@@ -1,30 +1,24 @@
-# XXX Ontology
+# Ontología para la representación del censo/registro de vehículos
 
-The XXX ontology describes the domain of XXX
+Esta ontología permite representar el dominio del censo o registro de vehículos que muchas entidades locales gestionan para distintos propósitos (cobro del impuesto de vehículos de tracción mecánica - IVTM - y gestión de la movilidad dentro de la ciudad, entre otros). 
 
+Está siendo desarrollada en el contexto del Espacio de Datos para las Infraestructuras Urbanas Inteligentes ([EDINT](https://edint.es/)). Asimismo, fue identificada como una ontología relevante para la representación de datos gestionados por entidades locales en la guía [Datos abiertos FEMP 2019: 40 conjuntos de datos a publicar por las Entidades Locales](http://femp.femp.es/files/3580-1937-fichero/DATOS%20ABIERTOS%20FEMP%202019.pdf), tal y como se describe también en la correspondiente nota de [datos.gob.es](https://datos.gob.es/es/conocimiento/datos-abiertos-femp-2019-40-conjuntos-de-datos-publicar-por-las-entidades-locales), y por tanto recogido en el [repositorio Github de apoyo a la iniciativa](https://github.com/opencitydata/vocab-transporte-censo-vehiculos), que queda deprecado una vez se lanza este repositorio.
 
-# Purpose and scope of the vocabulary
+# Propósito y alcance de la ontología (ontology purpose and scope)
 
-The purpose of the XXX ontology is to YYYY. 
-The scope of the XXX ontology is limited to ZZZ.
+El propósito de esta ontología es el de proporcionar un vocabulario común para la representación de las entidades y datos principales del censo o registro de vehículos. Su alcance se limita a los datos que pueden ser utilizados con los propósitos de cobro de impuestos por parte de las entidades locales o de gestión de la movilidad (permisos de aparcamiento, permisos de acceso a zonas específicas, etc.), que son parte de las funciones habituales de las entidades locales. Quedan fuera del alcance de la ontología otros aspectos relacionados con los vehículos, como pueden ser los datos de sus permisos de circulación, inspecciones técnicas, etc., que podrían ser objeto de una extensión de esta ontología o de su evolución en el futuro, si se considera relevante. 
 
-# Ontology prefix and namespace
+# Prefijo y espacio de nombres (prefix and namespace)
 
-The XXX ontology prefix is: XXX and it is published under the namespace: https://webdomain.ext/def/domain/subdomain# 
+El prefijo de esta ontologías es edint-veh. Se publica en el espacio de nombres: http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos# 
 
-# Ontology Conceptualization Image
+# Modelo conceptual (Ontology Conceptualization)
 
-Every ontology development repository should include, in this root README, a visual representation of the ontology conceptualization.
-This image helps users and contributors quickly understand the ontology’s structure, key concepts, and relationships.
-- The image should be located in the conceptualization folder.
-- Accepted formats: .svg, .png, or .drawio.
-- It should be referenced in this README using Markdown syntax, for example:
+![Diagrama del modelo conceptual](diagrams/diagram.png)
 
-![Ontology Conceptualization Diagram](diagrams/diagram.png)
+# Estructura del repositorio (Reposity structure)
 
-# Reposity structure
-
-The repository should contain (at least) the following folders:
+El repositorio contiene las siguientes carpetas:
 
 | Folder | Description |
 |--------|--------------|
@@ -36,12 +30,14 @@ The repository should contain (at least) the following folders:
 | **requirements/** | Contains all documents used to define the ontology’s requirements: data example, competency questions, functional requirements, use cases, etc. |
 | **shapes/** | Contains the SHACL shapes used to define and validate ontology constraints. |
 
-# Project maintenance
+# Mantenimiento y evolución (maintenance and evolution)
 
 To manage those incidents or suggested improvements with respect to the vocabulary, we recommend you to follow
 the guides provided in [Issues Management](https://github.com/nombre-repositorio/wiki/issues-management) to
 generate an issue (work in progress)
 
-# Funding
+# Financiación (Funding)
 
-Add here project funding and needed images.
+Esta ontología ha sido desarrollada en el contexto del Espacio de Datos para las Infraestructuras Urbanas Inteligentes ([EDINT](https://edint.es/)). 
+
+<<Completar con información global del proyecto y logos si es necesario>>.
