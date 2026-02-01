@@ -726,27 +726,27 @@
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="KJXqv6px2h66h55jfKWk-9" parent="1" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;dashPattern=1 3" value="" vertex="1">
-          <mxGeometry height="57" width="169" x="1040" y="806" as="geometry" />
+          <mxGeometry height="57" width="169" x="986" y="693" as="geometry" />
         </mxCell>
         <mxCell id="KJXqv6px2h66h55jfKWk-7" parent="1" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;dashPattern=1 3" value="" vertex="1">
-          <mxGeometry height="120" width="169" x="1041" y="870" as="geometry" />
+          <mxGeometry height="120" width="169" x="987" y="757" as="geometry" />
         </mxCell>
         <mxCell id="KJXqv6px2h66h55jfKWk-2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;dashPattern=1 3" value="" vertex="1">
-          <mxGeometry height="260" width="450" x="1040" y="1000" as="geometry" />
+          <mxGeometry height="260" width="500" x="990" y="1000" as="geometry" />
         </mxCell>
         <mxCell id="cgG5sZAH01hKlWfTNP8I-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;snapToPoint=1;points=[[0.1,0],[0.2,0],[0.3,0],[0.4,0],[0.5,0],[0.6,0],[0.7,0],[0.8,0],[0.9,0],[0,0.1],[0,0.3],[0,0.5],[0,0.7],[0,0.9],[0.1,1],[0.2,1],[0.3,1],[0.4,1],[0.5,1],[0.6,1],[0.7,1],[0.8,1],[0.9,1],[1,0.1],[1,0.3],[1,0.5],[1,0.7],[1,0.9]];" value="escjr:Via" vertex="1">
-          <mxGeometry height="30" width="120" x="1060" y="827.0000000000002" as="geometry" />
+          <mxGeometry height="30" width="120" x="1006" y="714.0000000000002" as="geometry" />
         </mxCell>
-        <mxCell id="cgG5sZAH01hKlWfTNP8I-2" parent="1" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;labelBackgroundColor=#ffffff;strokeColor=#000000;fontSize=12;fontColor=#000000;size=0.1875;" value="&lt;div&gt;&lt;b style=&quot;border-color: var(--border-color);&quot;&gt;owl:Ontology&lt;/b&gt;: &amp;lt;http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos&amp;gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: light-dark(rgb(255, 255, 255), rgb(18, 18, 18));&quot;&gt;&lt;b&gt;dcterms&lt;/b&gt;&lt;/span&gt;&lt;b&gt;:title&lt;/b&gt;: &quot;Ontología para la representación del censo o registro de vehículos&quot;@en &lt;br&gt;&lt;b&gt;dcterms&lt;/b&gt;&lt;b&gt;:description&lt;/b&gt;: &quot;Ontology for the representation of the vehicle census or register.&quot;@en &lt;br&gt;&lt;br&gt;&lt;b&gt;dcterms&lt;/b&gt;&lt;b&gt;:created&lt;/b&gt;: &quot;2026-01-29&quot;^^xsd:date &lt;br&gt;&lt;b&gt;dcterms&lt;/b&gt;&lt;b&gt;:creator&lt;/b&gt;: &quot;Daniel Doña, Edna Ruckhaus, Lucía Sánchez, Oscar Corcho&quot;@es&lt;br&gt;&lt;b&gt;dcterms&lt;/b&gt;&lt;b&gt;:contributo&lt;/b&gt;r: &amp;lt;https://w3id.org/people#AContributorURI&amp;gt;&lt;br&gt;&lt;br&gt;&lt;b&gt;dcterms&lt;/b&gt;&lt;b&gt;:license&lt;/b&gt;: &amp;lt;https://creativecommons.org/licenses/by/4.0/&amp;gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;vann:preferredNamespaceUr&lt;/b&gt;i: &amp;lt;http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#&amp;gt;&lt;br&gt;&lt;b&gt;vann:preferredNamespacePrefix&lt;/b&gt;: &quot;edintveh&quot; &lt;br&gt;&lt;br&gt;&lt;b&gt;owl:versionIRI&lt;/b&gt;: &amp;lt;http://vocab.linkeddata.es/datosabiertos/def/registrovehiculos/0.1.0&lt;span style=&quot;background-color: light-dark(rgb(255, 255, 255), rgb(18, 18, 18)); color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237));&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;owl:versionInfo&lt;/b&gt;: &quot;0.1.0&quot;&lt;br&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
-          <mxGeometry height="430" width="460" x="390" y="820" as="geometry" />
+        <mxCell id="cgG5sZAH01hKlWfTNP8I-2" parent="1" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;labelBackgroundColor=#ffffff;strokeColor=#000000;fontSize=12;fontColor=#000000;size=0.11627906976744186;" value="&lt;div&gt;&lt;b style=&quot;border-color: var(--border-color);&quot;&gt;owl:Ontology&lt;/b&gt;: &amp;lt;http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos&amp;gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: light-dark(rgb(255, 255, 255), rgb(18, 18, 18));&quot;&gt;&lt;b&gt;dcterms&lt;/b&gt;&lt;/span&gt;&lt;b&gt;:title&lt;/b&gt;: &quot;Ontología para la representación del censo o registro de vehículos&quot;@en &lt;br&gt;&lt;b&gt;dcterms&lt;/b&gt;&lt;b&gt;:description&lt;/b&gt;: &quot;Ontology for the representation of the vehicle census or register.&quot;@en &lt;br&gt;&lt;br&gt;&lt;b&gt;dcterms&lt;/b&gt;&lt;b&gt;:created&lt;/b&gt;: &quot;2026-01-29&quot;^^xsd:date &lt;br&gt;&lt;b&gt;dcterms&lt;/b&gt;&lt;b&gt;:creator&lt;/b&gt;: &quot;Daniel Doña, Edna Ruckhaus, Lucía Sánchez, Oscar Corcho&quot;&lt;br&gt;&lt;br&gt;&lt;b&gt;dcterms&lt;/b&gt;&lt;b&gt;:license&lt;/b&gt;: &amp;lt;https://creativecommons.org/licenses/by/4.0/&amp;gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;vann:preferredNamespaceUr&lt;/b&gt;i: &amp;lt;http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#&amp;gt;&lt;br&gt;&lt;b&gt;vann:preferredNamespacePrefix&lt;/b&gt;: &quot;edintveh&quot; &lt;br&gt;&lt;br&gt;&lt;b&gt;owl:versionIRI&lt;/b&gt;: &amp;lt;http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos/0.1.0&lt;span style=&quot;background-color: light-dark(rgb(255, 255, 255), rgb(18, 18, 18)); color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237));&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;owl:versionInfo&lt;/b&gt;: &quot;0.1.0&quot;&lt;br&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="280" width="510" x="330" y="884" as="geometry" />
         </mxCell>
         <mxCell id="cgG5sZAH01hKlWfTNP8I-3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;snapToPoint=1;points=[[0.1,0],[0.2,0],[0.3,0],[0.4,0],[0.5,0],[0.6,0],[0.7,0],[0.8,0],[0.9,0],[0,0.1],[0,0.3],[0,0.5],[0,0.7],[0,0.9],[0.1,1],[0.2,1],[0.3,1],[0.4,1],[0.5,1],[0.6,1],[0.7,1],[0.8,1],[0.9,1],[1,0.1],[1,0.3],[1,0.5],[1,0.7],[1,0.9]];" value="estraf:Tramo" vertex="1">
-          <mxGeometry height="30" width="120" x="1060" y="927" as="geometry" />
+          <mxGeometry height="30" width="120" x="1006" y="814" as="geometry" />
         </mxCell>
         <mxCell id="cgG5sZAH01hKlWfTNP8I-4" edge="1" parent="1" source="cgG5sZAH01hKlWfTNP8I-3" style="endArrow=classic;html=1;endSize=8;arcSize=0;rounded=0;edgeStyle=orthogonalEdgeStyle;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="cgG5sZAH01hKlWfTNP8I-1" value="">
           <mxGeometry height="50" relative="1" width="50" as="geometry">
-            <mxPoint x="1560" y="962" as="sourcePoint" />
-            <mxPoint x="1050" y="910" as="targetPoint" />
+            <mxPoint x="1506" y="849" as="sourcePoint" />
+            <mxPoint x="996" y="797" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="cgG5sZAH01hKlWfTNP8I-5" connectable="0" parent="cgG5sZAH01hKlWfTNP8I-4" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#ffffff;" value="&lt;div&gt;estraf:via&lt;/div&gt;" vertex="1">
@@ -754,43 +754,43 @@
             <mxPoint x="4.17" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="cgG5sZAH01hKlWfTNP8I-6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;snapToPoint=1;points=[[0.1,0],[0.2,0],[0.3,0],[0.4,0],[0.5,0],[0.6,0],[0.7,0],[0.8,0],[0.9,0],[0,0.1],[0,0.3],[0,0.5],[0,0.7],[0,0.9],[0.1,1],[0.2,1],[0.3,1],[0.4,1],[0.5,1],[0.6,1],[0.7,1],[0.8,1],[0.9,1],[1,0.1],[1,0.3],[1,0.5],[1,0.7],[1,0.9]];" value="edintveh:Vehiculo&lt;br&gt;(= s4auto:Vehicle)" vertex="1">
-          <mxGeometry height="44" width="120" x="1630" y="815.5" as="geometry" />
+        <mxCell id="cgG5sZAH01hKlWfTNP8I-6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;snapToPoint=1;points=[[0.1,0],[0.2,0],[0.3,0],[0.4,0],[0.5,0],[0.6,0],[0.7,0],[0.8,0],[0.9,0],[0,0.1],[0,0.3],[0,0.5],[0,0.7],[0,0.9],[0.1,1],[0.2,1],[0.3,1],[0.4,1],[0.5,1],[0.6,1],[0.7,1],[0.8,1],[0.9,1],[1,0.1],[1,0.3],[1,0.5],[1,0.7],[1,0.9]];" value="edintveh:Vehicle&lt;br&gt;(Vehículo)&lt;br&gt;(= s4auto:Vehicle)" vertex="1">
+          <mxGeometry height="49.5" width="120" x="1630" y="810" as="geometry" />
         </mxCell>
-        <mxCell id="cgG5sZAH01hKlWfTNP8I-9" parent="1" style="rounded=0;whiteSpace=wrap;html=1;snapToPoint=1;points=[[0.1,0],[0.2,0],[0.3,0],[0.4,0],[0.5,0],[0.6,0],[0.7,0],[0.8,0],[0.9,0],[0,0.1],[0,0.3],[0,0.5],[0,0.7],[0,0.9],[0.1,1],[0.2,1],[0.3,1],[0.4,1],[0.5,1],[0.6,1],[0.7,1],[0.8,1],[0.9,1],[1,0.1],[1,0.3],[1,0.5],[1,0.7],[1,0.9]];" value="edintveh:Autorizacion" vertex="1">
-          <mxGeometry height="47" width="120" x="1324" y="810" as="geometry" />
+        <mxCell id="cgG5sZAH01hKlWfTNP8I-9" parent="1" style="rounded=0;whiteSpace=wrap;html=1;snapToPoint=1;points=[[0.1,0],[0.2,0],[0.3,0],[0.4,0],[0.5,0],[0.6,0],[0.7,0],[0.8,0],[0.9,0],[0,0.1],[0,0.3],[0,0.5],[0,0.7],[0,0.9],[0.1,1],[0.2,1],[0.3,1],[0.4,1],[0.5,1],[0.6,1],[0.7,1],[0.8,1],[0.9,1],[1,0.1],[1,0.3],[1,0.5],[1,0.7],[1,0.9]];" value="edintveh:Authorisation&lt;br&gt;(Autorización)" vertex="1">
+          <mxGeometry height="50" width="120" x="1324" y="810" as="geometry" />
         </mxCell>
-        <mxCell id="cgG5sZAH01hKlWfTNP8I-16" parent="1" style="rounded=0;whiteSpace=wrap;html=1;snapToPoint=1;points=[[0.1,0],[0.2,0],[0.3,0],[0.4,0],[0.5,0],[0.6,0],[0.7,0],[0.8,0],[0.9,0],[0,0.1],[0,0.3],[0,0.5],[0,0.7],[0,0.9],[0.1,1],[0.2,1],[0.3,1],[0.4,1],[0.5,1],[0.6,1],[0.7,1],[0.8,1],[0.9,1],[1,0.1],[1,0.3],[1,0.5],[1,0.7],[1,0.9]];" value="edintveh:Titular" vertex="1">
-          <mxGeometry height="30" width="120" x="914" y="632.13" as="geometry" />
+        <mxCell id="cgG5sZAH01hKlWfTNP8I-16" parent="1" style="rounded=0;whiteSpace=wrap;html=1;snapToPoint=1;points=[[0.1,0],[0.2,0],[0.3,0],[0.4,0],[0.5,0],[0.6,0],[0.7,0],[0.8,0],[0.9,0],[0,0.1],[0,0.3],[0,0.5],[0,0.7],[0,0.9],[0.1,1],[0.2,1],[0.3,1],[0.4,1],[0.5,1],[0.6,1],[0.7,1],[0.8,1],[0.9,1],[1,0.1],[1,0.3],[1,0.5],[1,0.7],[1,0.9]];" value="edintveh:Owner&lt;br&gt;(Titular)" vertex="1">
+          <mxGeometry height="50" width="120" x="2144" y="650" as="geometry" />
         </mxCell>
         <mxCell id="cgG5sZAH01hKlWfTNP8I-19" parent="1" style="rounded=0;whiteSpace=wrap;html=1;snapToPoint=1;points=[[0.1,0],[0.2,0],[0.3,0],[0.4,0],[0.5,0],[0.6,0],[0.7,0],[0.8,0],[0.9,0],[0,0.1],[0,0.3],[0,0.5],[0,0.7],[0,0.9],[0.1,1],[0.2,1],[0.3,1],[0.4,1],[0.5,1],[0.6,1],[0.7,1],[0.8,1],[0.9,1],[1,0.1],[1,0.3],[1,0.5],[1,0.7],[1,0.9]];" value="schema:Person" vertex="1">
-          <mxGeometry height="30" width="120" x="850" y="502.13" as="geometry" />
+          <mxGeometry height="30" width="120" x="2080" y="516" as="geometry" />
         </mxCell>
         <mxCell id="cgG5sZAH01hKlWfTNP8I-20" parent="1" style="rounded=0;whiteSpace=wrap;html=1;snapToPoint=1;points=[[0.1,0],[0.2,0],[0.3,0],[0.4,0],[0.5,0],[0.6,0],[0.7,0],[0.8,0],[0.9,0],[0,0.1],[0,0.3],[0,0.5],[0,0.7],[0,0.9],[0.1,1],[0.2,1],[0.3,1],[0.4,1],[0.5,1],[0.6,1],[0.7,1],[0.8,1],[0.9,1],[1,0.1],[1,0.3],[1,0.5],[1,0.7],[1,0.9]];" value="schema:Organization" vertex="1">
-          <mxGeometry height="30" width="120" x="994.37" y="502.13" as="geometry" />
+          <mxGeometry height="30" width="120" x="2224.37" y="516" as="geometry" />
         </mxCell>
         <mxCell id="cgG5sZAH01hKlWfTNP8I-21" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontSize=17;" value="&lt;span class=&quot;st&quot;&gt;⨆&lt;/span&gt;" vertex="1">
-          <mxGeometry height="30" width="30" x="959" y="542.13" as="geometry" />
+          <mxGeometry height="30" width="30" x="2189" y="556" as="geometry" />
         </mxCell>
         <mxCell id="cgG5sZAH01hKlWfTNP8I-22" edge="1" parent="1" source="cgG5sZAH01hKlWfTNP8I-21" style="endArrow=diamondThin;endSize=12;html=1;fontColor=#000099;endFill=0;dashed=1;arcSize=0;rounded=0;edgeStyle=orthogonalEdgeStyle;" target="cgG5sZAH01hKlWfTNP8I-20" value="">
           <mxGeometry height="50" relative="1" width="50" as="geometry">
-            <mxPoint x="819" y="486.8" as="sourcePoint" />
-            <mxPoint x="1034" y="451.8" as="targetPoint" />
+            <mxPoint x="2049" y="500.66999999999996" as="sourcePoint" />
+            <mxPoint x="2264" y="465.67" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="cgG5sZAH01hKlWfTNP8I-23" edge="1" parent="1" source="cgG5sZAH01hKlWfTNP8I-21" style="endArrow=diamondThin;endSize=12;html=1;fontColor=#000099;endFill=0;dashed=1;arcSize=0;rounded=0;edgeStyle=orthogonalEdgeStyle;" target="cgG5sZAH01hKlWfTNP8I-19" value="">
           <mxGeometry height="50" relative="1" width="50" as="geometry">
             <Array as="points">
-              <mxPoint x="910" y="557" />
+              <mxPoint x="2140" y="570.87" />
             </Array>
-            <mxPoint x="1002.6066017177982" y="476.1933982822018" as="sourcePoint" />
-            <mxPoint x="1034" y="501.8" as="targetPoint" />
+            <mxPoint x="2232.606601717798" y="490.0633982822018" as="sourcePoint" />
+            <mxPoint x="2264" y="515.67" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="cgG5sZAH01hKlWfTNP8I-24" edge="1" parent="1" source="cgG5sZAH01hKlWfTNP8I-16" style="endArrow=open;html=1;fontColor=#000099;endFill=0;dashed=1;endSize=8;startArrow=open;startFill=0;startSize=8;rounded=0;" target="cgG5sZAH01hKlWfTNP8I-21" value="">
+        <mxCell id="cgG5sZAH01hKlWfTNP8I-24" edge="1" parent="1" source="cgG5sZAH01hKlWfTNP8I-16" style="endArrow=open;html=1;fontColor=#000099;endFill=0;dashed=1;endSize=8;startArrow=open;startFill=0;startSize=8;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" target="cgG5sZAH01hKlWfTNP8I-21" value="">
           <mxGeometry height="50" relative="1" width="50" as="geometry">
-            <mxPoint x="970" y="431.8" as="sourcePoint" />
-            <mxPoint x="1157" y="436.8" as="targetPoint" />
+            <mxPoint x="2204" y="646" as="sourcePoint" />
+            <mxPoint x="2387" y="450.67" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="cgG5sZAH01hKlWfTNP8I-25" connectable="0" parent="cgG5sZAH01hKlWfTNP8I-24" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontColor=#000000;labelBackgroundColor=#ffffff;" value="&amp;lt;&amp;lt;owl:equivalentClass&amp;gt;&amp;gt;" vertex="1">
@@ -804,30 +804,32 @@
         <mxCell id="cgG5sZAH01hKlWfTNP8I-27" edge="1" parent="1" source="cgG5sZAH01hKlWfTNP8I-6" style="endArrow=classic;html=1;endSize=8;arcSize=0;rounded=0;edgeStyle=orthogonalEdgeStyle;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.7;exitDx=0;exitDy=0;" target="cgG5sZAH01hKlWfTNP8I-130" value="">
           <mxGeometry height="50" relative="1" width="50" as="geometry">
             <Array as="points">
-              <mxPoint x="1825" y="846.5" />
-              <mxPoint x="1825" y="884.5" />
+              <mxPoint x="1750" y="847" />
+              <mxPoint x="1770" y="847" />
+              <mxPoint x="1770" y="895" />
             </Array>
             <mxPoint x="1606" y="966.5" as="sourcePoint" />
             <mxPoint x="1963.0538600300947" y="1006.5" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="cgG5sZAH01hKlWfTNP8I-28" connectable="0" parent="cgG5sZAH01hKlWfTNP8I-27" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#ffffff;" value="&lt;div&gt;edintveh:tieneDistintivoAmbiental&lt;/div&gt;" vertex="1">
+        <mxCell id="cgG5sZAH01hKlWfTNP8I-28" connectable="0" parent="cgG5sZAH01hKlWfTNP8I-27" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#ffffff;" value="&lt;div&gt;edintveh:environmentalBadge&lt;br&gt;(distintivoAmbiental)&lt;/div&gt;" vertex="1">
           <mxGeometry relative="1" x="-0.1269" as="geometry">
-            <mxPoint x="20" y="-8" as="offset" />
+            <mxPoint x="52" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="cgG5sZAH01hKlWfTNP8I-30" edge="1" parent="1" source="cgG5sZAH01hKlWfTNP8I-9" style="endArrow=classic;html=1;endSize=8;arcSize=0;rounded=0;edgeStyle=orthogonalEdgeStyle;exitX=1;exitY=0.3;exitDx=0;exitDy=0;" target="cgG5sZAH01hKlWfTNP8I-6" value="">
+        <mxCell id="cgG5sZAH01hKlWfTNP8I-30" edge="1" parent="1" source="cgG5sZAH01hKlWfTNP8I-9" style="endArrow=classic;html=1;endSize=8;arcSize=0;rounded=0;edgeStyle=orthogonalEdgeStyle;exitX=1;exitY=0.3;exitDx=0;exitDy=0;" value="">
           <mxGeometry height="50" relative="1" width="50" as="geometry">
             <Array as="points">
-              <mxPoint x="1444" y="841" />
+              <mxPoint x="1444" y="840" />
+              <mxPoint x="1630" y="840" />
             </Array>
             <mxPoint x="1360" y="1107" as="sourcePoint" />
-            <mxPoint x="1680" y="877" as="targetPoint" />
+            <mxPoint x="1630" y="840" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="cgG5sZAH01hKlWfTNP8I-31" connectable="0" parent="cgG5sZAH01hKlWfTNP8I-30" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#ffffff;" value="edintveh:autorizaVehiculo" vertex="1">
+        <mxCell id="cgG5sZAH01hKlWfTNP8I-31" connectable="0" parent="cgG5sZAH01hKlWfTNP8I-30" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#ffffff;" value="edintveh:authorisesVehicle&lt;br&gt;(autorizaVehiculo)" vertex="1">
           <mxGeometry relative="1" x="-0.1269" as="geometry">
-            <mxPoint x="14" y="-2" as="offset" />
+            <mxPoint x="14" y="-17" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="cgG5sZAH01hKlWfTNP8I-32" edge="1" parent="1" source="cgG5sZAH01hKlWfTNP8I-9" style="endArrow=classic;html=1;endSize=8;arcSize=0;rounded=0;edgeStyle=orthogonalEdgeStyle;entryX=1;entryY=0.7;entryDx=0;entryDy=0;" target="cgG5sZAH01hKlWfTNP8I-3" value="">
@@ -837,7 +839,7 @@
             <mxPoint x="1500" y="897" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="cgG5sZAH01hKlWfTNP8I-33" connectable="0" parent="cgG5sZAH01hKlWfTNP8I-32" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#ffffff;" value="edintveh:autorizaEnTramo" vertex="1">
+        <mxCell id="cgG5sZAH01hKlWfTNP8I-33" connectable="0" parent="cgG5sZAH01hKlWfTNP8I-32" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#ffffff;" value="edintveh:authorisesInSegment&lt;br&gt;(autorizaEnTramo)" vertex="1">
           <mxGeometry relative="1" x="-0.1269" as="geometry">
             <mxPoint x="-2" y="16" as="offset" />
           </mxGeometry>
@@ -849,15 +851,15 @@
             <mxPoint x="1393.3333333333335" y="1047.3333333333335" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="cgG5sZAH01hKlWfTNP8I-35" connectable="0" parent="cgG5sZAH01hKlWfTNP8I-34" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#ffffff;" value="edintveh:autorizaEnZona" vertex="1">
+        <mxCell id="cgG5sZAH01hKlWfTNP8I-35" connectable="0" parent="cgG5sZAH01hKlWfTNP8I-34" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#ffffff;" value="edintveh:authorisesInArea&lt;br&gt;(autorizaEnZona)" vertex="1">
           <mxGeometry relative="1" x="-0.1269" as="geometry">
             <mxPoint y="2" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="cgG5sZAH01hKlWfTNP8I-36" edge="1" parent="1" source="cgG5sZAH01hKlWfTNP8I-3" style="endArrow=classic;html=1;endSize=8;arcSize=0;rounded=0;edgeStyle=orthogonalEdgeStyle;" target="cgG5sZAH01hKlWfTNP8I-26" value="">
+        <mxCell id="cgG5sZAH01hKlWfTNP8I-36" edge="1" parent="1" source="cgG5sZAH01hKlWfTNP8I-3" style="endArrow=classic;html=1;endSize=8;arcSize=0;rounded=0;edgeStyle=orthogonalEdgeStyle;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="cgG5sZAH01hKlWfTNP8I-26" value="">
           <mxGeometry height="50" relative="1" width="50" as="geometry">
             <Array as="points">
-              <mxPoint x="1121" y="1040" />
+              <mxPoint x="1066" y="1040" />
             </Array>
             <mxPoint x="1121" y="957" as="sourcePoint" />
             <mxPoint x="1321" y="1077" as="targetPoint" />
@@ -865,100 +867,101 @@
         </mxCell>
         <mxCell id="cgG5sZAH01hKlWfTNP8I-37" connectable="0" parent="cgG5sZAH01hKlWfTNP8I-36" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#ffffff;" value="&lt;div&gt;edintzona:perteneceAZona&lt;/div&gt;" vertex="1">
           <mxGeometry relative="1" x="-0.1269" as="geometry">
-            <mxPoint x="44" y="-10" as="offset" />
+            <mxPoint y="-12" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="cgG5sZAH01hKlWfTNP8I-39" edge="1" parent="1" source="cgG5sZAH01hKlWfTNP8I-9" style="endArrow=classic;html=1;endSize=8;arcSize=0;rounded=0;edgeStyle=orthogonalEdgeStyle;exitX=0.3;exitY=0;exitDx=0;exitDy=0;" target="cgG5sZAH01hKlWfTNP8I-16" value="">
+        <mxCell id="cgG5sZAH01hKlWfTNP8I-39" edge="1" parent="1" source="cgG5sZAH01hKlWfTNP8I-9" style="endArrow=classic;html=1;endSize=8;arcSize=0;rounded=0;edgeStyle=orthogonalEdgeStyle;exitX=0.7;exitY=0;exitDx=0;exitDy=0;" target="cgG5sZAH01hKlWfTNP8I-16" value="">
           <mxGeometry height="50" relative="1" width="50" as="geometry">
             <Array as="points">
-              <mxPoint x="1360" y="770" />
-              <mxPoint x="960" y="770" />
+              <mxPoint x="1408" y="685" />
             </Array>
             <mxPoint x="1336" y="842.01" as="sourcePoint" />
             <mxPoint x="1060" y="676.9200000000001" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="cgG5sZAH01hKlWfTNP8I-40" connectable="0" parent="cgG5sZAH01hKlWfTNP8I-39" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#ffffff;" value="edintveh:tieneTitular" vertex="1">
+        <mxCell id="cgG5sZAH01hKlWfTNP8I-40" connectable="0" parent="cgG5sZAH01hKlWfTNP8I-39" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#ffffff;" value="edintveh:authorisationOwner (titularAutorización)" vertex="1">
           <mxGeometry relative="1" x="-0.1269" as="geometry">
-            <mxPoint x="3" y="-10" as="offset" />
+            <mxPoint x="81" y="-15" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="cgG5sZAH01hKlWfTNP8I-60" edge="1" parent="1" source="cgG5sZAH01hKlWfTNP8I-9" style="endArrow=classic;html=1;endSize=8;arcSize=0;rounded=0;edgeStyle=orthogonalEdgeStyle;" value="">
+        <mxCell id="cgG5sZAH01hKlWfTNP8I-60" edge="1" parent="1" source="cgG5sZAH01hKlWfTNP8I-9" style="endArrow=classic;html=1;endSize=8;arcSize=0;rounded=0;edgeStyle=orthogonalEdgeStyle;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="cgG5sZAH01hKlWfTNP8I-101" value="">
           <mxGeometry height="50" relative="1" width="50" as="geometry">
             <Array as="points">
-              <mxPoint x="1384" y="657" />
-              <mxPoint x="1269" y="657" />
+              <mxPoint x="1384" y="640" />
+              <mxPoint x="1196" y="640" />
             </Array>
             <mxPoint x="1330" y="657" as="sourcePoint" />
             <mxPoint x="1268.67" y="587.1300000000001" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="cgG5sZAH01hKlWfTNP8I-61" connectable="0" parent="cgG5sZAH01hKlWfTNP8I-60" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#ffffff;" value="edintveh:esTipoDeAutorizacion" vertex="1">
+        <mxCell id="cgG5sZAH01hKlWfTNP8I-61" connectable="0" parent="cgG5sZAH01hKlWfTNP8I-60" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#ffffff;" value="edintveh:authorisationType &lt;br&gt;(tipoAutorizacion)" vertex="1">
           <mxGeometry relative="1" x="-0.1269" as="geometry">
-            <mxPoint x="-118" y="-40" as="offset" />
+            <mxPoint x="-168" y="-30" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="cgG5sZAH01hKlWfTNP8I-62" edge="1" parent="1" source="cgG5sZAH01hKlWfTNP8I-9" style="endArrow=classic;html=1;endSize=8;arcSize=0;rounded=0;edgeStyle=orthogonalEdgeStyle;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="cgG5sZAH01hKlWfTNP8I-126" value="">
           <mxGeometry height="50" relative="1" width="50" as="geometry">
             <Array as="points">
-              <mxPoint x="1384" y="656" />
-              <mxPoint x="1550" y="656" />
+              <mxPoint x="1384" y="640" />
+              <mxPoint x="1530" y="640" />
             </Array>
             <mxPoint x="1553" y="826" as="sourcePoint" />
             <mxPoint x="1524.67" y="587.1300000000001" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="cgG5sZAH01hKlWfTNP8I-63" connectable="0" parent="cgG5sZAH01hKlWfTNP8I-62" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#ffffff;" value="edintveh:tieneEstado" vertex="1">
+        <mxCell id="cgG5sZAH01hKlWfTNP8I-63" connectable="0" parent="cgG5sZAH01hKlWfTNP8I-62" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#ffffff;" value="edintveh:authorisationStatus&lt;br&gt;(estadoAutorización)" vertex="1">
           <mxGeometry relative="1" x="-0.1269" as="geometry">
-            <mxPoint x="162" y="-29" as="offset" />
+            <mxPoint x="156" y="-40" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="cgG5sZAH01hKlWfTNP8I-64" edge="1" parent="1" source="cgG5sZAH01hKlWfTNP8I-9" style="endArrow=classic;html=1;endSize=8;arcSize=0;rounded=0;edgeStyle=orthogonalEdgeStyle;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="cgG5sZAH01hKlWfTNP8I-127" value="">
           <mxGeometry height="50" relative="1" width="50" as="geometry">
             <Array as="points">
-              <mxPoint x="1384" y="657" />
-              <mxPoint x="1895" y="657" />
+              <mxPoint x="1384" y="640" />
+              <mxPoint x="1895" y="640" />
             </Array>
             <mxPoint x="1460" y="807" as="sourcePoint" />
             <mxPoint x="1782.67" y="580.1300000000001" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="cgG5sZAH01hKlWfTNP8I-65" connectable="0" parent="cgG5sZAH01hKlWfTNP8I-64" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#ffffff;" value="edintveh:tienePeriodicidad" vertex="1">
+        <mxCell id="cgG5sZAH01hKlWfTNP8I-65" connectable="0" parent="cgG5sZAH01hKlWfTNP8I-64" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#ffffff;" value="edintveh:authorisationPeriodicity&lt;br&gt;(periodicidad)" vertex="1">
           <mxGeometry relative="1" x="-0.1269" as="geometry">
-            <mxPoint x="368" y="-25" as="offset" />
+            <mxPoint x="349" y="-37" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="cgG5sZAH01hKlWfTNP8I-66" edge="1" parent="1" source="cgG5sZAH01hKlWfTNP8I-6" style="endArrow=classic;html=1;endSize=8;arcSize=0;rounded=0;edgeStyle=orthogonalEdgeStyle;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.3;exitDx=0;exitDy=0;" value="">
+        <mxCell id="cgG5sZAH01hKlWfTNP8I-66" edge="1" parent="1" style="endArrow=classic;html=1;endSize=8;arcSize=0;rounded=0;edgeStyle=orthogonalEdgeStyle;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="cgG5sZAH01hKlWfTNP8I-128" value="">
           <mxGeometry height="50" relative="1" width="50" as="geometry">
             <Array as="points">
-              <mxPoint x="1825" y="824.5" />
-              <mxPoint x="1825" y="781.5" />
+              <mxPoint x="1770" y="820" />
+              <mxPoint x="1770" y="775" />
             </Array>
-            <mxPoint x="1755" y="816.5" as="sourcePoint" />
-            <mxPoint x="1955" y="781.5" as="targetPoint" />
+            <mxPoint x="1750" y="820" as="sourcePoint" />
+            <mxPoint x="2009.37" y="770" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="cgG5sZAH01hKlWfTNP8I-67" connectable="0" parent="cgG5sZAH01hKlWfTNP8I-66" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#ffffff;" value="&lt;div&gt;edintveh:tieneTipoVehiculo&lt;/div&gt;" vertex="1">
+        <mxCell id="cgG5sZAH01hKlWfTNP8I-67" connectable="0" parent="cgG5sZAH01hKlWfTNP8I-66" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#ffffff;" value="&lt;div&gt;edintveh:vehicleType&lt;br&gt;(tipoVehículo)&lt;/div&gt;" vertex="1">
           <mxGeometry relative="1" x="-0.1269" as="geometry">
-            <mxPoint x="20" y="9" as="offset" />
+            <mxPoint x="48" y="3" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="cgG5sZAH01hKlWfTNP8I-69" edge="1" parent="1" source="cgG5sZAH01hKlWfTNP8I-6" style="endArrow=classic;html=1;endSize=8;arcSize=0;rounded=0;edgeStyle=orthogonalEdgeStyle;exitX=1;exitY=0.7;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="cgG5sZAH01hKlWfTNP8I-129" value="">
           <mxGeometry height="50" relative="1" width="50" as="geometry">
             <Array as="points">
-              <mxPoint x="1945" y="836.5" />
+              <mxPoint x="1750" y="837" />
+              <mxPoint x="1945" y="837" />
+              <mxPoint x="1945" y="835" />
             </Array>
             <mxPoint x="1750" y="881.5" as="sourcePoint" />
             <mxPoint x="1915" y="878.5" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="cgG5sZAH01hKlWfTNP8I-70" connectable="0" parent="cgG5sZAH01hKlWfTNP8I-69" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#ffffff;" value="&lt;div&gt;edintveh:tieneTipoPropulsion&lt;/div&gt;" vertex="1">
+        <mxCell id="cgG5sZAH01hKlWfTNP8I-70" connectable="0" parent="cgG5sZAH01hKlWfTNP8I-69" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#ffffff;" value="&lt;div&gt;edintveh:propulsionType&lt;br&gt;(tipoPropulsión)&lt;/div&gt;" vertex="1">
           <mxGeometry relative="1" x="-0.1269" as="geometry">
-            <mxPoint x="9" y="-5" as="offset" />
+            <mxPoint x="26" y="-2" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="cgG5sZAH01hKlWfTNP8I-71" parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;" value="&lt;div&gt;&lt;b&gt;@base&lt;/b&gt;:&amp;nbsp;http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;b&gt;edintveh:&amp;nbsp;&lt;/b&gt;&lt;/span&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;http://vocab.linkeddata.es/datosabiertos/def/&lt;/span&gt;transporte/censovehiculos&lt;span style=&quot;background-color: transparent;&quot;&gt;#&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;&lt;b&gt;edintkos&lt;/b&gt;:&amp;nbsp;http://vocab.linkeddata.es/datosabiertos/kos/edint/&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;b style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;owl&lt;/b&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;: http://www.w3.org/2002/07/owl#&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;b&gt;rdf&lt;/b&gt;: http://www.w3.org/1999/02/22-rdf-syntax-ns#&lt;/div&gt;&lt;div&gt;&lt;b&gt;rdfs&lt;/b&gt;: http://www.w3.org/2000/01/rdf-schema#&lt;/div&gt;&lt;div&gt;&lt;b style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;dc&lt;/b&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;: http://purl.org/dc/elements/1.1/&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;dcterms&lt;/b&gt;: http://purl.org/dc/terms/&lt;/div&gt;&lt;div&gt;&lt;b&gt;skos&lt;/b&gt;: http://www.w3.org/2004/02/skos/core#&lt;/div&gt;&lt;div&gt;&lt;b&gt;vann&lt;/b&gt;: http://purl.org/vocab/vann/&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;edintzona:&amp;nbsp;&lt;/b&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;http://vocab.linkeddata.es/datosabiertos/def/femp-base/zona#&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;b&gt;edintmi:&lt;/b&gt; http://www.owl-ontologies.com/edintmi#&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;div&gt;&lt;b&gt;escjr&lt;/b&gt;: http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero#&lt;/div&gt;&lt;div&gt;&lt;b&gt;estraf&lt;/b&gt;:&amp;nbsp;http://vocab.ciudadesabiertas.es/def/transporte/trafico#&lt;/div&gt;&lt;div&gt;&lt;b&gt;esadm&lt;/b&gt;: http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;b style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;gsp&lt;/b&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;: http://www.opengis.net/spec/geosparql/1.0/&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;s4auto:&amp;nbsp;&lt;/b&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;https://saref.etsi.org/saref4auto/Vehicle/&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;div&gt;&lt;b&gt;sosa&lt;/b&gt;:&amp;nbsp;http://www.w3.org/ns/sosa/&lt;/div&gt;&lt;div&gt;&lt;b&gt;vsso&lt;/b&gt;:&amp;nbsp;https://github.com/w3c/vsso#&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;b&gt;schema:&lt;/b&gt; https://schema.org/&lt;/div&gt;&lt;/span&gt;&lt;/div&gt;" vertex="1">
-          <mxGeometry height="340" width="490" x="330" y="447" as="geometry" />
+        <mxCell id="cgG5sZAH01hKlWfTNP8I-71" parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;" value="&lt;div&gt;&lt;b&gt;@base&lt;/b&gt;:&amp;nbsp;http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;b&gt;edintveh:&amp;nbsp;&lt;/b&gt;&lt;/span&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;http://vocab.linkeddata.es/datosabiertos/def/&lt;/span&gt;transporte/censovehiculos&lt;span style=&quot;background-color: transparent;&quot;&gt;#&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;&lt;b&gt;edintkos&lt;/b&gt;:&amp;nbsp;http://vocab.linkeddata.es/datosabiertos/kos/edint/&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;b style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;owl&lt;/b&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;: http://www.w3.org/2002/07/owl#&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;b&gt;rdf&lt;/b&gt;: http://www.w3.org/1999/02/22-rdf-syntax-ns#&lt;/div&gt;&lt;div&gt;&lt;b&gt;rdfs&lt;/b&gt;: http://www.w3.org/2000/01/rdf-schema#&lt;/div&gt;&lt;div&gt;&lt;b style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;dc&lt;/b&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;: http://purl.org/dc/elements/1.1/&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;dcterms&lt;/b&gt;: http://purl.org/dc/terms/&lt;/div&gt;&lt;div&gt;&lt;b&gt;skos&lt;/b&gt;: http://www.w3.org/2004/02/skos/core#&lt;/div&gt;&lt;div&gt;&lt;b&gt;vann&lt;/b&gt;: http://purl.org/vocab/vann/&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;edintzona:&amp;nbsp;&lt;/b&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;http://vocab.linkeddata.es/datosabiertos/def/commons/zona#&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;b&gt;edintmi:&lt;/b&gt;&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;http://vocab.linkeddata.es/datosabiertos/def/casos/movilidadinteligente#&lt;/span&gt;&lt;/div&gt;&lt;/span&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div&gt;&lt;b&gt;escjr&lt;/b&gt;: http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero#&lt;/div&gt;&lt;div&gt;&lt;b&gt;estraf&lt;/b&gt;:&amp;nbsp;http://vocab.ciudadesabiertas.es/def/transporte/trafico#&lt;/div&gt;&lt;div&gt;&lt;b&gt;esadm&lt;/b&gt;: http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;b style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;gsp&lt;/b&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;: http://www.opengis.net/spec/geosparql/1.0/&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;s4auto:&amp;nbsp;&lt;/b&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;https://saref.etsi.org/saref4auto/Vehicle/&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;div&gt;&lt;b&gt;sosa&lt;/b&gt;:&amp;nbsp;http://www.w3.org/ns/sosa/&lt;/div&gt;&lt;div&gt;&lt;b&gt;vsso&lt;/b&gt;:&amp;nbsp;https://github.com/w3c/vsso#&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;b&gt;schema:&lt;/b&gt; https://schema.org/&lt;/div&gt;&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="340" width="510" x="330" y="511" as="geometry" />
         </mxCell>
         <mxCell id="cgG5sZAH01hKlWfTNP8I-72" parent="1" style="rounded=0;whiteSpace=wrap;html=1;snapToPoint=1;points=[[0.1,0],[0.2,0],[0.3,0],[0.4,0],[0.5,0],[0.6,0],[0.7,0],[0.8,0],[0.9,0],[0,0.1],[0,0.3],[0,0.5],[0,0.7],[0,0.9],[0.1,1],[0.2,1],[0.3,1],[0.4,1],[0.5,1],[0.6,1],[0.7,1],[0.8,1],[0.9,1],[1,0.1],[1,0.3],[1,0.5],[1,0.7],[1,0.9]];" value="edintzona:ZonaEstacionamientoRegulado" vertex="1">
           <mxGeometry height="30" width="234.37" x="1100" y="1098.94" as="geometry" />
@@ -997,46 +1000,46 @@
             <mxPoint x="1403.551818181818" y="1050" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="cgG5sZAH01hKlWfTNP8I-101" parent="1" style="rounded=0;whiteSpace=wrap;html=1;snapToPoint=1;points=[[0.1,0],[0.2,0],[0.3,0],[0.4,0],[0.5,0],[0.6,0],[0.7,0],[0.8,0],[0.9,0],[0,0.1],[0,0.3],[0,0.5],[0,0.7],[0,0.9],[0.1,1],[0.2,1],[0.3,1],[0.4,1],[0.5,1],[0.6,1],[0.7,1],[0.8,1],[0.9,1],[1,0.1],[1,0.3],[1,0.5],[1,0.7],[1,0.9]];" value="skos:Concept&lt;br&gt;&amp;lt;&amp;lt;skos:inScheme edintkos:TipoAutorizacionVehiculo&amp;gt;&amp;gt;" vertex="1">
-          <mxGeometry height="30" width="300" x="1080" y="557.13" as="geometry" />
+        <mxCell id="cgG5sZAH01hKlWfTNP8I-101" parent="1" style="rounded=0;whiteSpace=wrap;html=1;snapToPoint=1;points=[[0.1,0],[0.2,0],[0.3,0],[0.4,0],[0.5,0],[0.6,0],[0.7,0],[0.8,0],[0.9,0],[0,0.1],[0,0.3],[0,0.5],[0,0.7],[0,0.9],[0.1,1],[0.2,1],[0.3,1],[0.4,1],[0.5,1],[0.6,1],[0.7,1],[0.8,1],[0.9,1],[1,0.1],[1,0.3],[1,0.5],[1,0.7],[1,0.9]];" value="skos:Concept&lt;br&gt;&amp;lt;&amp;lt;skos:inScheme edintkos:VehicleAuthorisationType&amp;gt;&amp;gt;&lt;div&gt;(&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;TipoAutorizacionVehiculo)&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="47.13" width="300" x="1046" y="516" as="geometry" />
         </mxCell>
-        <mxCell id="cgG5sZAH01hKlWfTNP8I-126" parent="1" style="rounded=0;whiteSpace=wrap;html=1;snapToPoint=1;points=[[0.1,0],[0.2,0],[0.3,0],[0.4,0],[0.5,0],[0.6,0],[0.7,0],[0.8,0],[0.9,0],[0,0.1],[0,0.3],[0,0.5],[0,0.7],[0,0.9],[0.1,1],[0.2,1],[0.3,1],[0.4,1],[0.5,1],[0.6,1],[0.7,1],[0.8,1],[0.9,1],[1,0.1],[1,0.3],[1,0.5],[1,0.7],[1,0.9]];" value="skos:Concept&lt;br&gt;&amp;lt;&amp;lt;skos:inScheme edintkos:EstadoAutorizacionVehiculo&amp;gt;&amp;gt;" vertex="1">
-          <mxGeometry height="30" width="320" x="1390" y="557.13" as="geometry" />
+        <mxCell id="cgG5sZAH01hKlWfTNP8I-126" parent="1" style="rounded=0;whiteSpace=wrap;html=1;snapToPoint=1;points=[[0.1,0],[0.2,0],[0.3,0],[0.4,0],[0.5,0],[0.6,0],[0.7,0],[0.8,0],[0.9,0],[0,0.1],[0,0.3],[0,0.5],[0,0.7],[0,0.9],[0.1,1],[0.2,1],[0.3,1],[0.4,1],[0.5,1],[0.6,1],[0.7,1],[0.8,1],[0.9,1],[1,0.1],[1,0.3],[1,0.5],[1,0.7],[1,0.9]];" value="skos:Concept&lt;br&gt;&amp;lt;&amp;lt;skos:inScheme edintkos:VehicleAuthorisationStatus&amp;gt;&amp;gt;&lt;div&gt;(&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;EstadoAutorizacionVehiculo)&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="47.13" width="320" x="1370" y="516" as="geometry" />
         </mxCell>
-        <mxCell id="cgG5sZAH01hKlWfTNP8I-127" parent="1" style="rounded=0;whiteSpace=wrap;html=1;snapToPoint=1;points=[[0.1,0],[0.2,0],[0.3,0],[0.4,0],[0.5,0],[0.6,0],[0.7,0],[0.8,0],[0.9,0],[0,0.1],[0,0.3],[0,0.5],[0,0.7],[0,0.9],[0.1,1],[0.2,1],[0.3,1],[0.4,1],[0.5,1],[0.6,1],[0.7,1],[0.8,1],[0.9,1],[1,0.1],[1,0.3],[1,0.5],[1,0.7],[1,0.9]];" value="skos:Concept&lt;br&gt;&amp;lt;&amp;lt;skos:inScheme edintkos:PeriodicidadAutorizacionVehiculo&amp;gt;&amp;gt;" vertex="1">
-          <mxGeometry height="30" width="350" x="1720" y="557.13" as="geometry" />
+        <mxCell id="cgG5sZAH01hKlWfTNP8I-127" parent="1" style="rounded=0;whiteSpace=wrap;html=1;snapToPoint=1;points=[[0.1,0],[0.2,0],[0.3,0],[0.4,0],[0.5,0],[0.6,0],[0.7,0],[0.8,0],[0.9,0],[0,0.1],[0,0.3],[0,0.5],[0,0.7],[0,0.9],[0.1,1],[0.2,1],[0.3,1],[0.4,1],[0.5,1],[0.6,1],[0.7,1],[0.8,1],[0.9,1],[1,0.1],[1,0.3],[1,0.5],[1,0.7],[1,0.9]];" value="skos:Concept&lt;br&gt;&amp;lt;&amp;lt;skos:inScheme edintkos:VehicleAuthorisationPeriodicity&amp;gt;&amp;gt;&lt;div&gt;(&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;PeriodicidadAutorizacionVehiculo)&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="47.13" width="350" x="1720" y="516" as="geometry" />
         </mxCell>
-        <mxCell id="cgG5sZAH01hKlWfTNP8I-128" parent="1" style="rounded=0;whiteSpace=wrap;html=1;snapToPoint=1;points=[[0.1,0],[0.2,0],[0.3,0],[0.4,0],[0.5,0],[0.6,0],[0.7,0],[0.8,0],[0.9,0],[0,0.1],[0,0.3],[0,0.5],[0,0.7],[0,0.9],[0.1,1],[0.2,1],[0.3,1],[0.4,1],[0.5,1],[0.6,1],[0.7,1],[0.8,1],[0.9,1],[1,0.1],[1,0.3],[1,0.5],[1,0.7],[1,0.9]];" value="skos:Concept&lt;br&gt;&amp;lt;&amp;lt;skos:inScheme edintkos:TipoVehiculo&amp;gt;&amp;gt;" vertex="1">
-          <mxGeometry height="30" width="290" x="1955" y="769.5" as="geometry" />
+        <mxCell id="cgG5sZAH01hKlWfTNP8I-128" parent="1" style="rounded=0;whiteSpace=wrap;html=1;snapToPoint=1;points=[[0.1,0],[0.2,0],[0.3,0],[0.4,0],[0.5,0],[0.6,0],[0.7,0],[0.8,0],[0.9,0],[0,0.1],[0,0.3],[0,0.5],[0,0.7],[0,0.9],[0.1,1],[0.2,1],[0.3,1],[0.4,1],[0.5,1],[0.6,1],[0.7,1],[0.8,1],[0.9,1],[1,0.1],[1,0.3],[1,0.5],[1,0.7],[1,0.9]];" value="skos:Concept&lt;br&gt;&amp;lt;&amp;lt;skos:inScheme edintkos:VehicleType&amp;gt;&amp;gt;&lt;div&gt;(TipoVehículo)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="49.5" width="315" x="2029.37" y="750" as="geometry" />
         </mxCell>
-        <mxCell id="cgG5sZAH01hKlWfTNP8I-129" parent="1" style="rounded=0;whiteSpace=wrap;html=1;snapToPoint=1;points=[[0.1,0],[0.2,0],[0.3,0],[0.4,0],[0.5,0],[0.6,0],[0.7,0],[0.8,0],[0.9,0],[0,0.1],[0,0.3],[0,0.5],[0,0.7],[0,0.9],[0.1,1],[0.2,1],[0.3,1],[0.4,1],[0.5,1],[0.6,1],[0.7,1],[0.8,1],[0.9,1],[1,0.1],[1,0.3],[1,0.5],[1,0.7],[1,0.9]];" value="skos:Concept&lt;br&gt;&amp;lt;&amp;lt;skos:inScheme edintkos:TipoPropulsionVehiculo&amp;gt;&amp;gt;" vertex="1">
-          <mxGeometry height="30" width="290" x="1955" y="822.5" as="geometry" />
+        <mxCell id="cgG5sZAH01hKlWfTNP8I-129" parent="1" style="rounded=0;whiteSpace=wrap;html=1;snapToPoint=1;points=[[0.1,0],[0.2,0],[0.3,0],[0.4,0],[0.5,0],[0.6,0],[0.7,0],[0.8,0],[0.9,0],[0,0.1],[0,0.3],[0,0.5],[0,0.7],[0,0.9],[0.1,1],[0.2,1],[0.3,1],[0.4,1],[0.5,1],[0.6,1],[0.7,1],[0.8,1],[0.9,1],[1,0.1],[1,0.3],[1,0.5],[1,0.7],[1,0.9]];" value="skos:Concept&lt;br&gt;&amp;lt;&amp;lt;skos:inScheme edintkos:VehiclePropulsionType&amp;gt;&amp;gt;&lt;div&gt;(&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;TipoPropulsionVehículo)&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="50" width="315" x="2030" y="809.5" as="geometry" />
         </mxCell>
-        <mxCell id="cgG5sZAH01hKlWfTNP8I-130" parent="1" style="rounded=0;whiteSpace=wrap;html=1;snapToPoint=1;points=[[0.1,0],[0.2,0],[0.3,0],[0.4,0],[0.5,0],[0.6,0],[0.7,0],[0.8,0],[0.9,0],[0,0.1],[0,0.3],[0,0.5],[0,0.7],[0,0.9],[0.1,1],[0.2,1],[0.3,1],[0.4,1],[0.5,1],[0.6,1],[0.7,1],[0.8,1],[0.9,1],[1,0.1],[1,0.3],[1,0.5],[1,0.7],[1,0.9]];" value="skos:Concept&lt;br&gt;&amp;lt;&amp;lt;skos:inScheme edintkos:DistintivoAmbiental&amp;gt;&amp;gt;" vertex="1">
-          <mxGeometry height="30" width="290" x="1955" y="869.5" as="geometry" />
+        <mxCell id="cgG5sZAH01hKlWfTNP8I-130" parent="1" style="rounded=0;whiteSpace=wrap;html=1;snapToPoint=1;points=[[0.1,0],[0.2,0],[0.3,0],[0.4,0],[0.5,0],[0.6,0],[0.7,0],[0.8,0],[0.9,0],[0,0.1],[0,0.3],[0,0.5],[0,0.7],[0,0.9],[0.1,1],[0.2,1],[0.3,1],[0.4,1],[0.5,1],[0.6,1],[0.7,1],[0.8,1],[0.9,1],[1,0.1],[1,0.3],[1,0.5],[1,0.7],[1,0.9]];" value="skos:Concept&lt;br&gt;&amp;lt;&amp;lt;skos:inScheme edintkos:VehicleEnvironmentalBadge&amp;gt;&amp;gt;&lt;div&gt;(&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;DistintivoAmbientalVehículo)&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="50.5" width="315" x="2030" y="870" as="geometry" />
         </mxCell>
         <mxCell id="KJXqv6px2h66h55jfKWk-6" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="edintzona" vertex="1">
           <mxGeometry height="30" width="60" x="1410" y="1229.47" as="geometry" />
         </mxCell>
         <mxCell id="KJXqv6px2h66h55jfKWk-8" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="estraf" vertex="1">
-          <mxGeometry height="30" width="60" x="1040" y="960" as="geometry" />
+          <mxGeometry height="30" width="60" x="986" y="847" as="geometry" />
         </mxCell>
         <mxCell id="KJXqv6px2h66h55jfKWk-10" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="escjr" vertex="1">
-          <mxGeometry height="30" width="60" x="1034" y="803" as="geometry" />
+          <mxGeometry height="30" width="60" x="980" y="690" as="geometry" />
         </mxCell>
-        <mxCell id="KJXqv6px2h66h55jfKWk-11" edge="1" parent="1" source="cgG5sZAH01hKlWfTNP8I-6" style="endArrow=classic;html=1;endSize=8;arcSize=0;rounded=0;edgeStyle=orthogonalEdgeStyle;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.7;entryY=1;entryDx=0;entryDy=0;" target="cgG5sZAH01hKlWfTNP8I-16" value="">
+        <mxCell id="KJXqv6px2h66h55jfKWk-11" edge="1" parent="1" source="cgG5sZAH01hKlWfTNP8I-6" style="endArrow=classic;html=1;endSize=8;arcSize=0;rounded=0;edgeStyle=orthogonalEdgeStyle;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="cgG5sZAH01hKlWfTNP8I-16" value="">
           <mxGeometry height="50" relative="1" width="50" as="geometry">
             <Array as="points">
-              <mxPoint x="1690" y="740" />
-              <mxPoint x="998" y="740" />
+              <mxPoint x="1690" y="720" />
+              <mxPoint x="2204" y="720" />
             </Array>
             <mxPoint x="1706" y="938" as="sourcePoint" />
             <mxPoint x="1110" y="720" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="KJXqv6px2h66h55jfKWk-12" connectable="0" parent="KJXqv6px2h66h55jfKWk-11" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#ffffff;" value="edintveh:tieneTitular" vertex="1">
+        <mxCell id="KJXqv6px2h66h55jfKWk-12" connectable="0" parent="KJXqv6px2h66h55jfKWk-11" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#ffffff;" value="edintveh:registeredOwner (titularRegistrado)" vertex="1">
           <mxGeometry relative="1" x="-0.1269" as="geometry">
-            <mxPoint x="-87" y="-10" as="offset" />
+            <mxPoint x="83" y="-10" as="offset" />
           </mxGeometry>
         </mxCell>
       </root>
