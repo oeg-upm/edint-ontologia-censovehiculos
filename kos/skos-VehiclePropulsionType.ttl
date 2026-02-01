@@ -1,0 +1,91 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix edintveh: <http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#> .
+@prefix edintkos: <http://vocab.linkeddata.es/datosabiertos/kos/edint/> .
+
+@prefix edintvehiclepropulsiontype: <http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePropulsionType/> .
+
+#################################################################
+#
+#    Concept Scheme
+#
+#################################################################
+
+edintkos:VehiclePropulsionType a skos:ConceptScheme ; 
+    dct:issued "2026-01-29"^^xsd:date ;
+    dct:modified "2026-01-29"^^xsd:date ;
+    cc:license <https://creativecommons.org/licenses/by/4.0/> ;
+    rdfs:comment "This concept scheme belongs to the set of controlled SKOS-based thesauri used by the ontologies from the EDINT data space."@en ;
+    rdfs:comment "Este esquema de conceptos pertenece al conjunto de tesauros SKOS usados por las ontologías del espacio de datos EDINT."@es ;
+    rdfs:label "Vehicle propulsion type"@en ;
+    rdfs:label "Tipo de propulsión de vehículo"@es ;
+    dct:title "Concept scheme grouping vehicle propulsion types"@en ;
+    dct:title "Esquema de conceptos agrupando tipos de propulsión de vehículos"@es ;
+    skos:note "Values currently based on the list of values provided in the SER vehicle authorisation open dataset of the city of Madrid"@en;
+    skos:note "Valores basados inicialmente en el conjunto de datos de autorización de vehículos SER del portal de datos abiertos de la ciudad de Madrid"@es.
+
+#################################################################
+#
+#    Concepts
+#
+#################################################################
+
+edintvehiclepropulsiontype:ButaneGas a skos:Concept;
+  skos:inScheme edintkos:VehiclePropulsionType;
+  skos:prefLabel "Butane gas"@en ;
+  skos:prefLabel "Gas butano"@es .
+
+edintvehiclepropulsiontype:Diesel a skos:Concept;
+  skos:inScheme edintkos:VehiclePropulsionType;
+  skos:prefLabel "Diesel"@en ;
+  skos:prefLabel "Diésel"@es .
+
+edintvehiclepropulsiontype:UnleadedGasoline a skos:Concept;
+  skos:inScheme edintkos:VehiclePropulsionType;
+  skos:prefLabel "Unleaded gasoline"@en ;
+  skos:prefLabel "Gasolina sin plomo"@es .
+
+edintvehiclepropulsiontype:Electric a skos:Concept;
+  skos:inScheme edintkos:VehiclePropulsionType;
+  skos:prefLabel "Electric"@en ;
+  skos:prefLabel "Eléctrico"@es .
+
+edintvehiclepropulsiontype:LPG a skos:Concept;
+  skos:inScheme edintkos:VehiclePropulsionType;
+  skos:prefLabel "Liquefied petrol gas"@en ;
+  skos:prefLabel "Gas licuado de petróleo"@es .
+
+edintvehiclepropulsiontype:CompressedNaturalGas a skos:Concept;
+  skos:inScheme edintkos:VehiclePropulsionType;
+  skos:prefLabel "Compressed natural gas"@en ;
+  skos:prefLabel "Gas natural comprimido"@es .
+
+edintvehiclepropulsiontype:LiquefiedNaturalGas a skos:Concept;
+  skos:inScheme edintkos:VehiclePropulsionType;
+  skos:prefLabel "Liquefied natural gas"@en ;
+  skos:prefLabel "Gas natural licuado"@es .
+
+edintvehiclepropulsiontype:Diesel a skos:Concept;
+  skos:inScheme edintkos:VehiclePropulsionType;
+  skos:prefLabel "Diesel"@en ;
+  skos:prefLabel "Diésel"@es .
+
+edintvehiclepropulsiontype:PluginHybrid a skos:Concept;
+  skos:inScheme edintkos:VehiclePropulsionType;
+  skos:prefLabel "Plug-in hybrid"@en ;
+  skos:prefLabel "Híbrido enchufable"@es .
+
+edintvehiclepropulsiontype:NonPluginHybrid a skos:Concept;
+  skos:inScheme edintkos:VehiclePropulsionType;
+  skos:prefLabel "Non plug-in hybrid"@en ;
+  skos:prefLabel "Híbrido no enchufable"@es .
+
+edintvehiclepropulsiontype:Other a skos:Concept;
+  skos:inScheme edintkos:VehiclePropulsionType;
+  skos:prefLabel "Other"@en ;
+  skos:prefLabel "Otros"@es .

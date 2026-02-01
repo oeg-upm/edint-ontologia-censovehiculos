@@ -1,0 +1,99 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix edintveh: <http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#> .
+@prefix edintkos: <http://vocab.linkeddata.es/datosabiertos/kos/edint/> .
+
+@prefix edintvehicletype: <http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleType/> .
+
+#################################################################
+#
+#    Concept Scheme
+#
+#################################################################
+
+edintkos:VehicleType a skos:ConceptScheme ; 
+    dct:issued "2026-01-29"^^xsd:date ;
+    dct:modified "2026-01-29"^^xsd:date ;
+    cc:license <https://creativecommons.org/licenses/by/4.0/> ;
+    rdfs:comment "This concept scheme belongs to the set of controlled SKOS-based thesauri used by the ontologies from the EDINT data space."@en ;
+    rdfs:comment "Este esquema de conceptos pertenece al conjunto de tesauros SKOS usados por las ontologías del espacio de datos EDINT."@es ;
+    rdfs:label "Vehicle type"@en ;
+    rdfs:label "Tipo de vehículo"@es ;
+    dct:title "Concept scheme grouping vehicle types"@en ;
+    dct:title "Esquema de conceptos agrupando tipos de vehículos"@es ;
+    skos:note "Values currently based on the list of values provided in the SER vehicle authorisation open dataset of the city of Madrid"@en;
+    skos:note "Valores basados inicialmente en el conjunto de datos de autorización de vehículos SER del portal de datos abiertos de la ciudad de Madrid"@es.
+
+#################################################################
+#
+#    Concepts
+#
+#################################################################
+
+edintvehicletype:Ambulance a skos:Concept;
+  skos:inScheme edintkos:VehicleType;
+  skos:prefLabel "Ambulance"@en ;
+  skos:prefLabel "Ambulancia"@es .
+
+edintvehicletype:Bus a skos:Concept;
+  skos:inScheme edintkos:VehicleType;
+  skos:prefLabel "Bus"@en ;
+  skos:prefLabel "Autobús"@es .
+
+edintvehicletype:Truck a skos:Concept;
+  skos:inScheme edintkos:VehicleType;
+  skos:prefLabel "Truck"@en ;
+  skos:prefLabel "Camión"@es ;
+  skos:note "The dataset used also identifies other types of more specialised trucks, which may be considered in this concept scheme if necessary: full list in the Spanish version of this note"@en;
+  skos:note "El conjunto de datos usado como referencia identifica otros tipos más especializados de camiones, que podrían ser incluidos en el esquema de conceptos si es necesario: Camión articulado, Camión articulado furgón, Camión botellero, Camión caja, Camión cisterna, Camión frigorífico, Camión isotermo, Camión plataforma, Camión taller, Tractocamión"@es.
+
+edintvehicletype:Van a skos:Concept;
+  skos:inScheme edintkos:VehicleType;
+  skos:prefLabel "Van"@en ;
+  skos:prefLabel "Camioneta"@es ;
+  skos:note "The dataset used also identifies other more specialised types of van, which may be considered in this concept scheme if necessary"@en;
+  skos:note "El conjunto de datos usado como referencia identifica también furgoneta y furgoneta mixta, que podrían ser incluidos en el esquema de conceptos si es necesario"@es.
+
+edintvehicletype:Quadricycle a skos:Concept;
+  skos:inScheme edintkos:VehicleType;
+  skos:prefLabel "Quadricycle"@en ;
+  skos:prefLabel "Cuatriciclo"@es ;
+  skos:note "The dataset used also identifies lightweight quadricycle, which may be considered in this concept scheme if necessary"@en;
+  skos:note "El conjunto de datos usado como referencia identifica también cuatriciclo ligero, que podría ser incluido en el esquema de conceptos si es necesario"@es.
+
+edintvehicletype:OffRoad a skos:Concept;
+  skos:inScheme edintkos:VehicleType;
+  skos:prefLabel "Off-road"@en ;
+  skos:prefLabel "Todoterreno"@es .
+
+edintvehicletype:Car a skos:Concept;
+  skos:inScheme edintkos:VehicleType;
+  skos:prefLabel "Car"@en ;
+  skos:prefLabel "Turismo"@es .
+
+edintvehicletype:ArticulatedVehicle a skos:Concept;
+  skos:inScheme edintkos:VehicleType;
+  skos:prefLabel "Articulated vehicle"@en ;
+  skos:prefLabel "Vehículo articulado"@es ;
+  skos:note "The dataset used also identifies other more specialised types of articulated vehicles, which may be considered in this concept scheme if necessary"@en;
+  skos:note "El conjunto de datos usado como referencia identifica también Vehículo articulado vivienda, Vehículo articulado volquete y Vehículo articulado grúa, que podrían ser incluidos en el esquema de conceptos si es necesario"@es.
+
+edintvehicletype:PRMAdaptedVehicle a skos:Concept;
+  skos:inScheme edintkos:VehicleType;
+  skos:prefLabel "PRM adapted vehicle"@en ;
+  skos:prefLabel "Vehículo adaptado PMR"@es .
+
+edintvehicletype:AdaptableMixedVehicle a skos:Concept;
+  skos:inScheme edintkos:VehicleType;
+  skos:prefLabel "Adaptable mixed vehicle"@en ;
+  skos:prefLabel "Vehículo mixto adaptable"@es .
+
+edintvehicletype:HousingVehicle a skos:Concept;
+  skos:inScheme edintkos:VehicleType;
+  skos:prefLabel "Housing vehicle"@en ;
+  skos:prefLabel "Vehículo vivienda"@es .
