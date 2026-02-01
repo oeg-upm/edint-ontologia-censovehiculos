@@ -8,7 +8,7 @@
 @prefix edintveh: <http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#> .
 @prefix edintkos: <http://vocab.linkeddata.es/datosabiertos/kos/edint/> .
 
-@prefix edintvehicleauthorisationstatus: <http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleAuthorisationStatus/> .
+@prefix edintvehiclepermitperiodicity: <http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePermitPeriodicity/> .
 
 #################################################################
 #
@@ -16,16 +16,16 @@
 #
 #################################################################
 
-edintkos:VehicleAuthorisationStatus a skos:ConceptScheme ; 
+edintkos:VehiclePermitPeriodicity a skos:ConceptScheme ; 
     dct:issued "2026-01-29"^^xsd:date ;
     dct:modified "2026-01-29"^^xsd:date ;
     cc:license <https://creativecommons.org/licenses/by/4.0/> ;
     rdfs:comment "This concept scheme belongs to the set of controlled SKOS-based thesauri used by the ontologies from the EDINT data space."@en ;
     rdfs:comment "Este esquema de conceptos pertenece al conjunto de tesauros SKOS usados por las ontologías del espacio de datos EDINT."@es ;
-    rdfs:label "Vehicle authorisation status"@en ;
-    rdfs:label "Estado de autorización de vehículo"@es ;
-    dct:title "Concept scheme grouping vehicle authorisation status"@en ;
-    dct:title "Esquema de conceptos agrupando estados de autorización de vehículos"@es ;
+    rdfs:label "Vehicle permit periodicity"@en ;
+    rdfs:label "Periodicidad de autorización de vehículo"@es ;
+    dct:title "Concept scheme grouping vehicle permit periodicities"@en ;
+    dct:title "Esquema de conceptos agrupando periodicidades de autorización de vehículos"@es ;
     skos:note "Values currently based on the list of values provided in the SER vehicle authorisation open dataset of the city of Madrid. It is possible that this concept scheme evolves into a more general one applicable to other domains, so that it is not restricted to vehicle authorisations"@en;
     skos:note "Valores basados inicialmente en el conjunto de datos de autorización de vehículos SER del portal de datos abiertos de la ciudad de Madrid. Es posible que este esquema de conceptos evolucione a uno más general aplicable a otros dominios, de tal manera que no esté restringido a autorizaciones de vehículos"@es.
 
@@ -35,22 +35,12 @@ edintkos:VehicleAuthorisationStatus a skos:ConceptScheme ;
 #
 #################################################################
 
-edintvehicleauthorisationstatus:Active a skos:Concept;
-  skos:inScheme edintkos:VehicleAuthorisationStatus;
-  skos:prefLabel "Active"@en ;
-  skos:prefLabel "Activo"@es .
+edintvehiclepermitperiodicity:Annual a skos:Concept;
+  skos:inScheme edintkos:VehiclePermitPeriodicity;
+  skos:prefLabel "Annual"@en ;
+  skos:prefLabel "Anual"@es .
 
-edintvehicleauthorisationstatus:Inactive a skos:Concept;
-  skos:inScheme edintkos:VehicleAuthorisationStatus;
-  skos:prefLabel "Inactive"@en ;
-  skos:prefLabel "Baja"@es .
-
-edintvehicleauthorisationstatus:Rejected a skos:Concept;
-  skos:inScheme edintkos:VehicleAuthorisationStatus;
-  skos:prefLabel "Rejected"@en ;
-  skos:prefLabel "Rechazado"@es .
-
-edintvehicleauthorisationstatus:InProcess a skos:Concept;
-  skos:inScheme edintkos:VehicleAuthorisationStatus;
-  skos:prefLabel "In process"@en ;
-  skos:prefLabel "En trámite"@es .
+edintvehiclepermitperiodicity:Monthly a skos:Concept;
+  skos:inScheme edintkos:VehiclePermitPeriodicity;
+  skos:prefLabel "Monthly"@en ;
+  skos:prefLabel "Mensual"@es .
