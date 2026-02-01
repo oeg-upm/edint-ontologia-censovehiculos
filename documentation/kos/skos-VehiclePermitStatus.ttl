@@ -1,0 +1,56 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix edintveh: <http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#> .
+@prefix edintkos: <http://vocab.linkeddata.es/datosabiertos/kos/edint/> .
+
+@prefix edintvehiclepermitstatus: <http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePermitStatus/> .
+
+#################################################################
+#
+#    Concept Scheme
+#
+#################################################################
+
+edintkos:VehiclePermitStatus a skos:ConceptScheme ; 
+    dct:issued "2026-01-29"^^xsd:date ;
+    dct:modified "2026-01-29"^^xsd:date ;
+    cc:license <https://creativecommons.org/licenses/by/4.0/> ;
+    rdfs:comment "This concept scheme belongs to the set of controlled SKOS-based thesauri used by the ontologies from the EDINT data space."@en ;
+    rdfs:comment "Este esquema de conceptos pertenece al conjunto de tesauros SKOS usados por las ontologías del espacio de datos EDINT."@es ;
+    rdfs:label "Vehicle permit status"@en ;
+    rdfs:label "Estado de autorización de vehículo"@es ;
+    dct:title "Concept scheme grouping vehicle permit statuses"@en ;
+    dct:title "Esquema de conceptos agrupando estados de autorización de vehículos"@es ;
+    skos:note "Values currently based on the list of values provided in the SER vehicle authorisation open dataset of the city of Madrid. It is possible that this concept scheme evolves into a more general one applicable to other domains, so that it is not restricted to vehicle authorisations"@en;
+    skos:note "Valores basados inicialmente en el conjunto de datos de autorización de vehículos SER del portal de datos abiertos de la ciudad de Madrid. Es posible que este esquema de conceptos evolucione a uno más general aplicable a otros dominios, de tal manera que no esté restringido a autorizaciones de vehículos"@es.
+
+#################################################################
+#
+#    Concepts
+#
+#################################################################
+
+edintvehiclepermitstatus:Active a skos:Concept;
+  skos:inScheme edintkos:VehiclePermitStatus;
+  skos:prefLabel "Active"@en ;
+  skos:prefLabel "Activo"@es .
+
+edintvehiclepermitstatus:Inactive a skos:Concept;
+  skos:inScheme edintkos:VehiclePermitStatus;
+  skos:prefLabel "Inactive"@en ;
+  skos:prefLabel "Baja"@es .
+
+edintvehiclepermitstatus:Rejected a skos:Concept;
+  skos:inScheme edintkos:VehiclePermitStatus;
+  skos:prefLabel "Rejected"@en ;
+  skos:prefLabel "Rechazado"@es .
+
+edintvehiclepermitstatus:InProcess a skos:Concept;
+  skos:inScheme edintkos:VehiclePermitStatus;
+  skos:prefLabel "In process"@en ;
+  skos:prefLabel "En trámite"@es .

@@ -1,0 +1,66 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix edintveh: <http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#> .
+@prefix edintkos: <http://vocab.linkeddata.es/datosabiertos/kos/edint/> .
+
+@prefix edintvehiclepermittype: <http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePermitType/> .
+
+#################################################################
+#
+#    Concept Scheme
+#
+#################################################################
+
+edintkos:VehiclePermitType a skos:ConceptScheme ; 
+    dct:issued "2026-01-29"^^xsd:date ;
+    dct:modified "2026-01-29"^^xsd:date ;
+    cc:license <https://creativecommons.org/licenses/by/4.0/> ;
+    rdfs:comment "This concept scheme belongs to the set of controlled SKOS-based thesauri used by the ontologies from the EDINT data space."@en ;
+    rdfs:comment "Este esquema de conceptos pertenece al conjunto de tesauros SKOS usados por las ontologías del espacio de datos EDINT."@es ;
+    rdfs:label "Vehicle permit type"@en ;
+    rdfs:label "Tipo de autorización de vehículo"@es ;
+    dct:title "Concept scheme grouping vehicle permit types"@en ;
+    dct:title "Esquema de conceptos agrupando tipos de autorización de vehículos"@es ;
+    skos:note "Values currently based on the list of values provided in the SER vehicle authorisation open dataset of the city of Madrid"@en;
+    skos:note "Valores basados inicialmente en el conjunto de datos de autorización de vehículos SER del portal de datos abiertos de la ciudad de Madrid"@es.
+
+#################################################################
+#
+#    Concepts
+#
+#################################################################
+
+edintvehiclepermittype:Resident a skos:Concept;
+  skos:inScheme edintkos:VehiclePermitType;
+  skos:prefLabel "Resident"@en ;
+  skos:prefLabel "Residente"@es .
+
+edintvehiclepermittype:CommercialIndustrial a skos:Concept;
+  skos:inScheme edintkos:VehiclePermitType;
+  skos:prefLabel "Commercial-Industrial"@en ;
+  skos:prefLabel "Comercial-Industrial"@es .
+
+edintvehiclepermittype:Temporal a skos:Concept;
+  skos:inScheme edintkos:VehiclePermitType;
+  skos:prefLabel "Temporal"@en ;
+  skos:prefLabel "Temporal"@es .
+
+edintvehiclepermittype:Garage a skos:Concept;
+  skos:inScheme edintkos:VehiclePermitType;
+  skos:prefLabel "Garage"@en ;
+  skos:prefLabel "Taller"@es .
+
+edintvehiclepermittype:MedicalServices a skos:Concept;
+  skos:inScheme edintkos:VehiclePermitType;
+  skos:prefLabel "Medical services"@en ;
+  skos:prefLabel "Servicios sanitarios"@es .
+
+edintvehiclepermittype:EssentialServices a skos:Concept;
+  skos:inScheme edintkos:VehiclePermitType;
+  skos:prefLabel "Essential services"@en ;
+  skos:prefLabel "Servicios esenciales"@es .

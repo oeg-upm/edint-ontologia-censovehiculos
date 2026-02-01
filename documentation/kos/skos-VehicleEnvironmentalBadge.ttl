@@ -1,0 +1,61 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix edintveh: <http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#> .
+@prefix edintkos: <http://vocab.linkeddata.es/datosabiertos/kos/edint/> .
+
+@prefix edintvehicleenvironmentalbadge: <http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleEnvironmentalBadge/> .
+
+#################################################################
+#
+#    Concept Scheme
+#
+#################################################################
+
+edintkos:VehicleEnvironmentalBadge a skos:ConceptScheme ; 
+    dct:issued "2026-01-29"^^xsd:date ;
+    dct:modified "2026-01-29"^^xsd:date ;
+    cc:license <https://creativecommons.org/licenses/by/4.0/> ;
+    rdfs:comment "This concept scheme belongs to the set of controlled SKOS-based thesauri used by the ontologies from the EDINT data space."@en ;
+    rdfs:comment "Este esquema de conceptos pertenece al conjunto de tesauros SKOS usados por las ontologías del espacio de datos EDINT."@es ;
+    rdfs:label "Vehicle environmental badge"@en ;
+    rdfs:label "Tipo de distintivo medioambiental"@es ;
+    dct:title "Concept scheme grouping vehicle environmental badges"@en ;
+    dct:title "Esquema de conceptos agrupando tipos de distintivos medioambientales"@es ;
+    skos:note "Values currently based on the list of values provided in the SER vehicle authorisation open dataset of the city of Madrid"@en;
+    skos:note "Valores basados inicialmente en el conjunto de datos de autorización de vehículos SER del portal de datos abiertos de la ciudad de Madrid"@es.
+
+#################################################################
+#
+#    Concepts
+#
+#################################################################
+
+edintvehicleenvironmentalbadge:ECO a skos:Concept;
+  skos:inScheme edintkos:VehicleEnvironmentalBadge;
+  skos:prefLabel "Eco"@en ;
+  skos:prefLabel "Eco"@es .
+
+edintvehicleenvironmentalbadge:B a skos:Concept;
+  skos:inScheme edintkos:VehicleEnvironmentalBadge;
+  skos:prefLabel "B"@en ;
+  skos:prefLabel "B"@es .
+
+edintvehicleenvironmentalbadge:C a skos:Concept;
+  skos:inScheme edintkos:VehicleEnvironmentalBadge;
+  skos:prefLabel "C"@en ;
+  skos:prefLabel "C"@es .
+
+edintvehicleenvironmentalbadge:ZeroEmissions a skos:Concept;
+  skos:inScheme edintkos:VehicleEnvironmentalBadge;
+  skos:prefLabel "Zero emissions"@en ;
+  skos:prefLabel "Cero emisiones"@es .
+
+edintvehicleenvironmentalbadge:NoBadge a skos:Concept;
+  skos:inScheme edintkos:VehicleEnvironmentalBadge;
+  skos:prefLabel "No Badge"@en ;
+  skos:prefLabel "Sin distintivo"@es .

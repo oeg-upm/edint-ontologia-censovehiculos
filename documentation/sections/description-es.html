@@ -1,0 +1,68 @@
+<h2 id="desc" class="list">censovehiculos: Descripci&oacute;n <span class="backlink"> volver a <a href="#toc">&iacute;ndice</a></span></h2>
+<span class="markdown">
+
+<p>Como se muestra en la Figura 1, hay dos conceptos principales en la ontología: <a href="#Vehicle">Vehículo</a> y <a href="#Permit">Autorización</a></p>
+    
+<p><center><img src="images/diagram.png"/><figcaption>
+Figura 1. Modelo conceptual principal de la ontología</figcaption></center></p> 
+    
+<p>La clase <a href="#Vehicle">Vehículo</a> representa los vehículos que pueden encontrarse registrados en el censo de vehículos del municipio, con el propósito de que el municipio pueda aplicar los impuestos correspondientes así como controlar el acceso a áreas específicas de la ciudad, incluyendo zonas de bajas emisiones, zonas de aparcamiento, etc. Esta clase es equivalente a la clase Vehicle de la <a href="https://saref.etsi.org/saref4auto/" target="_blank">ontología SAREF4Auto</a></p>
+    
+<p>Además de las propiedades de datos que pueden usarse para describir vehículos, y que evolucionarán de acuerdo con los casos de uso que utilicen esta ontología en el futuro, hay tres relaciones que caracterizan a los vehículos desde el punto de vista de los permisos para entra y/o aparcar en determinadas zonas. Son: <a href="#vehicleType">tipo de vehículo</a>, <a href="#propulsionType">tipo de propulsión</a> y <a href="#environmentalBadge">distintivo medioambiental</a>. Estas tres relaciones tienen como rango un esquema de conceptos SKOS: <a href="<http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleType>" target="_blank">Tipo de vehículo</a>, <a href="<http://vocab.linkeddata.es/datosabiertos/kos/edint/PropulsionType>" target="_blank">Tipo de propulsión</a> y <a href="<http://vocab.linkeddata.es/datosabiertos/kos/edint/EnvironmentalBadge>" target="_blank">Distintivo medioambiental</a>, respectivamente.</p>
+    
+<p>De manera similar, la clase <a href="#Permit">Autorización</a> representa todas las autorizaciones que un vehículo puede tener, asociadas al <a href="#Vehicle">Vehículo</a> correspondiente mediante la relación <a href="#authorisesVehicle">autoriza a vehículo</a>,   para transitar a través de o aparcar en un tramo de vía o área del municipio (representado con las relaciones <a href="#authorisesInSegment">autoriza en tramo</a> y <a href="#authorisesInArea">autoriza en área</a>, respectivamente. Los rangos de estas relaciones pertenecen a otras ontologías en este ecosistema de ontologías, usadas para representar el tráfico y las áreas de un municipio.</p>
+
+<p>Las autorizaciones también se describen con tres relaciones (<a href="#permitType">tipo de autorización</a>, <a href="#permitStatus">estado de  autorización</a> y <a href="#permitPeriodicity">periodicidad de autorización</a>), que también están conectadas con sus esquemas de conceptos SKOS correspondientes (<a href="<http://vocab.linkeddata.es/datosabiertos/kos/edint/PermitType>" target="_blank">Tipo de autorización</a>, <a href="<http://vocab.linkeddata.es/datosabiertos/kos/edint/PermitStatus>" target="_blank">Estado de autorización</a> y <a href="<http://vocab.linkeddata.es/datosabiertos/kos/edint/PermitPeriodicity>" target="_blank">Periodicidad de autorización</a>).</p>
+    
+<p>Finalmente, las Autorizaciones y los Vehículos pueden pertenecer a una Persona u Organización. Siguiendo las guías generales usadas en la red de ontologías EDINT, estos dos conceptos generales se representan usando clases de schema.org, y la unión de estas dos clases se denomina actualmente <a href="#Owner">Titular</a>, aunque este término puede cambiar en el futuro a algo más genérico como Agente.</p>
+    
+<p>A continuación mostramos un ejemplo en RDF, usando la notación RDF Turtle, que describe un <a href="#Vehicle">Vehículo</a> (una furgoneta diésel, con etiqueta B), con una <a href="#Permit">Autorización</a> anual que pertence a una empresa, y que le permite entrar en la zona de bajas emisiones de Salamanca.</p>
+
+<pre><textarea style="resize:none" readonly id="code1" name="code" rows="50" cols="100">
+@prefix ex: &lt;http://example.org/recurso/&gt; .
+@prefix edintveh: &lt;http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#&gt; .
+@prefix edintvehiclepermittype: &lt;http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePermitType/&gt; .
+@prefix edintvehiclepermitstatus: &lt;http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePermitStatus/&gt; .
+@prefix edintvehiclepermitperiodicity: &lt;http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePermitPeriodicity/&gt; .
+@prefix edintvehicletype: &lt;http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleType/&gt; .
+@prefix edintvehiclepropulsionType: &lt;http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePropulsionType/&gt; .
+@prefix edintvehicleenvironmentalbadge: &lt;http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleEnvironmentalBadge/&gt; .
+@prefix edintzona: &lt;http://vocab.linkeddata.es/datosabiertos/def/commons/zona#&gt;
+
+ex:Permit1 a edintveh:Permit ;
+  dct:identifier "Permit1" ;
+  rdfs:label "Permit for Vehicle 2" ;
+  edintveh:permitType edintvehiclepermittype:CommercialIndustrial ;
+  edintveh:permitStatus edintvehiclepermitstatus:Active ;
+  edintveh:permitPeriodicity edintvehiclepermitperiodicity:Annual ;
+  edintveh:authorisesInArea ex:ZBESalamanca ;
+  edintveh:authorisesVehicle ex:Vehicle2 ;
+  edintveh:permitOwner ex:Company3 .
+
+ex:Vehicle2 a edintveh:Vehicle ;
+  dct:identifier "1234ABC" ;
+  rdfs:label "Permit for Vehicle with plate 1234ABC" ;
+  edintveh:vehicleType edintvehicletype:Van ;
+  edintveh:propulsionType edintvehiclepropulsiontype:Diesel ;
+  edintveh:environmentalBadge edintvehicleenvironmentalbadge:B ;
+  edintveh:registeredOwner ex:Company3 .
+
+ex:ZBESalamanca a edintzona:LowEmissionsZone :
+  dct:identifier "ZBESalamanca" ;
+  rdfs:label "Zona de bajas emisiones de Salamanca" .
+  
+ex:Company3 a schema:Organisation ;
+  dct:identifier "Company3" ;
+  rdfs:label "Example, Inc." .
+
+</textarea></pre>
+    <script>
+      var editor1 = CodeMirror.fromTextArea(document.getElementById("code1"), {
+        mode: "text/turtle",
+        matchBrackets: true
+      });
+ </script>
+ 
+    
+</span>
+

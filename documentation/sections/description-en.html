@@ -1,0 +1,68 @@
+<h2 id="desc" class="list">censovehiculos: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+
+<p>As shown in Figure 1, there are two main concepts in this ontology: <a href="#Vehicle">Vehicle</a> and <a href="#Permit">Permit</a></p>
+    
+<p><center><img src="images/diagram.png"/><figcaption>
+Figure 1. Main conceptual model of the ontology</figcaption></center></p> 
+    
+<p>The class <a href="#Vehicle">Vehicle</a> represents all the vehicles that may be registered in the vehicle census/registry of the municipality, with the purpose of allowing the municipality to take care of the corresponding taxes as well as to allow controlling accesses to specific areas of the city, including low emission zones and parking areas and facilities. This class is considered equivalent to the one with the same name in the <a href="https://saref.etsi.org/saref4auto/" target="_blank">SAREF4Auto ontology</a></p>
+    
+<p>Apart from the data properties that may be used to describe vehicles, and which will be evolving according the use cases in which this ontology will be used in the future, there are three object properties that characterise vehicles from the point of view of whether they will be allowed to enter and/or park in specific areas. These are: <a href="#vehicleType">vehicle type</a>, <a href="#propulsionType">propulsion type</a> and <a href="#environmentalBadge">environmental badge</a>. These three properties have as a range their corresponding SKOS concept scheme: <a href="<http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleType>" target="_blank">Vehicle Type</a>, <a href="<http://vocab.linkeddata.es/datosabiertos/kos/edint/PropulsionType>" target="_blank">Propulsion Type</a> and <a href="<http://vocab.linkeddata.es/datosabiertos/kos/edint/EnvironmentalBadge>" target="_blank">Environmental Badge</a>, respectively.</p>
+    
+<p>Similarly, the class <a href="#Permit">Permit</a> represents all the permits that a vehicle may have, associated to a <a href="#Vehicle">Vehicle</a> via the object property <a href="#authorisesVehicle">authorises vehicle</a>,   to transit through a street segment or area of the municipality (represented with the object properties <a href="#authorisesInSegment">authorises in segment</a> and <a href="#authorisesInArea">authorises in area</a>, respectively. The ranges of these properties belong to other ontologies in this ontology ecosystem, used to represent traffic and municipality areas.</p>
+
+<p>The permits are also described using three object properties (<a href="#permitType">permit type</a>, <a href="#permitStatus">permit status</a> and <a href="#permitPeriodicity">permit periodicity</a>), which are connected to their corresponding SKOS concept schemes (<a href="<http://vocab.linkeddata.es/datosabiertos/kos/edint/PermitType>" target="_blank">Permit Type</a>, <a href="<http://vocab.linkeddata.es/datosabiertos/kos/edint/PermitStatus>" target="_blank">Permit Status</a> and <a href="<http://vocab.linkeddata.es/datosabiertos/kos/edint/PermitPeriodicity>" target="_blank">Permit Periodicity</a>).</p>
+    
+<p>Finally, Permits and Vehicles may be owned by a Person or Organisation. Following the general guidelines used in the EDINT ontology network, these two general concepts are represented using schema.org classes, and the union of these two classes is currently named <a href="#Owner">Owner</a>, although this term may change in the future to something more general like Agent.</p>
+    
+<p>Next we show an example in RDF, using the RDF Turtle notation, that describes a <a href="#Vehicle">Vehicle</a> (a diesel van, with an environmental badge B), with an annual <a href="#Permit">Permit</a> that belongs to a company, and which allows it to enter in the low emissions zone of the city of Salamanca.</p>
+
+<pre><textarea style="resize:none" readonly id="code1" name="code" rows="50" cols="100">
+@prefix ex: &lt;http://example.org/recurso/&gt; .
+@prefix edintveh: &lt;http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#&gt; .
+@prefix edintvehiclepermittype: &lt;http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePermitType/&gt; .
+@prefix edintvehiclepermitstatus: &lt;http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePermitStatus/&gt; .
+@prefix edintvehiclepermitperiodicity: &lt;http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePermitPeriodicity/&gt; .
+@prefix edintvehicletype: &lt;http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleType/&gt; .
+@prefix edintvehiclepropulsionType: &lt;http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePropulsionType/&gt; .
+@prefix edintvehicleenvironmentalbadge: &lt;http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleEnvironmentalBadge/&gt; .
+@prefix edintzona: &lt;http://vocab.linkeddata.es/datosabiertos/def/commons/zona#&gt;
+
+ex:Permit1 a edintveh:Permit ;
+  dct:identifier "Permit1" ;
+  rdfs:label "Permit for Vehicle 2" ;
+  edintveh:permitType edintvehiclepermittype:CommercialIndustrial ;
+  edintveh:permitStatus edintvehiclepermitstatus:Active ;
+  edintveh:permitPeriodicity edintvehiclepermitperiodicity:Annual ;
+  edintveh:authorisesInArea ex:ZBESalamanca ;
+  edintveh:authorisesVehicle ex:Vehicle2 ;
+  edintveh:permitOwner ex:Company3 .
+
+ex:Vehicle2 a edintveh:Vehicle ;
+  dct:identifier "1234ABC" ;
+  rdfs:label "Permit for Vehicle with plate 1234ABC" ;
+  edintveh:vehicleType edintvehicletype:Van ;
+  edintveh:propulsionType edintvehiclepropulsiontype:Diesel ;
+  edintveh:environmentalBadge edintvehicleenvironmentalbadge:B ;
+  edintveh:registeredOwner ex:Company3 .
+
+ex:ZBESalamanca a edintzona:LowEmissionsZone :
+  dct:identifier "ZBESalamanca" ;
+  rdfs:label "Zona de bajas emisiones de Salamanca" .
+  
+ex:Company3 a schema:Organisation ;
+  dct:identifier "Company3" ;
+  rdfs:label "Example, Inc." .
+
+</textarea></pre>
+    <script>
+      var editor1 = CodeMirror.fromTextArea(document.getElementById("code1"), {
+        mode: "text/turtle",
+        matchBrackets: true
+      });
+ </script>
+ 
+
+</span>
+
