@@ -757,7 +757,7 @@
         <mxCell id="cgG5sZAH01hKlWfTNP8I-6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;snapToPoint=1;points=[[0.1,0],[0.2,0],[0.3,0],[0.4,0],[0.5,0],[0.6,0],[0.7,0],[0.8,0],[0.9,0],[0,0.1],[0,0.3],[0,0.5],[0,0.7],[0,0.9],[0.1,1],[0.2,1],[0.3,1],[0.4,1],[0.5,1],[0.6,1],[0.7,1],[0.8,1],[0.9,1],[1,0.1],[1,0.3],[1,0.5],[1,0.7],[1,0.9]];" value="edintveh:Vehicle&lt;br&gt;(Vehículo)&lt;br&gt;(= s4auto:Vehicle)" vertex="1">
           <mxGeometry height="49.5" width="120" x="1630" y="810" as="geometry" />
         </mxCell>
-        <mxCell id="cgG5sZAH01hKlWfTNP8I-9" parent="1" style="rounded=0;whiteSpace=wrap;html=1;snapToPoint=1;points=[[0.1,0],[0.2,0],[0.3,0],[0.4,0],[0.5,0],[0.6,0],[0.7,0],[0.8,0],[0.9,0],[0,0.1],[0,0.3],[0,0.5],[0,0.7],[0,0.9],[0.1,1],[0.2,1],[0.3,1],[0.4,1],[0.5,1],[0.6,1],[0.7,1],[0.8,1],[0.9,1],[1,0.1],[1,0.3],[1,0.5],[1,0.7],[1,0.9]];" value="edintveh:Authorisation&lt;br&gt;(Autorización)" vertex="1">
+        <mxCell id="cgG5sZAH01hKlWfTNP8I-9" parent="1" style="rounded=0;whiteSpace=wrap;html=1;snapToPoint=1;points=[[0.1,0],[0.2,0],[0.3,0],[0.4,0],[0.5,0],[0.6,0],[0.7,0],[0.8,0],[0.9,0],[0,0.1],[0,0.3],[0,0.5],[0,0.7],[0,0.9],[0.1,1],[0.2,1],[0.3,1],[0.4,1],[0.5,1],[0.6,1],[0.7,1],[0.8,1],[0.9,1],[1,0.1],[1,0.3],[1,0.5],[1,0.7],[1,0.9]];" value="edintveh:Permit&lt;br&gt;(Autorización)" vertex="1">
           <mxGeometry height="50" width="120" x="1324" y="810" as="geometry" />
         </mxCell>
         <mxCell id="cgG5sZAH01hKlWfTNP8I-16" parent="1" style="rounded=0;whiteSpace=wrap;html=1;snapToPoint=1;points=[[0.1,0],[0.2,0],[0.3,0],[0.4,0],[0.5,0],[0.6,0],[0.7,0],[0.8,0],[0.9,0],[0,0.1],[0,0.3],[0,0.5],[0,0.7],[0,0.9],[0.1,1],[0.2,1],[0.3,1],[0.4,1],[0.5,1],[0.6,1],[0.7,1],[0.8,1],[0.9,1],[1,0.1],[1,0.3],[1,0.5],[1,0.7],[1,0.9]];" value="edintveh:Owner&lt;br&gt;(Titular)" vertex="1">
@@ -879,7 +879,7 @@
             <mxPoint x="1060" y="676.9200000000001" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="cgG5sZAH01hKlWfTNP8I-40" connectable="0" parent="cgG5sZAH01hKlWfTNP8I-39" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#ffffff;" value="edintveh:authorisationOwner (titularAutorización)" vertex="1">
+        <mxCell id="cgG5sZAH01hKlWfTNP8I-40" connectable="0" parent="cgG5sZAH01hKlWfTNP8I-39" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#ffffff;" value="edintveh:permitOwner (titularAutorización)" vertex="1">
           <mxGeometry relative="1" x="-0.1269" as="geometry">
             <mxPoint x="81" y="-15" as="offset" />
           </mxGeometry>
@@ -894,7 +894,7 @@
             <mxPoint x="1268.67" y="587.1300000000001" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="cgG5sZAH01hKlWfTNP8I-61" connectable="0" parent="cgG5sZAH01hKlWfTNP8I-60" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#ffffff;" value="edintveh:authorisationType &lt;br&gt;(tipoAutorizacion)" vertex="1">
+        <mxCell id="cgG5sZAH01hKlWfTNP8I-61" connectable="0" parent="cgG5sZAH01hKlWfTNP8I-60" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#ffffff;" value="edintveh:permitType &lt;br&gt;(tipoAutorizacion)" vertex="1">
           <mxGeometry relative="1" x="-0.1269" as="geometry">
             <mxPoint x="-168" y="-30" as="offset" />
           </mxGeometry>
@@ -909,7 +909,7 @@
             <mxPoint x="1524.67" y="587.1300000000001" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="cgG5sZAH01hKlWfTNP8I-63" connectable="0" parent="cgG5sZAH01hKlWfTNP8I-62" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#ffffff;" value="edintveh:authorisationStatus&lt;br&gt;(estadoAutorización)" vertex="1">
+        <mxCell id="cgG5sZAH01hKlWfTNP8I-63" connectable="0" parent="cgG5sZAH01hKlWfTNP8I-62" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#ffffff;" value="edintveh:permitStatus&lt;br&gt;(estadoAutorización)" vertex="1">
           <mxGeometry relative="1" x="-0.1269" as="geometry">
             <mxPoint x="156" y="-40" as="offset" />
           </mxGeometry>
@@ -924,7 +924,7 @@
             <mxPoint x="1782.67" y="580.1300000000001" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="cgG5sZAH01hKlWfTNP8I-65" connectable="0" parent="cgG5sZAH01hKlWfTNP8I-64" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#ffffff;" value="edintveh:authorisationPeriodicity&lt;br&gt;(periodicidad)" vertex="1">
+        <mxCell id="cgG5sZAH01hKlWfTNP8I-65" connectable="0" parent="cgG5sZAH01hKlWfTNP8I-64" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#ffffff;" value="edintveh:permitPeriodicity&lt;br&gt;(periodicidad)" vertex="1">
           <mxGeometry relative="1" x="-0.1269" as="geometry">
             <mxPoint x="349" y="-37" as="offset" />
           </mxGeometry>
@@ -1000,13 +1000,13 @@
             <mxPoint x="1403.551818181818" y="1050" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="cgG5sZAH01hKlWfTNP8I-101" parent="1" style="rounded=0;whiteSpace=wrap;html=1;snapToPoint=1;points=[[0.1,0],[0.2,0],[0.3,0],[0.4,0],[0.5,0],[0.6,0],[0.7,0],[0.8,0],[0.9,0],[0,0.1],[0,0.3],[0,0.5],[0,0.7],[0,0.9],[0.1,1],[0.2,1],[0.3,1],[0.4,1],[0.5,1],[0.6,1],[0.7,1],[0.8,1],[0.9,1],[1,0.1],[1,0.3],[1,0.5],[1,0.7],[1,0.9]];" value="skos:Concept&lt;br&gt;&amp;lt;&amp;lt;skos:inScheme edintkos:VehicleAuthorisationType&amp;gt;&amp;gt;&lt;div&gt;(&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;TipoAutorizacionVehiculo)&lt;/span&gt;&lt;/div&gt;" vertex="1">
+        <mxCell id="cgG5sZAH01hKlWfTNP8I-101" parent="1" style="rounded=0;whiteSpace=wrap;html=1;snapToPoint=1;points=[[0.1,0],[0.2,0],[0.3,0],[0.4,0],[0.5,0],[0.6,0],[0.7,0],[0.8,0],[0.9,0],[0,0.1],[0,0.3],[0,0.5],[0,0.7],[0,0.9],[0.1,1],[0.2,1],[0.3,1],[0.4,1],[0.5,1],[0.6,1],[0.7,1],[0.8,1],[0.9,1],[1,0.1],[1,0.3],[1,0.5],[1,0.7],[1,0.9]];" value="skos:Concept&lt;br&gt;&amp;lt;&amp;lt;skos:inScheme edintkos:VehiclePermitType&amp;gt;&amp;gt;&lt;div&gt;(&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;TipoAutorizacionVehiculo)&lt;/span&gt;&lt;/div&gt;" vertex="1">
           <mxGeometry height="47.13" width="300" x="1046" y="516" as="geometry" />
         </mxCell>
-        <mxCell id="cgG5sZAH01hKlWfTNP8I-126" parent="1" style="rounded=0;whiteSpace=wrap;html=1;snapToPoint=1;points=[[0.1,0],[0.2,0],[0.3,0],[0.4,0],[0.5,0],[0.6,0],[0.7,0],[0.8,0],[0.9,0],[0,0.1],[0,0.3],[0,0.5],[0,0.7],[0,0.9],[0.1,1],[0.2,1],[0.3,1],[0.4,1],[0.5,1],[0.6,1],[0.7,1],[0.8,1],[0.9,1],[1,0.1],[1,0.3],[1,0.5],[1,0.7],[1,0.9]];" value="skos:Concept&lt;br&gt;&amp;lt;&amp;lt;skos:inScheme edintkos:VehicleAuthorisationStatus&amp;gt;&amp;gt;&lt;div&gt;(&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;EstadoAutorizacionVehiculo)&lt;/span&gt;&lt;/div&gt;" vertex="1">
+        <mxCell id="cgG5sZAH01hKlWfTNP8I-126" parent="1" style="rounded=0;whiteSpace=wrap;html=1;snapToPoint=1;points=[[0.1,0],[0.2,0],[0.3,0],[0.4,0],[0.5,0],[0.6,0],[0.7,0],[0.8,0],[0.9,0],[0,0.1],[0,0.3],[0,0.5],[0,0.7],[0,0.9],[0.1,1],[0.2,1],[0.3,1],[0.4,1],[0.5,1],[0.6,1],[0.7,1],[0.8,1],[0.9,1],[1,0.1],[1,0.3],[1,0.5],[1,0.7],[1,0.9]];" value="skos:Concept&lt;br&gt;&amp;lt;&amp;lt;skos:inScheme edintkos:VehiclePermitStatus&amp;gt;&amp;gt;&lt;div&gt;(&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;EstadoAutorizacionVehiculo)&lt;/span&gt;&lt;/div&gt;" vertex="1">
           <mxGeometry height="47.13" width="320" x="1370" y="516" as="geometry" />
         </mxCell>
-        <mxCell id="cgG5sZAH01hKlWfTNP8I-127" parent="1" style="rounded=0;whiteSpace=wrap;html=1;snapToPoint=1;points=[[0.1,0],[0.2,0],[0.3,0],[0.4,0],[0.5,0],[0.6,0],[0.7,0],[0.8,0],[0.9,0],[0,0.1],[0,0.3],[0,0.5],[0,0.7],[0,0.9],[0.1,1],[0.2,1],[0.3,1],[0.4,1],[0.5,1],[0.6,1],[0.7,1],[0.8,1],[0.9,1],[1,0.1],[1,0.3],[1,0.5],[1,0.7],[1,0.9]];" value="skos:Concept&lt;br&gt;&amp;lt;&amp;lt;skos:inScheme edintkos:VehicleAuthorisationPeriodicity&amp;gt;&amp;gt;&lt;div&gt;(&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;PeriodicidadAutorizacionVehiculo)&lt;/span&gt;&lt;/div&gt;" vertex="1">
+        <mxCell id="cgG5sZAH01hKlWfTNP8I-127" parent="1" style="rounded=0;whiteSpace=wrap;html=1;snapToPoint=1;points=[[0.1,0],[0.2,0],[0.3,0],[0.4,0],[0.5,0],[0.6,0],[0.7,0],[0.8,0],[0.9,0],[0,0.1],[0,0.3],[0,0.5],[0,0.7],[0,0.9],[0.1,1],[0.2,1],[0.3,1],[0.4,1],[0.5,1],[0.6,1],[0.7,1],[0.8,1],[0.9,1],[1,0.1],[1,0.3],[1,0.5],[1,0.7],[1,0.9]];" value="skos:Concept&lt;br&gt;&amp;lt;&amp;lt;skos:inScheme edintkos:VehiclePermitPeriodicity&amp;gt;&amp;gt;&lt;div&gt;(&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;PeriodicidadAutorizacionVehiculo)&lt;/span&gt;&lt;/div&gt;" vertex="1">
           <mxGeometry height="47.13" width="350" x="1720" y="516" as="geometry" />
         </mxCell>
         <mxCell id="cgG5sZAH01hKlWfTNP8I-128" parent="1" style="rounded=0;whiteSpace=wrap;html=1;snapToPoint=1;points=[[0.1,0],[0.2,0],[0.3,0],[0.4,0],[0.5,0],[0.6,0],[0.7,0],[0.8,0],[0.9,0],[0,0.1],[0,0.3],[0,0.5],[0,0.7],[0,0.9],[0.1,1],[0.2,1],[0.3,1],[0.4,1],[0.5,1],[0.6,1],[0.7,1],[0.8,1],[0.9,1],[1,0.1],[1,0.3],[1,0.5],[1,0.7],[1,0.9]];" value="skos:Concept&lt;br&gt;&amp;lt;&amp;lt;skos:inScheme edintkos:VehicleType&amp;gt;&amp;gt;&lt;div&gt;(TipoVehículo)&lt;/div&gt;" vertex="1">
