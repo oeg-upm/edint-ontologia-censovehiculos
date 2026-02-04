@@ -10,7 +10,7 @@
 	 prov:wasAttributedTo :agent3;
 	 prov:wasAttributedTo <https://github.com/dgarijo/Widoco/>,<http://www.essepuntato.it/lode/>;
 	 prov:specializationOf <http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#>;
-	 prov:wasGeneratedAt "Date of release";
+	 prov:wasGeneratedAt "2026-01-29";
 .
 :agent0 a prov:Agent; foaf:name "Daniel Doña".
 :agent1 a prov:Agent; foaf:name "Edna Ruckhaus".
