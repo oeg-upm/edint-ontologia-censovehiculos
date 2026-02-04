@@ -721,10 +721,13 @@
     </mxGraphModel>
   </diagram>
   <diagram id="DicrUQL0-ErC2kpqFqQI" name="ModeloConceptual">
-    <mxGraphModel dx="863" dy="589" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="881" dy="598" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="KJXqv6px2h66h55jfKWk-15" parent="1" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;dashPattern=1 3" value="" vertex="1">
+          <mxGeometry height="100" width="209" x="1500" y="690" as="geometry" />
+        </mxCell>
         <mxCell id="KJXqv6px2h66h55jfKWk-9" parent="1" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;dashPattern=1 3" value="" vertex="1">
           <mxGeometry height="57" width="169" x="986" y="693" as="geometry" />
         </mxCell>
@@ -754,7 +757,7 @@
             <mxPoint x="4.17" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="cgG5sZAH01hKlWfTNP8I-6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;snapToPoint=1;points=[[0.1,0],[0.2,0],[0.3,0],[0.4,0],[0.5,0],[0.6,0],[0.7,0],[0.8,0],[0.9,0],[0,0.1],[0,0.3],[0,0.5],[0,0.7],[0,0.9],[0.1,1],[0.2,1],[0.3,1],[0.4,1],[0.5,1],[0.6,1],[0.7,1],[0.8,1],[0.9,1],[1,0.1],[1,0.3],[1,0.5],[1,0.7],[1,0.9]];" value="edintveh:Vehicle&lt;br&gt;(Vehículo)&lt;br&gt;(= s4auto:Vehicle)" vertex="1">
+        <mxCell id="cgG5sZAH01hKlWfTNP8I-6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;snapToPoint=1;points=[[0.1,0],[0.2,0],[0.3,0],[0.4,0],[0.5,0],[0.6,0],[0.7,0],[0.8,0],[0.9,0],[0,0.1],[0,0.3],[0,0.5],[0,0.7],[0,0.9],[0.1,1],[0.2,1],[0.3,1],[0.4,1],[0.5,1],[0.6,1],[0.7,1],[0.8,1],[0.9,1],[1,0.1],[1,0.3],[1,0.5],[1,0.7],[1,0.9]];" value="edintveh:Vehicle&lt;br&gt;(Vehículo)" vertex="1">
           <mxGeometry height="49.5" width="120" x="1630" y="810" as="geometry" />
         </mxCell>
         <mxCell id="cgG5sZAH01hKlWfTNP8I-9" parent="1" style="rounded=0;whiteSpace=wrap;html=1;snapToPoint=1;points=[[0.1,0],[0.2,0],[0.3,0],[0.4,0],[0.5,0],[0.6,0],[0.7,0],[0.8,0],[0.9,0],[0,0.1],[0,0.3],[0,0.5],[0,0.7],[0,0.9],[0.1,1],[0.2,1],[0.3,1],[0.4,1],[0.5,1],[0.6,1],[0.7,1],[0.8,1],[0.9,1],[1,0.1],[1,0.3],[1,0.5],[1,0.7],[1,0.9]];" value="edintveh:Permit&lt;br&gt;(Autorización)" vertex="1">
@@ -798,8 +801,8 @@
             <mxPoint x="7" y="-10" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="cgG5sZAH01hKlWfTNP8I-26" parent="1" style="rounded=0;whiteSpace=wrap;html=1;snapToPoint=1;points=[[0.1,0],[0.2,0],[0.3,0],[0.4,0],[0.5,0],[0.6,0],[0.7,0],[0.8,0],[0.9,0],[0,0.1],[0,0.3],[0,0.5],[0,0.7],[0,0.9],[0.1,1],[0.2,1],[0.3,1],[0.4,1],[0.5,1],[0.6,1],[0.7,1],[0.8,1],[0.9,1],[1,0.1],[1,0.3],[1,0.5],[1,0.7],[1,0.9]];" value="edintzona:ZonaRegulatoria" vertex="1">
-          <mxGeometry height="30" width="150" x="1309" y="1020" as="geometry" />
+        <mxCell id="cgG5sZAH01hKlWfTNP8I-26" parent="1" style="rounded=0;whiteSpace=wrap;html=1;snapToPoint=1;points=[[0.1,0],[0.2,0],[0.3,0],[0.4,0],[0.5,0],[0.6,0],[0.7,0],[0.8,0],[0.9,0],[0,0.1],[0,0.3],[0,0.5],[0,0.7],[0,0.9],[0.1,1],[0.2,1],[0.3,1],[0.4,1],[0.5,1],[0.6,1],[0.7,1],[0.8,1],[0.9,1],[1,0.1],[1,0.3],[1,0.5],[1,0.7],[1,0.9]];" value="edintzone:TrafficControlledZone&lt;br&gt;(ZonaDeTraficoRegulado)" vertex="1">
+          <mxGeometry height="30" width="191" x="1289" y="1044" as="geometry" />
         </mxCell>
         <mxCell id="cgG5sZAH01hKlWfTNP8I-27" edge="1" parent="1" source="cgG5sZAH01hKlWfTNP8I-6" style="endArrow=classic;html=1;endSize=8;arcSize=0;rounded=0;edgeStyle=orthogonalEdgeStyle;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.7;exitDx=0;exitDy=0;" target="cgG5sZAH01hKlWfTNP8I-130" value="">
           <mxGeometry height="50" relative="1" width="50" as="geometry">
@@ -859,15 +862,15 @@
         <mxCell id="cgG5sZAH01hKlWfTNP8I-36" edge="1" parent="1" source="cgG5sZAH01hKlWfTNP8I-3" style="endArrow=classic;html=1;endSize=8;arcSize=0;rounded=0;edgeStyle=orthogonalEdgeStyle;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="cgG5sZAH01hKlWfTNP8I-26" value="">
           <mxGeometry height="50" relative="1" width="50" as="geometry">
             <Array as="points">
-              <mxPoint x="1066" y="1040" />
+              <mxPoint x="1066" y="1059" />
             </Array>
             <mxPoint x="1121" y="957" as="sourcePoint" />
             <mxPoint x="1321" y="1077" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="cgG5sZAH01hKlWfTNP8I-37" connectable="0" parent="cgG5sZAH01hKlWfTNP8I-36" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#ffffff;" value="&lt;div&gt;edintzona:perteneceAZona&lt;/div&gt;" vertex="1">
+        <mxCell id="cgG5sZAH01hKlWfTNP8I-37" connectable="0" parent="cgG5sZAH01hKlWfTNP8I-36" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#ffffff;" value="&lt;div&gt;edintzone:belongsToZone&lt;br&gt;(perteneceAZona)&lt;/div&gt;" vertex="1">
           <mxGeometry relative="1" x="-0.1269" as="geometry">
-            <mxPoint y="-12" as="offset" />
+            <mxPoint y="-1" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="cgG5sZAH01hKlWfTNP8I-39" edge="1" parent="1" source="cgG5sZAH01hKlWfTNP8I-9" style="endArrow=classic;html=1;endSize=8;arcSize=0;rounded=0;edgeStyle=orthogonalEdgeStyle;exitX=0.7;exitY=0;exitDx=0;exitDy=0;" target="cgG5sZAH01hKlWfTNP8I-16" value="">
@@ -960,44 +963,32 @@
             <mxPoint x="26" y="-2" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="cgG5sZAH01hKlWfTNP8I-71" parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;" value="&lt;div&gt;&lt;b&gt;@base&lt;/b&gt;:&amp;nbsp;http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;b&gt;edintveh:&amp;nbsp;&lt;/b&gt;&lt;/span&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;http://vocab.linkeddata.es/datosabiertos/def/&lt;/span&gt;transporte/censovehiculos&lt;span style=&quot;background-color: transparent;&quot;&gt;#&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;&lt;b&gt;edintkos&lt;/b&gt;:&amp;nbsp;http://vocab.linkeddata.es/datosabiertos/kos/edint/&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;b style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;owl&lt;/b&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;: http://www.w3.org/2002/07/owl#&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;b&gt;rdf&lt;/b&gt;: http://www.w3.org/1999/02/22-rdf-syntax-ns#&lt;/div&gt;&lt;div&gt;&lt;b&gt;rdfs&lt;/b&gt;: http://www.w3.org/2000/01/rdf-schema#&lt;/div&gt;&lt;div&gt;&lt;b style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;dc&lt;/b&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;: http://purl.org/dc/elements/1.1/&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;dcterms&lt;/b&gt;: http://purl.org/dc/terms/&lt;/div&gt;&lt;div&gt;&lt;b&gt;skos&lt;/b&gt;: http://www.w3.org/2004/02/skos/core#&lt;/div&gt;&lt;div&gt;&lt;b&gt;vann&lt;/b&gt;: http://purl.org/vocab/vann/&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;edintzona:&amp;nbsp;&lt;/b&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;http://vocab.linkeddata.es/datosabiertos/def/commons/zona#&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;b&gt;edintmi:&lt;/b&gt;&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;http://vocab.linkeddata.es/datosabiertos/def/casos/movilidadinteligente#&lt;/span&gt;&lt;/div&gt;&lt;/span&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div&gt;&lt;b&gt;escjr&lt;/b&gt;: http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero#&lt;/div&gt;&lt;div&gt;&lt;b&gt;estraf&lt;/b&gt;:&amp;nbsp;http://vocab.ciudadesabiertas.es/def/transporte/trafico#&lt;/div&gt;&lt;div&gt;&lt;b&gt;esadm&lt;/b&gt;: http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;b style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;gsp&lt;/b&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;: http://www.opengis.net/spec/geosparql/1.0/&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;s4auto:&amp;nbsp;&lt;/b&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;https://saref.etsi.org/saref4auto/Vehicle/&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;div&gt;&lt;b&gt;sosa&lt;/b&gt;:&amp;nbsp;http://www.w3.org/ns/sosa/&lt;/div&gt;&lt;div&gt;&lt;b&gt;vsso&lt;/b&gt;:&amp;nbsp;https://github.com/w3c/vsso#&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;b&gt;schema:&lt;/b&gt; https://schema.org/&lt;/div&gt;&lt;/span&gt;&lt;/div&gt;" vertex="1">
+        <mxCell id="cgG5sZAH01hKlWfTNP8I-71" parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;" value="&lt;div&gt;&lt;b&gt;@base&lt;/b&gt;:&amp;nbsp;http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;b&gt;edintveh:&amp;nbsp;&lt;/b&gt;&lt;/span&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;http://vocab.linkeddata.es/datosabiertos/def/&lt;/span&gt;transporte/censovehiculos&lt;span style=&quot;background-color: transparent;&quot;&gt;#&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;&lt;b&gt;edintkos&lt;/b&gt;:&amp;nbsp;http://vocab.linkeddata.es/datosabiertos/kos/edint/&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;b style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;owl&lt;/b&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;: http://www.w3.org/2002/07/owl#&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;b&gt;rdf&lt;/b&gt;: http://www.w3.org/1999/02/22-rdf-syntax-ns#&lt;/div&gt;&lt;div&gt;&lt;b&gt;rdfs&lt;/b&gt;: http://www.w3.org/2000/01/rdf-schema#&lt;/div&gt;&lt;div&gt;&lt;b style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;dc&lt;/b&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;: http://purl.org/dc/elements/1.1/&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;dcterms&lt;/b&gt;: http://purl.org/dc/terms/&lt;/div&gt;&lt;div&gt;&lt;b&gt;skos&lt;/b&gt;: http://www.w3.org/2004/02/skos/core#&lt;/div&gt;&lt;div&gt;&lt;b&gt;vann&lt;/b&gt;: http://purl.org/vocab/vann/&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;edintzone:&amp;nbsp;&lt;/b&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;http://vocab.linkeddata.es/datosabiertos/def/commons/zone#&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;b&gt;edintmi:&lt;/b&gt;&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;http://vocab.linkeddata.es/datosabiertos/def/casos/movilidadinteligente#&lt;/span&gt;&lt;/div&gt;&lt;/span&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div&gt;&lt;b&gt;escjr&lt;/b&gt;: http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero#&lt;/div&gt;&lt;div&gt;&lt;b&gt;estraf&lt;/b&gt;:&amp;nbsp;http://vocab.ciudadesabiertas.es/def/transporte/trafico#&lt;/div&gt;&lt;div&gt;&lt;b&gt;esadm&lt;/b&gt;: http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;b style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;gsp&lt;/b&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;: http://www.opengis.net/spec/geosparql/1.0/&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;s4auto:&amp;nbsp;&lt;/b&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;https://saref.etsi.org/saref4auto/&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;div&gt;&lt;b&gt;sosa&lt;/b&gt;:&amp;nbsp;http://www.w3.org/ns/sosa/&lt;/div&gt;&lt;div&gt;&lt;b&gt;vsso&lt;/b&gt;:&amp;nbsp;https://github.com/w3c/vsso#&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;b&gt;schema:&lt;/b&gt; https://schema.org/&lt;/div&gt;&lt;/span&gt;&lt;/div&gt;" vertex="1">
           <mxGeometry height="340" width="510" x="330" y="511" as="geometry" />
         </mxCell>
-        <mxCell id="cgG5sZAH01hKlWfTNP8I-72" parent="1" style="rounded=0;whiteSpace=wrap;html=1;snapToPoint=1;points=[[0.1,0],[0.2,0],[0.3,0],[0.4,0],[0.5,0],[0.6,0],[0.7,0],[0.8,0],[0.9,0],[0,0.1],[0,0.3],[0,0.5],[0,0.7],[0,0.9],[0.1,1],[0.2,1],[0.3,1],[0.4,1],[0.5,1],[0.6,1],[0.7,1],[0.8,1],[0.9,1],[1,0.1],[1,0.3],[1,0.5],[1,0.7],[1,0.9]];" value="edintzona:ZonaEstacionamientoRegulado" vertex="1">
+        <mxCell id="cgG5sZAH01hKlWfTNP8I-72" parent="1" style="rounded=0;whiteSpace=wrap;html=1;snapToPoint=1;points=[[0.1,0],[0.2,0],[0.3,0],[0.4,0],[0.5,0],[0.6,0],[0.7,0],[0.8,0],[0.9,0],[0,0.1],[0,0.3],[0,0.5],[0,0.7],[0,0.9],[0.1,1],[0.2,1],[0.3,1],[0.4,1],[0.5,1],[0.6,1],[0.7,1],[0.8,1],[0.9,1],[1,0.1],[1,0.3],[1,0.5],[1,0.7],[1,0.9]];" value="edintzone:RegulatedParkingZone&lt;br&gt;(ZonaEstacionamientoRegulado)" vertex="1">
           <mxGeometry height="30" width="234.37" x="1100" y="1098.94" as="geometry" />
         </mxCell>
-        <mxCell id="cgG5sZAH01hKlWfTNP8I-73" edge="1" parent="1" source="cgG5sZAH01hKlWfTNP8I-72" style="endArrow=block;html=1;fontColor=#000099;endFill=0;endSize=8;arcSize=0;rounded=0;edgeStyle=orthogonalEdgeStyle;" target="cgG5sZAH01hKlWfTNP8I-26" value="">
+        <mxCell id="cgG5sZAH01hKlWfTNP8I-73" edge="1" parent="1" source="cgG5sZAH01hKlWfTNP8I-72" style="endArrow=block;html=1;fontColor=#000099;endFill=0;endSize=8;arcSize=0;rounded=0;edgeStyle=orthogonalEdgeStyle;" value="">
           <mxGeometry height="50" relative="1" width="50" as="geometry">
             <Array as="points">
-              <mxPoint x="1398" y="1119" />
+              <mxPoint x="1390" y="1119" />
             </Array>
             <mxPoint x="784.37" y="1178.94" as="sourcePoint" />
-            <mxPoint x="1403.551818181818" y="1050" as="targetPoint" />
+            <mxPoint x="1390" y="1070" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="cgG5sZAH01hKlWfTNP8I-74" parent="1" style="rounded=0;whiteSpace=wrap;html=1;snapToPoint=1;points=[[0.1,0],[0.2,0],[0.3,0],[0.4,0],[0.5,0],[0.6,0],[0.7,0],[0.8,0],[0.9,0],[0,0.1],[0,0.3],[0,0.5],[0,0.7],[0,0.9],[0.1,1],[0.2,1],[0.3,1],[0.4,1],[0.5,1],[0.6,1],[0.7,1],[0.8,1],[0.9,1],[1,0.1],[1,0.3],[1,0.5],[1,0.7],[1,0.9]];" value="edintzona:ZonaBajasEmisiones" vertex="1">
-          <mxGeometry height="30" width="234.37" x="1100" y="1148.94" as="geometry" />
+        <mxCell id="cgG5sZAH01hKlWfTNP8I-74" parent="1" style="rounded=0;whiteSpace=wrap;html=1;snapToPoint=1;points=[[0.1,0],[0.2,0],[0.3,0],[0.4,0],[0.5,0],[0.6,0],[0.7,0],[0.8,0],[0.9,0],[0,0.1],[0,0.3],[0,0.5],[0,0.7],[0,0.9],[0.1,1],[0.2,1],[0.3,1],[0.4,1],[0.5,1],[0.6,1],[0.7,1],[0.8,1],[0.9,1],[1,0.1],[1,0.3],[1,0.5],[1,0.7],[1,0.9]];" value="edintzone:LowEmissionsZone&lt;div&gt;(ZonaBajasEmisiones)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="234.37" x="1100" y="1181.94" as="geometry" />
         </mxCell>
-        <mxCell id="cgG5sZAH01hKlWfTNP8I-75" edge="1" parent="1" source="cgG5sZAH01hKlWfTNP8I-74" style="endArrow=block;html=1;fontColor=#000099;endFill=0;endSize=8;arcSize=0;rounded=0;edgeStyle=orthogonalEdgeStyle;" target="cgG5sZAH01hKlWfTNP8I-26" value="">
+        <mxCell id="cgG5sZAH01hKlWfTNP8I-75" edge="1" parent="1" source="cgG5sZAH01hKlWfTNP8I-74" style="endArrow=block;html=1;fontColor=#000099;endFill=0;endSize=8;arcSize=0;rounded=0;edgeStyle=orthogonalEdgeStyle;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" value="">
           <mxGeometry height="50" relative="1" width="50" as="geometry">
             <Array as="points">
-              <mxPoint x="1398" y="1164" />
+              <mxPoint x="1390" y="1197" />
+              <mxPoint x="1390" y="1074" />
             </Array>
             <mxPoint x="784.37" y="1227.94" as="sourcePoint" />
-            <mxPoint x="1403.551818181818" y="1050" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="cgG5sZAH01hKlWfTNP8I-76" parent="1" style="rounded=0;whiteSpace=wrap;html=1;snapToPoint=1;points=[[0.1,0],[0.2,0],[0.3,0],[0.4,0],[0.5,0],[0.6,0],[0.7,0],[0.8,0],[0.9,0],[0,0.1],[0,0.3],[0,0.5],[0,0.7],[0,0.9],[0.1,1],[0.2,1],[0.3,1],[0.4,1],[0.5,1],[0.6,1],[0.7,1],[0.8,1],[0.9,1],[1,0.1],[1,0.3],[1,0.5],[1,0.7],[1,0.9]];" value="edintzona:ZonaInterésEconómico" vertex="1">
-          <mxGeometry height="30" width="234.37" x="1100" y="1199.47" as="geometry" />
-        </mxCell>
-        <mxCell id="cgG5sZAH01hKlWfTNP8I-77" edge="1" parent="1" source="cgG5sZAH01hKlWfTNP8I-76" style="endArrow=block;html=1;fontColor=#000099;endFill=0;endSize=8;arcSize=0;rounded=0;edgeStyle=orthogonalEdgeStyle;exitX=1;exitY=0.7;exitDx=0;exitDy=0;" target="cgG5sZAH01hKlWfTNP8I-26" value="">
-          <mxGeometry height="50" relative="1" width="50" as="geometry">
-            <Array as="points">
-              <mxPoint x="1334" y="1214" />
-              <mxPoint x="1398" y="1214" />
-            </Array>
-            <mxPoint x="1415.227142857143" y="1379.47" as="sourcePoint" />
-            <mxPoint x="1403.551818181818" y="1050" as="targetPoint" />
+            <mxPoint x="1390" y="1070" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="cgG5sZAH01hKlWfTNP8I-101" parent="1" style="rounded=0;whiteSpace=wrap;html=1;snapToPoint=1;points=[[0.1,0],[0.2,0],[0.3,0],[0.4,0],[0.5,0],[0.6,0],[0.7,0],[0.8,0],[0.9,0],[0,0.1],[0,0.3],[0,0.5],[0,0.7],[0,0.9],[0.1,1],[0.2,1],[0.3,1],[0.4,1],[0.5,1],[0.6,1],[0.7,1],[0.8,1],[0.9,1],[1,0.1],[1,0.3],[1,0.5],[1,0.7],[1,0.9]];" value="skos:Concept&lt;br&gt;&amp;lt;&amp;lt;skos:inScheme edintkos:VehiclePermitType&amp;gt;&amp;gt;&lt;div&gt;(&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;TipoAutorizacionVehiculo)&lt;/span&gt;&lt;/div&gt;" vertex="1">
@@ -1018,7 +1009,7 @@
         <mxCell id="cgG5sZAH01hKlWfTNP8I-130" parent="1" style="rounded=0;whiteSpace=wrap;html=1;snapToPoint=1;points=[[0.1,0],[0.2,0],[0.3,0],[0.4,0],[0.5,0],[0.6,0],[0.7,0],[0.8,0],[0.9,0],[0,0.1],[0,0.3],[0,0.5],[0,0.7],[0,0.9],[0.1,1],[0.2,1],[0.3,1],[0.4,1],[0.5,1],[0.6,1],[0.7,1],[0.8,1],[0.9,1],[1,0.1],[1,0.3],[1,0.5],[1,0.7],[1,0.9]];" value="skos:Concept&lt;br&gt;&amp;lt;&amp;lt;skos:inScheme edintkos:VehicleEnvironmentalBadge&amp;gt;&amp;gt;&lt;div&gt;(&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;DistintivoAmbientalVehículo)&lt;/span&gt;&lt;/div&gt;" vertex="1">
           <mxGeometry height="50.5" width="315" x="2030" y="870" as="geometry" />
         </mxCell>
-        <mxCell id="KJXqv6px2h66h55jfKWk-6" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="edintzona" vertex="1">
+        <mxCell id="KJXqv6px2h66h55jfKWk-6" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="edintzone" vertex="1">
           <mxGeometry height="30" width="60" x="1410" y="1229.47" as="geometry" />
         </mxCell>
         <mxCell id="KJXqv6px2h66h55jfKWk-8" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="estraf" vertex="1">
@@ -1030,7 +1021,8 @@
         <mxCell id="KJXqv6px2h66h55jfKWk-11" edge="1" parent="1" source="cgG5sZAH01hKlWfTNP8I-6" style="endArrow=classic;html=1;endSize=8;arcSize=0;rounded=0;edgeStyle=orthogonalEdgeStyle;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="cgG5sZAH01hKlWfTNP8I-16" value="">
           <mxGeometry height="50" relative="1" width="50" as="geometry">
             <Array as="points">
-              <mxPoint x="1690" y="720" />
+              <mxPoint x="1720" y="810" />
+              <mxPoint x="1720" y="720" />
               <mxPoint x="2204" y="720" />
             </Array>
             <mxPoint x="1706" y="938" as="sourcePoint" />
@@ -1041,6 +1033,25 @@
           <mxGeometry relative="1" x="-0.1269" as="geometry">
             <mxPoint x="83" y="-10" as="offset" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="KJXqv6px2h66h55jfKWk-13" parent="1" style="rounded=0;whiteSpace=wrap;html=1;snapToPoint=1;points=[[0.1,0],[0.2,0],[0.3,0],[0.4,0],[0.5,0],[0.6,0],[0.7,0],[0.8,0],[0.9,0],[0,0.1],[0,0.3],[0,0.5],[0,0.7],[0,0.9],[0.1,1],[0.2,1],[0.3,1],[0.4,1],[0.5,1],[0.6,1],[0.7,1],[0.8,1],[0.9,1],[1,0.1],[1,0.3],[1,0.5],[1,0.7],[1,0.9]];" value="s4auto:Vehicle)" vertex="1">
+          <mxGeometry height="49.5" width="120" x="1560" y="714" as="geometry" />
+        </mxCell>
+        <mxCell id="KJXqv6px2h66h55jfKWk-14" edge="1" parent="1" source="cgG5sZAH01hKlWfTNP8I-6" style="endArrow=block;html=1;fontColor=#000099;endFill=0;endSize=8;arcSize=0;rounded=0;edgeStyle=orthogonalEdgeStyle;exitX=0.4;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="KJXqv6px2h66h55jfKWk-13" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="1678" y="800" />
+              <mxPoint x="1620" y="800" />
+            </Array>
+            <mxPoint x="1580" y="1080" as="sourcePoint" />
+            <mxPoint x="1650" y="770" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KJXqv6px2h66h55jfKWk-16" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="s4auto" vertex="1">
+          <mxGeometry height="30" width="60" x="1500" y="690" as="geometry" />
+        </mxCell>
+        <mxCell id="KJXqv6px2h66h55jfKWk-17" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="..." vertex="1">
+          <mxGeometry height="30" width="60" x="1187.18" y="1139" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
