@@ -19,7 +19,7 @@
 @prefix edintmi: <http://vocab.linkeddata.es/datosabiertos/def/casos/movilidadinteligente#> .
 @prefix edintkos: <http://vocab.linkeddata.es/datosabiertos/kos/edint/> .
 @prefix edintveh: <http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#> .
-@prefix edintzona: <http://vocab.linkeddata.es/datosabiertos/def/commons/zona#> .
+@prefix edintzone: <http://vocab.linkeddata.es/datosabiertos/def/commons/zone#> .
 @base <http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#> .
 
 <http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos> rdf:type owl:Ontology ;
@@ -29,10 +29,10 @@
                                                                                           "Edna Ruckhaus" ,
                                                                                           "Lucía Sánchez" ,
                                                                                           "Oscar Corcho" ;
-                                                                          dcterms:description "El propósito de esta ontología es el de proporcionar un vocabulario común para la representación de las entidades y datos principales del censo o registro de vehículos. Su alcance se limita a los datos que pueden ser utilizados con los propósitos de cobro de impuestos por parte de las entidades locales o de gestión de la movilidad (permisos de aparcamiento, permisos de acceso a zonas específicas, etc.), que son parte de las funciones habituales de las entidades locales. Quedan fuera del alcance de la ontología otros aspectos relacionados con los vehículos, como pueden ser los datos de sus permisos de circulación, inspecciones técnicas, etc., que podrían ser objeto de una extensión de esta ontología o de su evolución en el futuro, si se considera relevante."@es ;
+                                                                          dcterms:description "El propósito de esta ontología es el de proporcionar un vocabulario común para la representación de las entidades y datos principales del censo o registro de vehículos. Su alcance se limita a los datos que pueden ser utilizados con los propósitos de cobro de impuestos por parte de las entidades locales o de gestión de la movilidad (permisos de aparcamiento, permisos de acceso a zonas específicas, etc.), que son parte de las funciones habituales de las entidades locales. Quedan fuera del alcance de la ontología otros aspectos relacionados con los vehículos, como pueden ser los datos de sus permisos de circulación, inspecciones técnicas, etc., que podrían ser objeto de una extensión de esta ontología o de su evolución en el futuro, si se considera relevante."@es ,
+                                                                                              "The purpose of this ontology is to provide a common vocabulary for representing the main entities and data of the vehicle census or registry. Its scope is limited to the data that may be used for purposes such as tax collection by local authorities or mobility management (parking permits, access permits to specific zones, etc.), which are part of the usual functions of local entities. Other aspects related to vehicles, such as data concerning driving permits, technical inspections, and similar information, are outside the scope of this ontology. These could be addressed through an extension of this ontology or through its future evolution, if considered relevant."@en ;
                                                                           dcterms:hasFormat "http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos.owl" ;
                                                                           dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
-                                                                          dcterms:title "The purpose of this ontology is to provide a common vocabulary for representing the main entities and data of the vehicle census or registry. Its scope is limited to the data that may be used for purposes such as tax collection by local authorities or mobility management (parking permits, access permits to specific zones, etc.), which are part of the usual functions of local entities. Other aspects related to vehicles, such as data concerning driving permits, technical inspections, and similar information, are outside the scope of this ontology. These could be addressed through an extension of this ontology or through its future evolution, if considered relevant."@en ;
                                                                           vann:preferredNamespacePrefix "edintveh" ;
                                                                           vann:preferredNamespaceUri edintveh: ;
                                                                           owl:versionInfo "0.1.0" .
@@ -103,164 +103,163 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://vocab.ciudadesabiertas.es/def/transporte/trafico#via
 estraf:via rdf:type owl:ObjectProperty ;
-           rdfs:domain escjr:Via ;
-           rdfs:range estraf:Tramo ;
-           rdfs:comment "Relación del Tramo con la/s Vía/s que cubre, en caso de que se digan" ;
-           rdfs:isDefinedBy <http://vocab.ciudadesabiertas.es/def/transporte/trafico> ;
-           rdfs:label "via" .
+           rdfs:range estraf:Tramo .
 
 
-###  http://vocab.linkeddata.es/datosabiertos/def/femp-base/registro-vehiculo#autorizaEnVia
-<http://vocab.linkeddata.es/datosabiertos/def/femp-base/registro-vehiculo#autorizaEnVia> rdf:type owl:ObjectProperty ;
-                                                                                         rdfs:domain edintveh:Autorizacion ;
-                                                                                         rdfs:range escjr:Via ;
-                                                                                         rdfs:label "autoriza en via" .
+###  http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#authorisesInSegment
+edintveh:authorisesInSegment rdf:type owl:ObjectProperty ;
+                             rdfs:domain edintveh:Permit ;
+                             rdfs:range estraf:Tramo ;
+                             rdfs:comment "Identifica el segmento de vía para el cual la autorización da permiso para pasar o aparcar"@es ,
+                                          "It identifies a segment where the permit authorises the vehicle to go through or park"@en ,
+                                          "authorises in segment"@en ;
+                             rdfs:label "autoriza en tramo"@es .
 
 
-###  http://vocab.linkeddata.es/datosabiertos/def/femp-base/registro-vehiculo#autorizaEnZona
-<http://vocab.linkeddata.es/datosabiertos/def/femp-base/registro-vehiculo#autorizaEnZona> rdf:type owl:ObjectProperty ;
-                                                                                          rdfs:domain edintveh:Autorizacion ;
-                                                                                          rdfs:range edintveh:ZonaRegulatoria ;
-                                                                                          rdfs:label "autoriza en zona" .
+###  http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#authorisesInZone
+edintveh:authorisesInZone rdf:type owl:ObjectProperty ;
+                          rdfs:domain edintveh:Permit ;
+                          rdfs:range edintzone:TrafficControlledZone ;
+                          rdfs:comment "Identifica una zona de tráfico regulado para la cual la autorización da permiso para pasar o aparcar"@es ,
+                                       "It identifies a traffic-controlled zone where the permit authorises the vehicle to go through or park"@en ,
+                                       "authorises in zone"@en ;
+                          rdfs:label "autoriza en zona"@es .
 
 
-###  http://vocab.linkeddata.es/datosabiertos/def/femp-base/registro-vehiculo#autorizaVehiculo
-<http://vocab.linkeddata.es/datosabiertos/def/femp-base/registro-vehiculo#autorizaVehiculo> rdf:type owl:ObjectProperty ;
-                                                                                            rdfs:domain edintveh:Autorizacion ;
-                                                                                            rdfs:range s4auto:Vehicle ;
-                                                                                            rdfs:label "autoriza vehiculo" .
+###  http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#authorisesVehicle
+edintveh:authorisesVehicle rdf:type owl:ObjectProperty ;
+                           rdfs:domain edintveh:Permit ;
+                           rdfs:range edintveh:Vehicle ;
+                           rdfs:comment "Identifica el vehículo al que se refiere la autorización"@es ,
+                                        "It identifies the vehicle for which the permit is issued"@en ;
+                           rdfs:label "authorises vehicle"@en ,
+                                      "autoriza vehículo"@es .
 
 
-###  http://vocab.linkeddata.es/datosabiertos/def/femp-base/registro-vehiculo#esTipoDeAutorizacion
-<http://vocab.linkeddata.es/datosabiertos/def/femp-base/registro-vehiculo#esTipoDeAutorizacion> rdf:type owl:ObjectProperty ;
-                                                                                                rdfs:domain edintveh:Autorizacion ;
-                                                                                                rdfs:range [ owl:intersectionOf ( skos:Concept
-                                                                                                                                  [ rdf:type owl:Restriction ;
-                                                                                                                                    owl:onProperty <http://www.owl-ontologies.com/skos#inScheme> ;
-                                                                                                                                    owl:hasValue <http://vocab.linkeddata.es/datosabiertos/kos/femp-base/registro-vehiculo#tiposDeAutorización>
-                                                                                                                                  ]
-                                                                                                                                ) ;
-                                                                                                             rdf:type owl:Class
-                                                                                                           ] ;
-                                                                                                rdfs:label "es tipo de autorizacion" .
+###  http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#environmentalBadge
+edintveh:environmentalBadge rdf:type owl:ObjectProperty ;
+                            rdfs:domain edintveh:Vehicle ;
+                            rdfs:range [ owl:intersectionOf ( skos:Concept
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty skos:inScheme ;
+                                                                owl:hasValue edintkos:VehicleEnvironmentalBadge
+                                                              ]
+                                                            ) ;
+                                         rdf:type owl:Class
+                                       ] ;
+                            rdfs:comment "Distintivo ambiental asignado a un vehículo. Los valores son conceptos SKOS que pertenecen a una lista controlada de tipos de autorización (por ejemplo, ECO, B, C, etc.)"@es ,
+                                         "Environmental badge assigned to a vehicle. The range is a SKOS concept that belongs to a controlled list of permit types (e.g., ECO, B, C, etc.)."@en ;
+                            rdfs:label "distintivo ambiental del vehículo"@es ,
+                                       "environmental badge"@en .
 
 
-###  http://vocab.linkeddata.es/datosabiertos/def/femp-base/registro-vehiculo#perteneceAZona
-<http://vocab.linkeddata.es/datosabiertos/def/femp-base/registro-vehiculo#perteneceAZona> rdf:type owl:ObjectProperty ;
-                                                                                          rdfs:domain estraf:Tramo ;
-                                                                                          rdfs:range edintveh:ZonaRegulatoria ;
-                                                                                          rdfs:label "pertenece a zona" .
+###  http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#permitOwner
+edintveh:permitOwner rdf:type owl:ObjectProperty ;
+                     rdfs:domain edintveh:Permit ;
+                     rdfs:range edintveh:Owner ;
+                     rdfs:comment "Identifica al titular (persona u organización) para el cual la autorización está expedida"@es ,
+                                  "It identifies the person or organisation for which the permit has been issued"@en ,
+                                  "permit owner"@en ;
+                     rdfs:label "titular autorización"@es .
 
 
-###  http://vocab.linkeddata.es/datosabiertos/def/femp-base/registro-vehiculo#tieneAutorizacion
-<http://vocab.linkeddata.es/datosabiertos/def/femp-base/registro-vehiculo#tieneAutorizacion> rdf:type owl:ObjectProperty ;
-                                                                                             rdfs:domain edintveh:Titular ;
-                                                                                             rdfs:range edintveh:Autorizacion ;
-                                                                                             rdfs:label "tiene autorizacion" .
+###  http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#permitPeriodicity
+edintveh:permitPeriodicity rdf:type owl:ObjectProperty ;
+                           rdfs:domain edintveh:Permit ;
+                           rdfs:range [ owl:intersectionOf ( skos:Concept
+                                                             [ rdf:type owl:Restriction ;
+                                                               owl:onProperty skos:inScheme ;
+                                                               owl:hasValue edintkos:VehiclePermitPeriodicity
+                                                             ]
+                                                           ) ;
+                                        rdf:type owl:Class
+                                      ] ;
+                           rdfs:comment "Identifica la periodicidad de la autorización para un vehículo. Los valores son conceptos SKOS que pertenecen a una lista controlada de tipos de autorización (por ejemplo, mensual, anual, etc.)"@es ,
+                                        "It identifies the periodicity of a vehicle permit. The range is a SKOS concept that belongs to a controlled list of permit types (e.g., monhtly, annual, etc.)."@en ;
+                           rdfs:label "periodicidad de la autorización"@es ,
+                                      "permit periodicity"@en .
 
 
-###  http://vocab.linkeddata.es/datosabiertos/def/femp-base/registro-vehiculo#tieneDistintivoAmbiental
-<http://vocab.linkeddata.es/datosabiertos/def/femp-base/registro-vehiculo#tieneDistintivoAmbiental> rdf:type owl:ObjectProperty ;
-                                                                                                    rdfs:domain s4auto:Vehicle ;
-                                                                                                    rdfs:range [ owl:intersectionOf ( skos:Concept
-                                                                                                                                      [ rdf:type owl:Restriction ;
-                                                                                                                                        owl:onProperty <http://www.owl-ontologies.com/skos#inScheme> ;
-                                                                                                                                        owl:hasValue <http://vocab.linkeddata.es/datosabiertos/kos/femp-base/registro-vehiculo#DistintivosAmbientales>
-                                                                                                                                      ]
-                                                                                                                                    ) ;
-                                                                                                                 rdf:type owl:Class
-                                                                                                               ] ;
-                                                                                                    rdfs:label "tiene distintivo ambiental" .
+###  http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#permitStatus
+edintveh:permitStatus rdf:type owl:ObjectProperty ;
+                      rdfs:domain edintveh:Permit ;
+                      rdfs:range [ owl:intersectionOf ( skos:Concept
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty skos:inScheme ;
+                                                          owl:hasValue edintkos:VehiclePermitStatus
+                                                        ]
+                                                      ) ;
+                                   rdf:type owl:Class
+                                 ] ;
+                      rdfs:comment "Identifica el estado de la autorización para un vehículo. Los valores son conceptos SKOS que pertenecen a una lista controlada de tipos de autorización (por ejemplo, activo, inactivo, rechazado, etc.)"@es ,
+                                   "It identifies the status of a vehicle permit. The range is a SKOS concept that belongs to a controlled list of permit types (e.g., active, inactive, rejected, etc.)."@en ;
+                      rdfs:label "estado de autorización"@es ,
+                                 "permit status"@en .
 
 
-###  http://vocab.linkeddata.es/datosabiertos/def/femp-base/registro-vehiculo#tieneEstado
-<http://vocab.linkeddata.es/datosabiertos/def/femp-base/registro-vehiculo#tieneEstado> rdf:type owl:ObjectProperty ;
-                                                                                       rdfs:domain edintveh:Autorizacion ;
-                                                                                       rdfs:range [ owl:intersectionOf ( skos:Concept
-                                                                                                                         [ rdf:type owl:Restriction ;
-                                                                                                                           owl:onProperty <http://www.owl-ontologies.com/skos#inScheme> ;
-                                                                                                                           owl:hasValue <http://vocab.linkeddata.es/datosabiertos/kos/femp-base/registro-vehiculo#EstadosDeAutorización>
-                                                                                                                         ]
-                                                                                                                       ) ;
-                                                                                                    rdf:type owl:Class
-                                                                                                  ] ;
-                                                                                       rdfs:label "tiene estado" .
+###  http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#permitType
+edintveh:permitType rdf:type owl:ObjectProperty ;
+                    rdfs:domain edintveh:Permit ;
+                    rdfs:range [ owl:intersectionOf ( skos:Concept
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty skos:inScheme ;
+                                                        owl:hasValue edintkos:VehiclePermitType
+                                                      ]
+                                                    ) ;
+                                 rdf:type owl:Class
+                               ] ;
+                    rdfs:comment "Identifica el tipo de autorización para un vehículo. Los valores son conceptos SKOS que pertenecen a una lista controlada de tipos de autorización."@es ,
+                                 "It identifies the type of vehicle permit. The range is a SKOS concept that belongs to a controlled list of permit types."@en ;
+                    rdfs:label "permit type"@en ,
+                               "tipo de autorizacion"@es .
 
 
-###  http://vocab.linkeddata.es/datosabiertos/def/femp-base/registro-vehiculo#tienePeriodicidad
-<http://vocab.linkeddata.es/datosabiertos/def/femp-base/registro-vehiculo#tienePeriodicidad> rdf:type owl:ObjectProperty ;
-                                                                                             rdfs:domain edintveh:Autorizacion ;
-                                                                                             rdfs:range [ owl:intersectionOf ( skos:Concept
-                                                                                                                               [ rdf:type owl:Restriction ;
-                                                                                                                                 owl:onProperty <http://www.owl-ontologies.com/skos#inScheme> ;
-                                                                                                                                 owl:hasValue <http://vocab.linkeddata.es/datosabiertos/kos/femp-base/registro-vehiculo#PeriodicidadAutorización>
-                                                                                                                               ]
-                                                                                                                             ) ;
-                                                                                                          rdf:type owl:Class
-                                                                                                        ] ;
-                                                                                             rdfs:label "tiene periodicidad" .
+###  http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#propulsionType
+edintveh:propulsionType rdf:type owl:ObjectProperty ;
+                        rdfs:domain edintveh:Vehicle ;
+                        rdfs:range [ owl:intersectionOf ( skos:Concept
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty skos:inScheme ;
+                                                            owl:hasValue edintkos:VehiclePropulsionType
+                                                          ]
+                                                        ) ;
+                                     rdf:type owl:Class
+                                   ] ;
+                        rdfs:comment "Propulsion type of a vehicle. The range is a SKOS concept that belongs to a controlled list of permit types (e.g., Diesel, Petrol, Electrical, etc.)."@en ,
+                                     "Tipo de propulsión de un vehículo. Los valores son conceptos SKOS que pertenecen a una lista controlada de tipos de autorización (por ejemplo, diésel, gasolina, eléctrico, etc.)"@es ;
+                        rdfs:label "propulsion type"@en ,
+                                   "tipo de propulsión"@es .
 
 
-###  http://vocab.linkeddata.es/datosabiertos/def/femp-base/registro-vehiculo#tieneTipoPropulsion
-<http://vocab.linkeddata.es/datosabiertos/def/femp-base/registro-vehiculo#tieneTipoPropulsion> rdf:type owl:ObjectProperty ;
-                                                                                               rdfs:domain s4auto:Vehicle ;
-                                                                                               rdfs:range [ owl:intersectionOf ( skos:Concept
-                                                                                                                                 [ rdf:type owl:Restriction ;
-                                                                                                                                   owl:onProperty <http://www.owl-ontologies.com/skos#inScheme> ;
-                                                                                                                                   owl:hasValue <http://vocab.linkeddata.es/datosabiertos/kos/femp-base/registro-vehiculo#tipologiasPropulsión>
-                                                                                                                                 ]
-                                                                                                                               ) ;
-                                                                                                            rdf:type owl:Class
-                                                                                                          ] ;
-                                                                                               rdfs:label "tiene tipo propulsion" .
+###  http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#registeredOwner
+edintveh:registeredOwner rdf:type owl:ObjectProperty ;
+                         rdfs:domain edintveh:Vehicle ;
+                         rdfs:range edintveh:Owner ;
+                         rdfs:comment "Identifica al titular (persona u organización) del vehículo"@es ,
+                                      "It identifies the person or organisation who owns the vehicle"@en ,
+                                      "registered owner"@en ;
+                         rdfs:label "titular registrado"@es .
 
 
-###  http://vocab.linkeddata.es/datosabiertos/def/femp-base/registro-vehiculo#tieneTipologíaVehiculo
-<http://vocab.linkeddata.es/datosabiertos/def/femp-base/registro-vehiculo#tieneTipologíaVehiculo> rdf:type owl:ObjectProperty ;
-                                                                                                  rdfs:domain s4auto:Vehicle ;
-                                                                                                  rdfs:range [ owl:intersectionOf ( skos:Concept
-                                                                                                                                    [ rdf:type owl:Restriction ;
-                                                                                                                                      owl:onProperty <http://www.owl-ontologies.com/skos#inScheme> ;
-                                                                                                                                      owl:hasValue <http://vocab.linkeddata.es/datosabiertos/kos/femp-base/registro-vehiculo#tipologiasVehiculo>
-                                                                                                                                    ]
-                                                                                                                                  ) ;
-                                                                                                               rdf:type owl:Class
-                                                                                                             ] ;
-                                                                                                  rdfs:label "tiene tipología vehiculo" .
+###  http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#vehicleType
+edintveh:vehicleType rdf:type owl:ObjectProperty ;
+                     rdfs:domain edintveh:Vehicle ;
+                     rdfs:range [ owl:intersectionOf ( skos:Concept
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty skos:inScheme ;
+                                                         owl:hasValue edintkos:VehicleType
+                                                       ]
+                                                     ) ;
+                                  rdf:type owl:Class
+                                ] ;
+                     rdfs:comment "Tipo de vehículo. Los valores son conceptos SKOS que pertenecen a una lista controlada de tipos de autorización (por ejemplo, turismo, furgoneta, caravana, etc.)"@es ,
+                                  "Type of vehicle. The range is a SKOS concept that belongs to a controlled list of permit types (e.g., van, truck, caravan, etc.)."@en ;
+                     rdfs:label "tipo de vehículo"@es ,
+                                "vehicle type"@en .
 
 
-###  http://vocab.linkeddata.es/datosabiertos/def/femp-base/registro-vehiculo#tieneTitular
-<http://vocab.linkeddata.es/datosabiertos/def/femp-base/registro-vehiculo#tieneTitular> rdf:type owl:ObjectProperty ;
-                                                                                        rdfs:domain edintveh:Autorizacion ;
-                                                                                        rdfs:range edintveh:Titular ;
-                                                                                        rdfs:label "tiene titular" .
-
-
-###  http://www.opengis.net/spec/geosparql/1.0/hasGeometry
-gsp:hasGeometry rdf:type owl:ObjectProperty ;
-                rdfs:domain gsp:Feature ;
-                rdfs:range gsp:Geometry ;
-                rdfs:comment <http://www.opengis.net/spec/geosparql/1.0> ,
-                             "Una representación espacial de un \"feature\" determinado." ;
-                rdfs:label "has geometry" .
-
-
-###  http://www.owl-ontologies.com/edintmi#perteneceA
-<http://www.owl-ontologies.com/edintmi#perteneceA> rdf:type owl:ObjectProperty ;
-                                                   rdfs:domain <http://www.owl-ontologies.com/edintmi#Lugar> ;
-                                                   rdfs:range [ rdf:type owl:Class ;
-                                                                owl:unionOf ( esadm:Autonomia
-                                                                              esadm:Distrito
-                                                                              esadm:Municipio
-                                                                              esadm:Provincia
-                                                                            )
-                                                              ] ;
-                                                   rdfs:label "pertenece a" .
-
-
-###  http://www.owl-ontologies.com/skos#inScheme
-<http://www.owl-ontologies.com/skos#inScheme> rdf:type owl:ObjectProperty ;
-                                              rdfs:label "in scheme" .
+###  http://www.w3.org/2004/02/skos/core#inScheme
+skos:inScheme rdf:type owl:ObjectProperty .
 
 
 #################################################################
@@ -268,138 +267,47 @@ gsp:hasGeometry rdf:type owl:ObjectProperty ;
 #################################################################
 
 ###  http://vocab.ciudadesabiertas.es/def/transporte/trafico#Tramo
-estraf:Tramo rdf:type owl:Class ;
-             rdfs:comment <http://vocab.ciudadesabiertas.es/def/transporte/trafico> ,
-                          "Tramo definido por un punto de inicio y fin que puede pertenecer a una o más vías"@es ;
-             rdfs:label "Tramo" .
+estraf:Tramo rdf:type owl:Class .
 
 
-###  http://vocab.linkeddata.es/datosabiertos/def/femp-base/zona#ZonaBajasEmisiones
-<http://vocab.linkeddata.es/datosabiertos/def/femp-base/zona#ZonaBajasEmisiones> rdf:type owl:Class ;
-                                                                                 rdfs:subClassOf edintveh:ZonaRegulatoria ;
-                                                                                 rdfs:label "Zona Bajas Emisiones" .
+###  http://vocab.linkeddata.es/datosabiertos/def/commons/zone#TrafficControlledZone
+edintzone:TrafficControlledZone rdf:type owl:Class .
 
 
-###  http://vocab.linkeddata.es/datosabiertos/def/femp-base/zona#ZonaEstacionamientoRegulado
-<http://vocab.linkeddata.es/datosabiertos/def/femp-base/zona#ZonaEstacionamientoRegulado> rdf:type owl:Class ;
-                                                                                          rdfs:subClassOf edintveh:ZonaRegulatoria ;
-                                                                                          rdfs:label "Zona Estacionamiento Regulado" .
+###  http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#Owner
+edintveh:Owner rdf:type owl:Class ;
+               rdfs:subClassOf schema:Organization ,
+                               schema:Person ,
+                               [ rdf:type owl:Class ;
+                                 owl:unionOf ( schema:Organization
+                                               schema:Person
+                                             )
+                               ] ;
+               rdfs:comment "Owner"@en ,
+                            "Person or organisation that is registered as the owner of a vehicle or of a vehicle permit"@en ,
+                            "Persona u organización que está registrada como titular de un vehículo o como titular de una autorización para un vehículo"@es ;
+               rdfs:label "Titular"@es .
 
 
-###  http://vocab.linkeddata.es/datosabiertos/def/femp-base/zona#ZonaInterésEconómico
-<http://vocab.linkeddata.es/datosabiertos/def/femp-base/zona#ZonaInterésEconómico> rdf:type owl:Class ;
-                                                                                   rdfs:subClassOf edintveh:ZonaRegulatoria ;
-                                                                                   rdfs:label "Zona Interés Económico" .
+###  http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#Permit
+edintveh:Permit rdf:type owl:Class ;
+                rdfs:comment "Official permit, usually issued by the city council or the traffic authority, that allows a particular vehicle to access, drive through, or park in an area where entry is restricted or regulated"@en ,
+                             "Permiso oficial, emitido normalmente por el ayuntamiento o la autoridad de tráfico, que habilita a un vehículo concreto a acceder, circular o estacionar en un área donde el acceso está restringido o regulado"@es ,
+                             "Permit"@en ;
+                rdfs:label "Autorización"@es .
 
 
-###  http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Autonomia
-esadm:Autonomia rdf:type owl:Class ;
-                rdfs:subClassOf gsp:Feature ;
-                rdfs:comment "Comunidad Autónoma o Ciudad Autónoma"@es ;
-                rdfs:isDefinedBy <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio> ;
-                rdfs:label "Autonomia" .
-
-
-###  http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Barrio
-esadm:Barrio rdf:type owl:Class ;
-             rdfs:subClassOf gsp:Feature ;
-             rdfs:comment "Un barrio es cada una de las partes en que se dividen los pueblos grandes o sus distritos [fuente: Diccionario de la Real Academia (DRAE) 2011]"@es ;
-             rdfs:isDefinedBy <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio> ;
-             rdfs:label "Barrio" .
-
-
-###  http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Ciudad
-esadm:Ciudad rdf:type owl:Class ;
-             rdfs:subClassOf esadm:Municipio ;
-             rdfs:comment "Una ciudad es un área urbana en la que predominan fundamentalmente la industria y los servicios [fuente: Wikipedia]"@es ;
-             rdfs:isDefinedBy <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio> ;
-             rdfs:label "Ciudad" .
-
-
-###  http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Distrito
-esadm:Distrito rdf:type owl:Class ;
-               rdfs:subClassOf gsp:Feature ;
-               rdfs:comment "Un distrito es cada una de las demarcaciones en que se subdivide un territorio o una población para distribuir y ordenar el ejercicio de los derechos civiles y políticos, o de las funciones públicas, o de los servicios administrativos [fuente: Diccionario de la Real Academia (DRAE) 2011]"@es ;
-               rdfs:isDefinedBy <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio> ;
-               rdfs:label "Distrito" .
-
-
-###  http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Municipio
-esadm:Municipio rdf:type owl:Class ;
-                rdfs:subClassOf gsp:Feature ;
-                rdfs:comment <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio> ,
-                             """Un Municipio es el ente local definido en el artículo 140 de la Constitución española y la entidad básica de la organización territorial del Estado según el artículo 1 de la Ley 7/1985, de 2 de abril, Reguladora de las Bases del Régimen Local. Tiene personalidad jurídica y plena capacidad para el cumplimiento de sus fines. La delimitación territorial de Municipio está recogida del REgistro Central de Cartografía del IGN.
-Su nombre, que se especifica con la propiedad dct:title, es el proporcionado por el Registro de Entidades Locales del Ministerio de Política Territorial, en http://www.ine.es/nomen2/index.do"""@es ;
-                rdfs:label "Municipio" .
-
-
-###  http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Provincia
-esadm:Provincia rdf:type owl:Class ;
-                rdfs:subClassOf gsp:Feature ;
-                rdfs:comment <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio> ,
-                             """Entidad local con personalidad jurídica propia, determinada por la agrupación de Municipios y división territorial para el cumplimiento de las actividades del Estado. La delimitación territorial de Provincia está recogida en el Registro Central de Cartografía del IGN [fuente: Modelo de Direcciones de la Administración General del Estado v.2]
-Su identificador, que se especifica con la propiedad dct:identifier, es el proporcionado por el INE en http://www.ine.es/daco/daco42/codmun/codmun09/09codmun.xls
-Su nombre, que se especifica con la propiedad dct:title, es el proporcionado por el Registro de Entidades Locales del Ministerio de Política Territorial, en http://www.ine.es/nomen2/index.do"""@es ;
-                rdfs:label "Provincia" .
-
-
-###  http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#Autorizacion
-edintveh:Autorizacion rdf:type owl:Class ;
-                      rdfs:label "Autorizacion" .
-
-
-###  http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#Titular
-edintveh:Titular rdf:type owl:Class ;
-                 rdfs:subClassOf [ rdf:type owl:Class ;
-                                   owl:unionOf ( schema:Organization
-                                                 schema:Person
-                                               )
-                                 ] ;
-                 rdfs:label "Titular" .
-
-
-###  http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#ZonaRegulatoria
-edintveh:ZonaRegulatoria rdf:type owl:Class ;
-                         rdfs:subClassOf gsp:Feature ;
-                         rdfs:label "Zona Regulatoria" .
-
-
-###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero#Via
-escjr:Via rdf:type owl:Class ;
-          rdfs:comment <http://vocab.ciudadesabiertas.es/def/transporte/trafico> ,
-                       "Parte del callejero"@es ;
-          rdfs:label "Via" .
-
-
-###  http://www.opengis.net/spec/geosparql/1.0/Feature
-gsp:Feature rdf:type owl:Class ;
-            rdfs:comment "Esta clase representa el tipo \"feature\" de nivel superior. Es equivalente a GFI_Feature, definida en la norma ISO 19156:2011, y es la superclase de todos los tipos de \"feature\"."@es ;
-            rdfs:isDefinedBy <http://www.opengis.net/spec/geosparql/1.0> ;
-            rdfs:label "Feature"@en .
-
-
-###  http://www.opengis.net/spec/geosparql/1.0/Geometry
-gsp:Geometry rdf:type owl:Class ;
-             rdfs:comment "La clase representa el tipo de geometría de nivel superior. Esta clase es equivalente a la clase UML GM_Object definida en la norma ISO 19107 y es la superclase de todos los tipos de geometría."@es ;
-             rdfs:isDefinedBy <http://www.opengis.net/spec/geosparql/1.0> ;
-             rdfs:label "Geometry" .
-
-
-###  http://www.owl-ontologies.com/edintmi#Aparcamiento
-<http://www.owl-ontologies.com/edintmi#Aparcamiento> rdf:type owl:Class ;
-                                                     rdfs:subClassOf <http://www.owl-ontologies.com/edintmi#Lugar> ;
-                                                     rdfs:label "Aparcamiento" .
-
-
-###  http://www.owl-ontologies.com/edintmi#Lugar
-<http://www.owl-ontologies.com/edintmi#Lugar> rdf:type owl:Class ;
-                                              rdfs:subClassOf gsp:Feature ;
-                                              rdfs:label "Lugar" .
+###  http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#Vehicle
+edintveh:Vehicle rdf:type owl:Class ;
+                 rdfs:subClassOf s4auto:Vehicle ;
+                 rdfs:comment "Dispositivo de transporte autopropulsado, junto con cualquier accesorio, por ejemplo remolques, que es un usuario legal de la red de transporte (Fuente: ISO/TS 19091:2019(en))"@es ,
+                              "Self-propelled transport device, along with any attachments, e.g. trailers, that is a legal user of the transportation network (Source: ISO/TS 19091:2019(en))."@en ;
+                 rdfs:label "Vehicle"@en ,
+                            "Vehículo"@es .
 
 
 ###  http://www.w3.org/2004/02/skos/core#Concept
-skos:Concept rdf:type owl:Class ;
-             rdfs:label "Concept" .
+skos:Concept rdf:type owl:Class .
 
 
 ###  http://www.w3.org/2004/02/skos/core#ConceptScheme
@@ -407,48 +315,39 @@ skos:ConceptScheme rdf:type owl:Class .
 
 
 ###  https://saref.etsi.org/saref4auto/Vehicle/Vehicle
-s4auto:Vehicle rdf:type owl:Class ;
-               rdfs:comment "Self-propelled transport device, along with any attachments, e.g. trailers, that is a legal user of the transportation network (Source: ISO/TS 19091:2019(en))."@es ;
-               rdfs:isDefinedBy <https://saref.etsi.org/saref4auto/Vehicle> ;
-               rdfs:label "Vehicle" .
+s4auto:Vehicle rdf:type owl:Class .
 
 
 ###  https://schema.org/Organization
-schema:Organization rdf:type owl:Class ;
-                    rdfs:comment "Grupo de personas que se organiza en una comunidad u otro tipo de estructura social, comercial o política. Dicho grupo tiene un objetivo o motivo común para su existencia que va más allá del conjunto de personas que lo forman y que puede actuar como “agente”. A menudo las organizaciones se pueden agrupar en estructuras jerárquicas. Se recomienda el uso de etiquetas de SKOS para denominar a cada “organización”. En concreto, `skos:prefLabel` para la denominación principal o recomendada (aquella reconocida legalmente, siempre que sea posible), `skos:altLabel` para denominaciones alternativas (nombre comercial, sigla, denominación por la que se conoce a la organización coloquialmente) y `skos:notation` para referirse al código que identifique a la organización en una lista de códigos. Denominaciones alternativas: _colectivo_ _corporación_ _grupo_"@es ;
-                    rdfs:isDefinedBy <http://www.w3.org/ns/org> ;
-                    rdfs:label "Organization" .
+schema:Organization rdf:type owl:Class .
 
 
 ###  https://schema.org/Person
-schema:Person rdf:type owl:Class ;
-              rdfs:comment "Persona"@es ;
-              rdfs:isDefinedBy schema: ;
-              rdfs:label "Person" .
+schema:Person rdf:type owl:Class .
 
 
 #################################################################
 #    Individuals
 #################################################################
 
-###  http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleAuthorisationPeriodicity
-edintkos:VehicleAuthorisationPeriodicity rdf:type owl:NamedIndividual ,
-                                                  skos:ConceptScheme .
-
-
-###  http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleAuthorisationStatus
-edintkos:VehicleAuthorisationStatus rdf:type owl:NamedIndividual ,
-                                             skos:ConceptScheme .
-
-
-###  http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleAuthorisationType
-edintkos:VehicleAuthorisationType rdf:type owl:NamedIndividual ,
-                                           skos:ConceptScheme .
-
-
 ###  http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleEnvironmentalBadge
 edintkos:VehicleEnvironmentalBadge rdf:type owl:NamedIndividual ,
                                             skos:ConceptScheme .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePermitPeriodicity
+edintkos:VehiclePermitPeriodicity rdf:type owl:NamedIndividual ,
+                                           skos:ConceptScheme .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePermitStatus
+edintkos:VehiclePermitStatus rdf:type owl:NamedIndividual ,
+                                      skos:ConceptScheme .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePermitType
+edintkos:VehiclePermitType rdf:type owl:NamedIndividual ,
+                                    skos:ConceptScheme .
 
 
 ###  http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePropulsionType
