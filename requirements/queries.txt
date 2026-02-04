@@ -1,0 +1,164 @@
+PRUEBAS SPARQL
+
+
+PREFIX edintveh: <http://vocab.linkeddata.es/datosabiertos/def/censovehiculos#>
+PREFIX edintkos: <http://vocab.linkeddata.es/datosabiertos/kos/edint>
+
+PREFIX mod: <https://w3id.org/mod#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX xml: <http://www.w3.org/XML/1998/namespace>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX vann: <http://purl.org/vocab/vann/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX edintzona: <http://vocab.linkeddata.es/datosabiertos/def/femp-base/zona#>
+PREFIX edintmi: <http://www.owl-ontologies.com/edintmi#>
+PREFIX escjr: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero#>
+PREFIX estraf: < http://vocab.ciudadesabiertas.es/def/transporte/trafico#>
+PREFIX esadm: < http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#>
+PREFIX gsp: <http://www.opengis.net/spec/geosparql/1.0>
+PREFIX s4auto: <https://saref.etsi.org/saref4auto/Vehicle/>
+PREFIX sosa: < http://www.w3.org/ns/sosa/>
+PREFIX vsso: <https://github.com/w3c/vsso#>
+PREFIX schema: <http://schema.org/>
+PREFIX geonames: <http://www.geonames.org/g/ontology#>
+
+-----
+VEH1
+-----
+SELECT ?titular
+WHERE { ?veh edintveh:permitOwner ?titular .}
+
+----
+VEH2
+----
+
+----
+VEH3
+----
+SELECT ?titular
+WHERE { ?aut edintveh:permitOwner ?titular .}
+
+
+----
+VEH4
+----
+SELECT ?tramo ?via
+WHERE { ?aut edintveh:authorisesInSegmanet ?tramo .
+         ?tramo estraf:via ?via . }
+
+SELECT ?tramo 
+WHERE { ?aut edintveh:authorisesInSegmanet ?tramo .
+         ?tramo estraf:via ?via 
+		 ?via geonames:officialName "nombre"^^literal . }
+
+
+----
+VEH5
+----
+SELECT ?zona 
+WHERE { ?aut edintveh:authorisesInArea ?zona .
+        ?aut edintveh:officialName "nombre"^^literal . }
+
+
+----
+VEH6
+----
+
+SELECT ?veh ?tramo ?via
+WHERE { ?aut edintveh:officialName "nombre"^^literal .
+        ?aut edintveh:authorisesVehicle ?veh .
+		?aut edintveh:authorisesinArea ?tramo .
+        ?tramo estraf:via ?via . }
+
+
+----
+VEH11
+----
+
+SELECT ?veh ?tramo ?via
+WHERE { ?aut edintveh:officialName "nombre"^^literal .
+        ?aut edintveh:authorisesVehicle ?veh .
+		}
+		
+		
+----
+VEH12
+----
+
+SELECT ?veh ?distintivo
+WHERE { ?aut edintveh:authorisesVehicle ?veh .
+		?veh edintveh:environmentalBadge ?distintivo .
+      }
+	  
+	  
+----
+VEH13
+----
+
+SELECT distinct ?tipoAut
+WHERE { ?aut edintveh:permitType ?tipoAut .
+      }
+	  
+----
+VEH14
+----
+
+SELECT distinct ?veh
+WHERE { ?aut edintveh:authorisesVehicle ?veh .
+        ?aut edintveh:permitType "nombre"^^literal .}
+		
+		
+----
+VEH15
+----
+
+SELECT ?estado
+WHERE { ?aut edintveh:officialName "nombre"^^literal .
+        ?aut edintveh:permitStatus ?estado .
+		}
+		
+		
+----
+VEH16
+----
+
+SELECT ?duracion
+WHERE { ?aut edintveh:officialName "nombre"^^literal .
+        ?aut edintveh:permitPeriodicity ?duracion .
+		}
+		
+----
+VEH17
+----
+
+SELECT ?veh ?zona
+WHERE { ?aut edintveh:authorisesVehicle ?veh .
+        ?veh edintveh:environmentalBadge ?distintivo .
+		?distintivo edintkos:vehicleEnvironmentalBadge "nombre"^^literal . ¡OJO DUDA!!
+        ?aut edintveh:authorisesInArea ?zona .
+		}
+		
+----
+VEH18
+----
+
+SELECT distinct ?tipoVeh ?zona
+WHERE { ?aut edintveh:authorisesVehicle ?veh .
+        ?veh edintveh:environmentalBadge ?distintivo .
+		?veh edintveh:vehicleType ?tipoVeh .
+		?distintivo edintkos:vehicleEnvironmentalBadge "nombre"^^literal . ¡¡OJO DUDA!!
+        ?aut edintveh:authorisesInArea ?zona .
+		}
+		
+----
+VEH20
+----
+
+SELECT ?aut
+WHERE { ?aut edintveh:permitStatus ?status .
+		?status edintkos:vehiclePermitStatus "activa"^^literal . ¡OJO DUDA!!
+        ?aut edintveh:startingDate "date"^^xsd:date .
+		?aut edintveh:endingDate "date"^^xsd:date .
+		}
