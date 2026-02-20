@@ -1,0 +1,21 @@
+prefixes:
+  edintvehicletype: http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleType/
+  edintvehiclepropulsiontype: http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePropulsionType/
+  edintvehicleenvironmentalbadge: http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleEnvironmentalBadge/
+  edintveh: http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#
+
+sources:
+  vehicle-source: ['dataset_enriquecido.csv~csv']
+
+mappings:
+  vehicle:
+    sources:
+      - vehicle-source
+    s: http://vocab.linkeddata.es/datosabiertos/transporte/recurso/vehiculo/$(vehiculo_id)
+    po:
+      - [a, edintveh:Vehicle]
+      - [edintveh:registeredOwner, "http://vocab.linkeddata.es/datosabiertos/recurso/titular/$(company)~iri"] # Check FEMP-owner.yml
+      - [edintveh:vehicleType, "edintvehicletype:$(tipologia_vehiculo)~iri"] # Ambulance, Bus, Truck, Van, etc.
+      - [edintveh:propulsionType, "edintvehiclepropulsiontype:$(tipologia_propulsion)~iri"] # ButaneGas, Electric, Diesel, etc.
+      - [edintveh:environmentalBadge, "edintvehicleenvironmentalbadge:$(distintivo)~iri"] # ECO, ZeroEmissions, B, C, etc.
+      - [edintveh:licensePlateNumber, "$(vehiculo_id)",xsd:string]

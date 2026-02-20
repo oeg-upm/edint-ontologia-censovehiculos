@@ -1,0 +1,14 @@
+prefixes:
+  edintveh: http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#
+  schema: https://schema.org/
+
+sources:
+  owner-source: ['dataset_enriquecido.csv~csv']
+
+mappings:
+  owner:
+    sources:
+      - owner-source
+    s: http://vocab.linkeddata.es/datosabiertos/recurso/titular/$(company)
+    po:
+      - [a, edintveh:Owner]

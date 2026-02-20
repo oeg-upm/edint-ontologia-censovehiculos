@@ -1,0 +1,13 @@
+prefixes:
+  edintzone: http://vocab.linkeddata.es/datosabiertos/def/commons/zone#
+
+sources:
+  t-controlled-zone-source: ['dataset_enriquecido.csv~csv']
+
+mappings:
+  trafficControlledZone:
+    sources:
+      - t-controlled-zone-source
+    s: http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/$(zona-regulada_id)
+    po:
+      - [a, edintzone:TrafficControlledZone]
