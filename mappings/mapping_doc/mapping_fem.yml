@@ -1,0 +1,55 @@
+prefixes:
+  edintveh: http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#
+  schema: https://schema.org/
+  edintvehiclepermittype: http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePermitType/
+  edintvehiclepermitstatus: http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePermitStatus/
+  edintvehiclepermitperiodicity: http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePermitPeriodicity/
+  edintvehicletype: http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleType/
+  edintvehiclepropulsiontype: http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePropulsionType/
+  edintvehicleenvironmentalbadge: http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleEnvironmentalBadge/
+  edintzone: http://vocab.linkeddata.es/datosabiertos/def/commons/zone#
+sources:
+  owner-source: ['dataset_enriquecido.csv~csv']
+  permit-source: ['dataset_enriquecido.csv~csv']
+  t-controlled-zone-source: ['dataset_enriquecido.csv~csv']
+  vehicle-source: ['dataset_enriquecido.csv~csv']
+
+mappings:
+  owner:
+    sources:
+      - owner-source
+    s: http://vocab.linkeddata.es/datosabiertos/recurso/titular/$(company)~iri
+    po:
+      - [a, edintveh:Owner]
+  permit:
+    sources:
+      - permit-source
+    s: http://vocab.linkeddata.es/datosabiertos/recurso/autorizacion/$(subtipo_autorizacion)-$(estado)-$(fecha_inicio_periodo)-$(fecha_activacion)-$(fecha_vigencia)-$(distintivo)-$(tipologia_vehiculo)-$(periodicidad)
+    po:
+      - [a, edintveh:Permit]
+      - [edintveh:authorisesInArea, "http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/$(zona-regulada_id)~iri"] # Check FEMP-trafficControlledZone.yml
+      - [edintveh:authorisesInSegment, "http://vocab.ciudadesabiertas.es/recurso/transporte/trafico/tramo/$(tramo_id)~iri"]  # E.g <http://vocab.ciudadesabiertas.es/recurso/transporte/trafico/tramo/100>
+      - [edintveh:permitType,"edintvehiclepermittype:$(tipo_autorizacion)~iri"] # Resident , CommercialIndustrial ,Temporal, etc.
+      - [edintveh:permitStatus, "edintvehiclepermitstatus:$(estado)~iri"] # Active, Inactive, Rejected, In process
+      - [edintveh:permitPeriodicity, "edintvehiclepermitperiodicity:$(periodicidad)~iri"] # Annual, Monthly
+      - [edintveh:permitOwner, "http://vocab.linkeddata.es/datosabiertos/recurso/titular/$(company)~iri"] #: Check FEMP-owner.yml
+      - [edintveh:authorisesVehicle, "http://vocab.linkeddata.es/datosabiertos/transporte/recurso/vehiculo/$(vehiculo_id)~iri"] # check FEMP-vehicle.yml
+      - [edintveh:beginningDate,"$(fecha_inicio_periodo)", xsd:date ]
+      - [edintveh:activationDate, "$(fecha_activacion)",xsd:date]
+  trafficControlledZone:
+    sources:
+      - t-controlled-zone-source
+    s: http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/$(zona-regulada_id)
+    po:
+      - [a, edintzone:TrafficControlledZone]
+  vehicle:
+    sources:
+      - vehicle-source
+    s: http://vocab.linkeddata.es/datosabiertos/transporte/recurso/vehiculo/$(vehiculo_id)
+    po:
+      - [a, edintveh:Vehicle]
+      - [edintveh:registeredOwner, "http://vocab.linkeddata.es/datosabiertos/recurso/titular/$(company)~iri"] # Check FEMP-owner.yml
+      - [edintveh:vehicleType, "edintvehicletype:$(tipologia_vehiculo)~iri"] # Ambulance, Bus, Truck, Van, etc.
+      - [edintveh:propulsionType, "edintvehiclepropulsiontype:$(tipologia_propulsion)~iri"] # ButaneGas, Electric, Diesel, etc.
+      - [edintveh:environmentalBadge, "edintvehicleenvironmentalbadge:$(distintivo)~iri"] # ECO, ZeroEmissions, B, C, etc.
+      - [edintveh:licensePlateNumber, "$(vehiculo_id)",xsd:string]

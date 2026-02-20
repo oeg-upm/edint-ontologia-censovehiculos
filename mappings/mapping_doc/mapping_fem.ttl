@@ -1,0 +1,284 @@
+@prefix edintveh: <http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#>.
+@prefix schema: <https://schema.org/>.
+@prefix edintvehiclepermittype: <http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePermitType/>.
+@prefix edintvehiclepermitstatus: <http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePermitStatus/>.
+@prefix edintvehiclepermitperiodicity: <http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePermitPeriodicity/>.
+@prefix edintvehicletype: <http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleType/>.
+@prefix edintvehiclepropulsiontype: <http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePropulsionType/>.
+@prefix edintvehicleenvironmentalbadge: <http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleEnvironmentalBadge/>.
+@prefix edintzone: <http://vocab.linkeddata.es/datosabiertos/def/commons/zone#>.
+@prefix rr: <http://www.w3.org/ns/r2rml#>.
+@prefix rml: <http://semweb.mmlab.be/ns/rml#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix ql: <http://semweb.mmlab.be/ns/ql#>.
+@prefix d2rq: <http://www.wiwiss.fu-berlin.de/suhl/bizer/D2RQ/0.1#>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix schema: <http://schema.org/>.
+@prefix formats: <http://www.w3.org/ns/formats/>.
+@prefix comp: <http://semweb.mmlab.be/ns/rml-compression#>.
+@prefix void: <http://rdfs.org/ns/void#>.
+@prefix fnml: <http://semweb.mmlab.be/ns/fnml#>.
+@prefix grel: <http://users.ugent.be/~bjdmeest/function/grel.ttl#>.
+@base <http://example.com/ns#>.
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix map: <http://mapping.example.com/> .
+
+map:person_000 dct:contributor foaf:Person ;
+	rdfs:label "Jhon Toledo" ;
+	foaf:mbox <mailto:ja.toledo@upm.es> .
+map:rules_000 schema:contributor map:person_000 ;
+	rdf:type schema:Dataset;
+    schema:version "1.0.0";
+    schema:title "Mappings RML para transformar el Censo/Registro de Vehículos a RDF (EDINT CensoVehículos)";
+    schema:dateCreated "14-02-2026";
+    schema:description "Este conjunto de mappings RML transforma los datos de un censo o registro municipal de vehículos a RDF, utilizando la ontología EDINT CensoVehículos. El objetivo es generar un grafo RDF interoperable para representar las entidades principales del registro de vehículos y su información asociada, orientada a usos habituales de las entidades locales".
+
+
+<owner_0> a rr:TriplesMap;
+
+	rml:logicalSource [
+		a rml:LogicalSource;
+		rml:source "dataset_enriquecido.csv";
+		rml:referenceFormulation ql:CSV
+	];
+	rr:subjectMap [
+		a rr:SubjectMap;
+		rr:template "http://vocab.linkeddata.es/datosabiertos/recurso/titular/{company}~iri";
+	];
+	rr:predicateObjectMap [
+		rr:predicateMap [
+			a rr:PredicateMap;
+			rr:constant rdf:type;
+		];
+		rr:objectMap [
+			a rr:ObjectMap;
+			rr:constant edintveh:Owner;
+		];
+	].
+
+
+<permit_0> a rr:TriplesMap;
+
+	rml:logicalSource [
+		a rml:LogicalSource;
+		rml:source "dataset_enriquecido.csv";
+		rml:referenceFormulation ql:CSV
+	];
+	rr:subjectMap [
+		a rr:SubjectMap;
+		rr:template "http://vocab.linkeddata.es/datosabiertos/recurso/autorizacion/{subtipo_autorizacion}-{estado}-{fecha_inicio_periodo}-{fecha_activacion}-{fecha_vigencia}-{distintivo}-{tipologia_vehiculo}-{periodicidad}";
+	];
+	rr:predicateObjectMap [
+		rr:predicateMap [
+			a rr:PredicateMap;
+			rr:constant rdf:type;
+		];
+		rr:objectMap [
+			a rr:ObjectMap;
+			rr:constant edintveh:Permit;
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicateMap [
+			a rr:PredicateMap;
+			rr:constant edintveh:authorisesInArea;
+		];
+		rr:objectMap [
+			a rr:ObjectMap;
+			rr:template "http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/{zona-regulada_id}";
+			rr:termType rr:IRI
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicateMap [
+			a rr:PredicateMap;
+			rr:constant edintveh:authorisesInSegment;
+		];
+		rr:objectMap [
+			a rr:ObjectMap;
+			rr:template "http://vocab.ciudadesabiertas.es/recurso/transporte/trafico/tramo/{tramo_id}";
+			rr:termType rr:IRI
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicateMap [
+			a rr:PredicateMap;
+			rr:constant edintveh:permitType;
+		];
+		rr:objectMap [
+			a rr:ObjectMap;
+			rr:template "http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePermitType/{tipo_autorizacion}";
+			rr:termType rr:IRI
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicateMap [
+			a rr:PredicateMap;
+			rr:constant edintveh:permitStatus;
+		];
+		rr:objectMap [
+			a rr:ObjectMap;
+			rr:template "http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePermitStatus/{estado}";
+			rr:termType rr:IRI
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicateMap [
+			a rr:PredicateMap;
+			rr:constant edintveh:permitPeriodicity;
+		];
+		rr:objectMap [
+			a rr:ObjectMap;
+			rr:template "http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePermitPeriodicity/{periodicidad}";
+			rr:termType rr:IRI
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicateMap [
+			a rr:PredicateMap;
+			rr:constant edintveh:permitOwner;
+		];
+		rr:objectMap [
+			a rr:ObjectMap;
+			rr:template "http://vocab.linkeddata.es/datosabiertos/recurso/titular/{company}";
+			rr:termType rr:IRI
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicateMap [
+			a rr:PredicateMap;
+			rr:constant edintveh:authorisesVehicle;
+		];
+		rr:objectMap [
+			a rr:ObjectMap;
+			rr:template "http://vocab.linkeddata.es/datosabiertos/transporte/recurso/vehiculo/{vehiculo_id}";
+			rr:termType rr:IRI
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicateMap [
+			a rr:PredicateMap;
+			rr:constant edintveh:beginningDate;
+		];
+		rr:objectMap [
+			a rr:ObjectMap;
+			rml:reference "fecha_inicio_periodo";
+			rr:datatype xsd:date
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicateMap [
+			a rr:PredicateMap;
+			rr:constant edintveh:activationDate;
+		];
+		rr:objectMap [
+			a rr:ObjectMap;
+			rml:reference "fecha_activacion";
+			rr:datatype xsd:date
+		];
+	].
+
+
+<trafficControlledZone_0> a rr:TriplesMap;
+
+	rml:logicalSource [
+		a rml:LogicalSource;
+		rml:source "dataset_enriquecido.csv";
+		rml:referenceFormulation ql:CSV
+	];
+	rr:subjectMap [
+		a rr:SubjectMap;
+		rr:template "http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/{zona-regulada_id}";
+	];
+	rr:predicateObjectMap [
+		rr:predicateMap [
+			a rr:PredicateMap;
+			rr:constant rdf:type;
+		];
+		rr:objectMap [
+			a rr:ObjectMap;
+			rr:constant edintzone:TrafficControlledZone;
+		];
+	].
+
+
+<vehicle_0> a rr:TriplesMap;
+
+	rml:logicalSource [
+		a rml:LogicalSource;
+		rml:source "dataset_enriquecido.csv";
+		rml:referenceFormulation ql:CSV
+	];
+	rr:subjectMap [
+		a rr:SubjectMap;
+		rr:template "http://vocab.linkeddata.es/datosabiertos/transporte/recurso/vehiculo/{vehiculo_id}";
+	];
+	rr:predicateObjectMap [
+		rr:predicateMap [
+			a rr:PredicateMap;
+			rr:constant rdf:type;
+		];
+		rr:objectMap [
+			a rr:ObjectMap;
+			rr:constant edintveh:Vehicle;
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicateMap [
+			a rr:PredicateMap;
+			rr:constant edintveh:registeredOwner;
+		];
+		rr:objectMap [
+			a rr:ObjectMap;
+			rr:template "http://vocab.linkeddata.es/datosabiertos/recurso/titular/{company}";
+			rr:termType rr:IRI
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicateMap [
+			a rr:PredicateMap;
+			rr:constant edintveh:vehicleType;
+		];
+		rr:objectMap [
+			a rr:ObjectMap;
+			rr:template "http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleType/{tipologia_vehiculo}";
+			rr:termType rr:IRI
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicateMap [
+			a rr:PredicateMap;
+			rr:constant edintveh:propulsionType;
+		];
+		rr:objectMap [
+			a rr:ObjectMap;
+			rr:template "http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePropulsionType/{tipologia_propulsion}";
+			rr:termType rr:IRI
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicateMap [
+			a rr:PredicateMap;
+			rr:constant edintveh:environmentalBadge;
+		];
+		rr:objectMap [
+			a rr:ObjectMap;
+			rr:template "http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleEnvironmentalBadge/{distintivo}";
+			rr:termType rr:IRI
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicateMap [
+			a rr:PredicateMap;
+			rr:constant edintveh:licensePlateNumber;
+		];
+		rr:objectMap [
+			a rr:ObjectMap;
+			rml:reference "vehiculo_id";
+			rr:datatype xsd:string
+		];
+	].
+
+
