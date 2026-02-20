@@ -1,0 +1,500 @@
+@prefix comp: <http://semweb.mmlab.be/ns/rml-compression#> .
+@prefix d2rq: <http://www.wiwiss.fu-berlin.de/suhl/bizer/D2RQ/0.1#> .
+@prefix edintzone: <http://vocab.linkeddata.es/datosabiertos/def/commons/zone#> .
+@prefix fnml: <http://semweb.mmlab.be/ns/fnml#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix formats: <http://www.w3.org/ns/formats/> .
+@prefix grel: <http://users.ugent.be/~bjdmeest/function/grel.ttl#> .
+@prefix ql: <http://semweb.mmlab.be/ns/ql#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rml: <http://semweb.mmlab.be/ns/rml#> .
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix schema: <http://schema.org/> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1000>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1001>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1002>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1003>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1004>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1005>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1006>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1007>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1008>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1009>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1010>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1011>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1012>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1013>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1014>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1015>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1016>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1017>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1018>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1020>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1021>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1022>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1023>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1024>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1025>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1026>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1027>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1028>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1029>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1030>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1031>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1032>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1033>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1034>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1035>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1036>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1037>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1038>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1039>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1040>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1042>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1043>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1044>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1045>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1046>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1047>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1048>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1049>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1050>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1051>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1052>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1053>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1054>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1055>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1056>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1057>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1058>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1059>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1060>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1062>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1063>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1064>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1065>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1067>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1068>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1069>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1070>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1071>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1072>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1073>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1074>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1075>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1076>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1077>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1078>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1079>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1080>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1081>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1082>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1083>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1084>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1085>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1086>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1087>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1088>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1089>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1090>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1091>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1092>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1093>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1094>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1095>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1096>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1097>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1098>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1099>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1100>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1101>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1102>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1104>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1105>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1106>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1107>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1108>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1111>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1112>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1113>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1114>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1115>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1117>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1118>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1119>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1120>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1121>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1122>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1123>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1124>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1125>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1126>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1127>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1128>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1129>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1131>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1132>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1133>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1134>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1135>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1136>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1138>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1140>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1141>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1142>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1143>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1144>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1145>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1146>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1147>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1148>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1149>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1150>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1151>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1152>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1153>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1154>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1155>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1156>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1157>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1158>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1159>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1161>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1162>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1163>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1164>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1165>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1166>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1167>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1168>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1169>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1170>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1171>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1173>
+  a edintzone:TrafficControlledZone .
+
+<http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/ZR-CI-1174>
