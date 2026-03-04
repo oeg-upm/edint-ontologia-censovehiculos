@@ -1,0 +1,11 @@
+
+# VEH11: ¿Qué vehículo es autorizado por una autorización determinada?
+
+PREFIX edintveh: <http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#>
+
+SELECT ?vehicle
+WHERE {
+    <URI_DE_LA_AUTORIZACION> edintveh:authorisesVehicle ?vehicle .
+}
+
+

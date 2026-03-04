@@ -1,0 +1,114 @@
+
+# VEH23: ¿Quien es el titular de un vehículo y los de sus autorizaciones?
+
+PREFIX edintveh: <http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehicles#>
+
+SELECT DISTINCT ?vehicle ?vehicleOwner ?permit ?permitOwner
+WHERE {
+  ?vehicle a edintveh:Vehicle ;
+           edintveh:registeredOwner ?vehicleOwner .
+
+  ?permit  a edintveh:Permit ;
+           edintveh:authorisesVehicle ?vehicle ;
+           edintveh:permitOwner ?permitOwner .
+}
+
+
+# Variantes más elaboradas
+
+# Una fila por par (vehículo, titular-permiso):
+
+PREFIX rdf:      <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos:     <http://www.w3.org/2004/02/skos/core#>
+PREFIX schema:   <https://schema.org/>
+PREFIX edintveh: <http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehicles#>
+
+SELECT ?vehicle
+       ?owner
+       (COALESCE(?ownerLabel, STR(?owner)) AS ?ownerName)
+       ?permit
+       ?permitOwner
+       (COALESCE(?permitOwnerLabel, STR(?permitOwner)) AS ?permitOwnerName)
+WHERE {
+  VALUES ?vehicle { <vehicle_URI> }
+
+  # Titular registrado del vehículo
+  OPTIONAL {
+    ?vehicle edintveh:registeredOwner ?owner .
+    OPTIONAL {
+      ?owner rdfs:label ?ownerLabel .
+      FILTER(LANG(?ownerLabel) = "" || LANGMATCHES(LANG(?ownerLabel), "es"))
+    }
+    OPTIONAL {
+      ?owner schema:name ?ownerNameES .
+      FILTER(LANG(?ownerNameES) = "" || LANGMATCHES(LANG(?ownerNameES), "es"))
+    }
+    BIND(COALESCE(?ownerNameES, ?ownerLabel) AS ?ownerLabel)
+  }
+
+  # Permisos del vehículo y titulares de esos permisos
+  OPTIONAL {
+    ?permit a edintveh:Permit ;
+            edintveh:authorisesVehicle ?vehicle ;
+            edintveh:permitOwner ?permitOwner .
+    OPTIONAL {
+      ?permitOwner rdfs:label ?permitOwnerLabelRdfs .
+      FILTER(LANG(?permitOwnerLabelRdfs) = "" || LANGMATCHES(LANG(?permitOwnerLabelRdfs), "es"))
+    }
+    OPTIONAL {
+      ?permitOwner schema:name ?permitOwnerNameES .
+      FILTER(LANG(?permitOwnerNameES) = "" || LANGMATCHES(LANG(?permitOwnerNameES), "es"))
+    }
+    BIND(COALESCE(?permitOwnerNameES, ?permitOwnerLabelRdfs) AS ?permitOwnerLabel)
+  }
+}
+ORDER BY ?vehicle ?permit
+
+
+# Una fila por vehículo, agregando los titulares de permisos:
+
+PREFIX rdf:      <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX schema:   <https://schema.org/>
+PREFIX edintveh: <http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehicles#>
+
+SELECT ?vehicle
+       (SAMPLE(?ownerReg) AS ?owner)
+       (SAMPLE(?ownerRegName) AS ?ownerName)
+       (GROUP_CONCAT(DISTINCT ?permitOwnerName; separator=" | ") AS ?titularesAutorizaciones)
+       (GROUP_CONCAT(DISTINCT STR(?permitOwner); separator=" | ") AS ?titularesAutorizacionesIRIs)
+WHERE {
+  VALUES ?vehicle { <vehicle_URI> }
+
+  # Titular registrado del vehículo
+  OPTIONAL {
+    ?vehicle edintveh:registeredOwner ?ownerReg .
+    OPTIONAL {
+      ?ownerReg rdfs:label ?ownerRegLabel .
+      FILTER(LANG(?ownerRegLabel) = "" || LANGMATCHES(LANG(?ownerRegLabel), "es"))
+    }
+    OPTIONAL {
+      ?ownerReg schema:name ?ownerRegNameES .
+      FILTER(LANG(?ownerRegNameES) = "" || LANGMATCHES(LANG(?ownerRegNameES), "es"))
+    }
+    BIND(COALESCE(?ownerRegNameES, ?ownerRegLabel, STR(?ownerReg)) AS ?ownerName)
+  }
+
+  # Titulares de autorizaciones
+  OPTIONAL {
+    ?permit a edintveh:Permit ;
+            edintveh:authorisesVehicle ?vehicle ;
+            edintveh:permitOwner ?permitOwner .
+    OPTIONAL {
+      ?permitOwner rdfs:label ?permitOwnerLabel .
+      FILTER(LANG(?permitOwnerLabel) = "" || LANGMATCHES(LANG(?permitOwnerLabel), "es"))
+    }
+    OPTIONAL {
+      ?permitOwner schema:name ?permitOwnerNameES .
+      FILTER(LANG(?permitOwnerNameES) = "" || LANGMATCHES(LANG(?permitOwnerNameES), "es"))
+    }
+    BIND(COALESCE(?permitOwnerNameES, ?permitOwnerLabel, STR(?permitOwner)) AS ?permitOwnerName)
+  }
+}
+GROUP BY ?vehicle

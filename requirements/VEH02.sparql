@@ -1,0 +1,23 @@
+
+# VEH2: Un titular puede ser una persona o una organización 
+
+
+PREFIX edintveh: <http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#>
+PREFIX schema: <https://schema.org/>
+
+SELECT ?owner ?type
+WHERE {
+    ?owner a edintveh:Owner .
+
+    OPTIONAL {
+        ?owner a schema:Person .
+        BIND("Person" AS ?type)
+    }
+
+    OPTIONAL {
+        ?owner a schema:Organization .
+        BIND("Organization" AS ?type)
+    }
+}
+
+

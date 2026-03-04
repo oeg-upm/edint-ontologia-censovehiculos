@@ -1,0 +1,88 @@
+
+# VEH25: ¿Que autorizaciones de tipo comercial dan permiso en una zona regulada?
+
+PREFIX edintveh: <http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#>
+PREFIX edintvehiclepermittype: <http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePermitType/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT ?permit ?zone
+WHERE {
+  ?permit a edintveh:Permit ;
+          edintveh:permitType edintvehiclepermittype:CommercialIndustrial ;
+          edintveh:authorisesInArea ?zone .
+}
+ORDER BY ?zone ?permit
+
+
+
+# Variantes más elaboradas
+
+PREFIX edintveh:  <http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehicles#>
+PREFIX edintkos:  <http://vocab.linkeddata.es/datosabiertos/kos/edint/>
+PREFIX edintzone: <http://vocab.linkeddata.es/datosabiertos/def/commons/zone#>
+PREFIX skos:      <http://www.w3.org/2004/02/skos/core#>
+
+SELECT ?permit ?vehicle ?zone
+WHERE {
+  # Permiso de tipo Comercial/Industrial
+  ?permit a edintveh:Permit ;
+          edintveh:permitType edintkos:VehiclePermitType/CommercialIndustrial ;
+          edintveh:authorisesVehicle ?vehicle ;
+          edintveh:authorisesInZone ?zone .
+
+  # Garantizar que la zona es efectivamente una zona regulada
+  ?zone a edintzone:RegulatedZone .
+}
+ORDER BY ?zone ?permit
+
+# Incluyendo etiquetas:
+OPTIONAL { ?zone skos:prefLabel ?zoneLabel FILTER(LANG(?zoneLabel)="es") }
+OPTIONAL { ?vehicle rdfs:label ?vehicleLabel FILTER(LANG(?vehicleLabel)="es") }
+
+PREFIX edintveh:  <http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehicles#>
+PREFIX edintkos:  <http://vocab.linkeddata.es/datosabiertos/kos/edint/>
+PREFIX edintzone: <http://vocab.linkeddata.es/datosabiertos/def/commons/zone#>
+PREFIX skos:      <http://www.w3.org/2004/02/skos/core#>
+PREFIX rdfs:      <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX schema:    <https://schema.org/>
+
+SELECT ?permit
+       (COALESCE(?permitTypeLabelES, STR(edintkos:VehiclePermitType/CommercialIndustrial)) AS ?tipoPermiso)
+       ?vehicle
+       (COALESCE(?vehicleNameES, ?vehicleLabelES, STR(?vehicle)) AS ?vehicleLabel)
+       ?zone
+       (COALESCE(?zoneLabelES, STR(?zone)) AS ?zoneLabel)
+WHERE {
+  # Permiso de tipo Comercial/Industrial que autoriza en una zona regulada
+  ?permit a edintveh:Permit ;
+          edintveh:permitType edintkos:VehiclePermitType/CommercialIndustrial ;
+          edintveh:authorisesVehicle ?vehicle ;
+          edintveh:authorisesInZone ?zone .
+
+  # Asegurar que la zona es una zone regulada
+  ?zone a edintzone:RegulatedZone .
+
+  # Label del tipo de permiso (en ES)
+  OPTIONAL {
+    edintkos:VehiclePermitType/CommercialIndustrial skos:prefLabel ?permitTypeLabelES .
+    FILTER(LANG(?permitTypeLabelES) = "" || LANGMATCHES(LANG(?permitTypeLabelES), "es"))
+  }
+
+  # Labels/Name del vehículo (preferencia: schema:name ES > rdfs:label ES)
+  OPTIONAL {
+    ?vehicle schema:name ?vehicleNameES .
+    FILTER(LANG(?vehicleNameES) = "" || LANGMATCHES(LANG(?vehicleNameES), "es"))
+  }
+  OPTIONAL {
+    ?vehicle rdfs:label ?vehicleLabelES .
+    FILTER(LANG(?vehicleLabelES) = "" || LANGMATCHES(LANG(?vehicleLabelES), "es"))
+  }
+
+  # Label de la zona (skos:prefLabel en ES si existe)
+  OPTIONAL {
+    ?zone skos:prefLabel ?zoneLabelES .
+    FILTER(LANG(?zoneLabelES) = "" || LANGMATCHES(LANG(?zoneLabelES), "es"))
+  }
+}
+ORDER BY LCASE(?zoneLabel) ?permit
+

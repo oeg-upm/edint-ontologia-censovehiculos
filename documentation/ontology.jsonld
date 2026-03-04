@@ -151,16 +151,35 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico#Tramo",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
-}, {
-  "@id" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico#via",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico#Tramo"
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Tramo definido por un punto de inicio y fin que puede pertenecer a una o más vías."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Tramo"
   } ]
 }, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/commons/zone#TrafficControlledZone",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/common/zone#RegulatedZone",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Area a la que se aplica una regulacion o normativa particular."
+  }, {
+    "@language" : "en",
+    "@value" : "Area to which a particular regulation or policy applies."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Regulated Zone"
+  }, {
+    "@language" : "es",
+    "@value" : "Zona regulatoria"
+  } ]
 }, {
   "@id" : "http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
@@ -175,6 +194,8 @@
     "@value" : "Edna Ruckhaus"
   }, {
     "@value" : "Lucía Sánchez"
+  }, {
+    "@value" : "Maria del Socorro Bernardos"
   }, {
     "@value" : "Oscar Corcho"
   } ],
@@ -208,15 +229,15 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Owner"
-  }, {
-    "@language" : "en",
     "@value" : "Person or organisation that is registered as the owner of a vehicle or of a vehicle permit"
   }, {
     "@language" : "es",
     "@value" : "Persona u organización que está registrada como titular de un vehículo o como titular de una autorización para un vehículo"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Owner"
+  }, {
     "@language" : "es",
     "@value" : "Titular"
   } ],
@@ -236,13 +257,13 @@
   }, {
     "@language" : "es",
     "@value" : "Permiso oficial, emitido normalmente por el ayuntamiento o la autoridad de tráfico, que habilita a un vehículo concreto a acceder, circular o estacionar en un área donde el acceso está restringido o regulado"
-  }, {
-    "@language" : "en",
-    "@value" : "Permit"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "es",
     "@value" : "Autorización"
+  }, {
+    "@language" : "en",
+    "@value" : "Permit"
   } ]
 }, {
   "@id" : "http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#Vehicle",
@@ -265,6 +286,29 @@
     "@id" : "https://saref.etsi.org/saref4auto/Vehicle/Vehicle"
   } ]
 }, {
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#activationDate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "La fecha de activación de la autorización."
+  }, {
+    "@language" : "en",
+    "@value" : "The date on which the authorization is activated."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#Permit"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Date of Activation"
+  }, {
+    "@language" : "es",
+    "@value" : "Fecha de activación"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#date"
+  } ]
+}, {
   "@id" : "http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#authorisesInSegment",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -273,42 +317,19 @@
   }, {
     "@language" : "en",
     "@value" : "It identifies a segment where the permit authorises the vehicle to go through or park"
-  }, {
-    "@language" : "en",
-    "@value" : "authorises in segment"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#Permit"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "authorises in segment"
+  }, {
     "@language" : "es",
     "@value" : "autoriza en tramo"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico#Tramo"
-  } ]
-}, {
-  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#authorisesInZone",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "es",
-    "@value" : "Identifica una zona de tráfico regulado para la cual la autorización da permiso para pasar o aparcar"
-  }, {
-    "@language" : "en",
-    "@value" : "It identifies a traffic-controlled zone where the permit authorises the vehicle to go through or park"
-  }, {
-    "@language" : "en",
-    "@value" : "authorises in zone"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#Permit"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "es",
-    "@value" : "autoriza en zona"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/commons/zone#TrafficControlledZone"
   } ]
 }, {
   "@id" : "http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#authorisesVehicle",
@@ -334,6 +355,51 @@
     "@id" : "http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#Vehicle"
   } ]
 }, {
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#beginningDate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Fecha de inicio del periodo de la autorización."
+  }, {
+    "@language" : "en",
+    "@value" : "Starting date of the authorization period."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#Permit"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Fecha de inicio"
+  }, {
+    "@value" : "Beginning Date"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#date"
+  } ]
+}, {
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#endingDate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Fecha de finalización de vigencia de la autorización"
+  }, {
+    "@language" : "en",
+    "@value" : "Permit expiration date"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#Permit"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Ending date"
+  }, {
+    "@language" : "es",
+    "@value" : "Fecha de finalización"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#date"
+  } ]
+}, {
   "@id" : "http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#environmentalBadge",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -357,6 +423,29 @@
     "@id" : "_:genid1"
   } ]
 }, {
+  "@id" : "http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#licensePlateNumber",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Alphanumeric identifier assigned to a vehicle for registration and identification purposes."
+  }, {
+    "@language" : "es",
+    "@value" : "Identificador alfanumérico asignado a un vehículo para su registro e identificación"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#Vehicle"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "License Plate Number"
+  }, {
+    "@language" : "es",
+    "@value" : "Número de matrícula"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
   "@id" : "http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#permitOwner",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -365,14 +454,14 @@
   }, {
     "@language" : "en",
     "@value" : "It identifies the person or organisation for which the permit has been issued"
-  }, {
-    "@language" : "en",
-    "@value" : "permit owner"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#Permit"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "permit owner"
+  }, {
     "@language" : "es",
     "@value" : "titular autorización"
   } ],
@@ -480,14 +569,14 @@
   }, {
     "@language" : "en",
     "@value" : "It identifies the person or organisation who owns the vehicle"
-  }, {
-    "@language" : "en",
-    "@value" : "registered owner"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#Vehicle"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "registered owner"
+  }, {
     "@language" : "es",
     "@value" : "titular registrado"
   } ],
@@ -575,6 +664,11 @@
   "@id" : "http://www.w3.org/2001/XMLSchema#date",
   "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ]
 }, {
+  "@id" : "http://www.w3.org/2001/XMLSchema#dateTime",
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#date"
+  } ]
+}, {
   "@id" : "http://www.w3.org/2002/07/owl#versionIRI",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
@@ -591,13 +685,50 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
 }, {
   "@id" : "https://saref.etsi.org/saref4auto/Vehicle/Vehicle",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Self-propelled transport device, along with any attachments, e.g. trailers, that is a legal user of the transportation network (Source: ISO/TS 19091:2019(en))."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://saref.etsi.org/saref4auto/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Vehicle"
+  } ]
 }, {
   "@id" : "https://schema.org/Organization",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An organization such as a school, NGO, corporation, club, etc."
+  }, {
+    "@language" : "es",
+    "@value" : "Una organización como una escuela, una ONG, una corporación, un club, etc."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://schema.org/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Organization"
+  } ]
 }, {
   "@id" : "https://schema.org/Person",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A person (alive, dead, undead, or fictional)."
+  }, {
+    "@language" : "es",
+    "@value" : "Una persona (viva, muerta, no muerta o ficticia)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://schema.org/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Person"
+  } ]
 }, {
   "@id" : "https://w3id.org/mod#createdWith",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]

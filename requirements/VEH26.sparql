@@ -1,0 +1,41 @@
+
+# VEH26: ¿Qué vehículos tienen una autorización para zonas de aparcamiento regulado? - Esto depende de la ontología de zonas
+
+PREFIX edintveh: <http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#>
+PREFIX edintzone: <http://vocab.linkeddata.es/datosabiertos/def/commons/zone#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT DISTINCT ?vehicle ?permit ?zone
+WHERE {
+  ?permit rdf:type edintveh:Permit ;
+          edintveh:authorisesVehicle ?vehicle ;
+          edintveh:authorisesInZone ?zone .
+
+  ?zone rdf:type edintzone:RegulatedZone .
+}
+ORDER BY ?vehicle ?permit
+
+
+# Para autorizaciones activas solo
+
+PREFIX edintveh: <http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#>
+PREFIX edintzone: <http://vocab.linkeddata.es/datosabiertos/def/commons/zone#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT DISTINCT ?vehicle ?permit ?zone ?permitTypeLabel ?statusLabel
+WHERE {
+  ?permit rdf:type edintveh:Permit ;
+          edintveh:authorisesVehicle ?vehicle ;
+          edintveh:authorisesInZone ?zone ;
+          edintveh:permitType ?permitType ;
+          edintveh:permitStatus ?status .
+
+  ?zone rdf:type edintzone:RegulatedZone .
+  OPTIONAL { ?permitType skos:prefLabel ?permitTypeLabel . }
+  OPTIONAL { ?status skos:prefLabel ?statusLabel . }
+
+  # Filtro: status "activo" (ajusta al literal/idioma real de SKOS)
+  FILTER (BOUND(?statusLabel) && CONTAINS(LCASE(STR(?statusLabel)), "activo"))
+}
+ORDER BY ?vehicle ?permit

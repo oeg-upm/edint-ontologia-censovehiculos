@@ -1,0 +1,108 @@
+
+# VEH18: ¿Qué tipos de vehículo con un determinado distintivo ambiental están autorizados en una zona regulada?
+
+
+PREFIX edintveh: <http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#>
+PREFIX skos:     <http://www.w3.org/2004/02/skos/core#>
+
+SELECT DISTINCT ?vehicleType ?vehicleTypeLabel
+WHERE {
+  ?permit a edintveh:Permit ;
+          edintveh:authorisesVehicle ?vehicle ;
+          edintveh:authorisesInZone  ?zone .
+
+  ?vehicle edintveh:environmentalBadge <URI_DEL_DISTINTIVO> ;
+           edintveh:vehicleType        ?vehicleType .
+
+  OPTIONAL { ?vehicleType skos:prefLabel ?vehicleTypeLabel . }
+}
+ORDER BY LCASE(STR(COALESCE(?vehicleTypeLabel, STR(?vehicleType))))
+
+
+# Por etiqueta del distintivo (sin conocer su URI) + todas las zonas:
+
+PREFIX edintveh: <http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#>
+PREFIX edintkos: <http://vocab.linkeddata.es/datosabiertos/kos/edint/>
+PREFIX skos:     <http://www.w3.org/2004/02/skos/core#>
+
+SELECT DISTINCT ?vehicleType ?vehicleTypeLabel
+WHERE {
+  ?permit a edintveh:Permit ;
+          edintveh:authorisesVehicle ?vehicle ;
+          edintveh:authorisesInZone  ?zone .
+
+  ?vehicle edintveh:environmentalBadge ?badge ;
+           edintveh:vehicleType        ?vehicleType .
+
+  ?badge skos:inScheme edintkos:VehicleEnvironmentalBadge ;
+         skos:prefLabel ?badgeLabel .
+  FILTER (LCASE(STR(?badgeLabel)) = LCASE("ECO"))
+  # Para forzar español:
+  # FILTER (LANG(?badgeLabel) = "es")
+
+  OPTIONAL { ?vehicleType skos:prefLabel ?vehicleTypeLabel . }
+}
+ORDER BY LCASE(STR(COALESCE(?vehicleTypeLabel, STR(?vehicleType))))
+
+
+# Para una zona regulada específica (por URI)
+
+PREFIX edintveh: <http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#>
+PREFIX skos:     <http://www.w3.org/2004/02/skos/core#>
+
+SELECT DISTINCT ?vehicleType ?vehicleTypeLabel
+WHERE {
+  ?permit a edintveh:Permit ;
+          edintveh:authorisesVehicle ?vehicle ;
+          edintveh:authorisesInZone  <URI_DE_LA_ZONA> .
+
+  ?vehicle edintveh:environmentalBadge <URI_DEL_DISTINTIVO> ;
+           edintveh:vehicleType        ?vehicleType .
+
+  OPTIONAL { ?vehicleType skos:prefLabel ?vehicleTypeLabel . }
+}
+ORDER BY LCASE(STR(COALESCE(?vehicleTypeLabel, STR(?vehicleType))))
+
+
+# Versión agrupada: tipos de vehículo y recuento por distintivo y zona:
+
+PREFIX edintveh: <http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#>
+PREFIX skos:     <http://www.w3.org/2004/02/skos/core#>
+
+SELECT ?zone ?vehicleType ?vehicleTypeLabel (COUNT(DISTINCT ?vehicle) AS ?numVehicles)
+WHERE {
+  ?permit a edintveh:Permit ;
+          edintveh:authorisesVehicle ?vehicle ;
+          edintveh:authorisesInZone  ?zone .
+
+  ?vehicle edintveh:environmentalBadge <URI_DEL_DISTINTIVO> ;
+           edintveh:vehicleType        ?vehicleType .
+
+  OPTIONAL { ?vehicleType skos:prefLabel ?vehicleTypeLabel . }
+}
+GROUP BY ?zone ?vehicleType ?vehicleTypeLabel
+ORDER BY ?zone LCASE(STR(COALESCE(?vehicleTypeLabel, STR(?vehicleType))))
+
+
+# Para mostrar etiqueta del distintivo y etiqueta de la zona:
+
+PREFIX edintveh: <http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#>
+PREFIX skos:     <http://www.w3.org/2004/02/skos/core#>
+PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT ?zone ?zoneLabel ?vehicleType ?vehicleTypeLabel ?badgeLabel
+WHERE {
+  ?permit a edintveh:Permit ;
+          edintveh:authorisesVehicle ?vehicle ;
+          edintveh:authorisesInZone  ?zone .
+
+  ?vehicle edintveh:environmentalBadge ?badge ;
+           edintveh:vehicleType        ?vehicleType .
+
+  FILTER (?badge = <URI_DEL_DISTINTIVO>)
+
+  OPTIONAL { ?vehicleType skos:prefLabel ?vehicleTypeLabel . }
+  OPTIONAL { ?badge      skos:prefLabel ?badgeLabel . }
+  OPTIONAL { ?zone       rdfs:label     ?zoneLabel . }  # o skos:prefLabel si tu zona usa SKOS
+}
+ORDER BY LCASE(STR(COALESCE(?vehicleTypeLabel, STR(?vehicleType)))) ?zone

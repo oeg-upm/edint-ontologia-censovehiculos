@@ -1,7 +1,7 @@
 <h2 id="overv" class="list">censovehiculos: Resumen <span class="backlink"> volver a <a href="#toc">&iacute;ndice</a></span></h2>
 <span class="markdown">La ontolog&iacute;a se compone de las siguientes clases y propiedades:</span>
 <h4>Clases</h4>
-<ul xmlns:era="http://data.europa.eu/949/"
+<ul xmlns:widoco="https://w3id.org/widoco/vocab#"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     class="hlist">
    <li>
@@ -9,23 +9,37 @@
          title="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#Permit">Autorización</a>
    </li>
    <li>
+      <a href="#https://schema.org/Organization" title="https://schema.org/Organization">Organization</a>
+   </li>
+   <li>
+      <a href="#https://schema.org/Person" title="https://schema.org/Person">Person</a>
+   </li>
+   <li>
       <a href="#Owner"
          title="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#Owner">Titular</a>
+   </li>
+   <li>
+      <a href="#http://vocab.ciudadesabiertas.es/def/transporte/trafico#Tramo"
+         title="http://vocab.ciudadesabiertas.es/def/transporte/trafico#Tramo">Tramo</a>
+   </li>
+   <li>
+      <a href="#https://saref.etsi.org/saref4auto/Vehicle/Vehicle"
+         title="https://saref.etsi.org/saref4auto/Vehicle/Vehicle">Vehicle</a>
    </li>
    <li>
       <a href="#Vehicle"
          title="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#Vehicle">Vehículo</a>
    </li>
-</ul><h4>Propiedades de objeto</h4><ul xmlns:era="http://data.europa.eu/949/"
+   <li>
+      <a href="#http://vocab.linkeddata.es/datosabiertos/def/common/zone#RegulatedZone"
+         title="http://vocab.linkeddata.es/datosabiertos/def/common/zone#RegulatedZone">Zona regulatoria</a>
+   </li>
+</ul><h4>Propiedades de objeto</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     class="hlist">
    <li>
       <a href="#authorisesInSegment"
          title="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#authorisesInSegment">autoriza en tramo</a>
-   </li>
-   <li>
-      <a href="#authorisesInZone"
-         title="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#authorisesInZone">autoriza en zona</a>
    </li>
    <li>
       <a href="#authorisesVehicle"
@@ -63,49 +77,62 @@
       <a href="#registeredOwner"
          title="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#registeredOwner">titular registrado</a>
    </li>
+</ul><h4>Propiedades de datos</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
    <li>
-      <a href="#http://vocab.ciudadesabiertas.es/def/transporte/trafico#via"
-         title="http://vocab.ciudadesabiertas.es/def/transporte/trafico#via">
-         <span>via</span>
-      </a>
+      <a href="#activationDate"
+         title="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#activationDate">Fecha de activación</a>
    </li>
-</ul><h4>Individuos</h4><ul xmlns:era="http://data.europa.eu/949/"
+   <li>
+      <a href="#endingDate"
+         title="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#endingDate">Fecha de finalización</a>
+   </li>
+   <li>
+      <a href="#beginningDate"
+         title="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#beginningDate">Fecha de inicio</a>
+   </li>
+   <li>
+      <a href="#licensePlateNumber"
+         title="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#licensePlateNumber">Número de matrícula</a>
+   </li>
+</ul><h4>Individuos</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     class="hlist">
    <li>
       <a href="#http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleEnvironmentalBadge"
          title="http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleEnvironmentalBadge">
-         <span>vehicle environmental badge</span>
+         <span>Vehicle Environmental Badge</span>
       </a>
    </li>
    <li>
       <a href="#http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePermitPeriodicity"
          title="http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePermitPeriodicity">
-         <span>vehicle permit periodicity</span>
+         <span>Vehicle Permit Periodicity</span>
       </a>
    </li>
    <li>
       <a href="#http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePermitStatus"
          title="http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePermitStatus">
-         <span>vehicle permit status</span>
+         <span>Vehicle Permit Status</span>
       </a>
    </li>
    <li>
       <a href="#http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePermitType"
          title="http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePermitType">
-         <span>vehicle permit type</span>
+         <span>Vehicle Permit Type</span>
       </a>
    </li>
    <li>
       <a href="#http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePropulsionType"
          title="http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePropulsionType">
-         <span>vehicle propulsion type</span>
+         <span>Vehicle Propulsion Type</span>
       </a>
    </li>
    <li>
       <a href="#http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleType"
          title="http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleType">
-         <span>vehicle type</span>
+         <span>Vehicle Type</span>
       </a>
    </li>
 </ul>

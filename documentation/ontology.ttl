@@ -12,6 +12,7 @@
                                                                           <http://purl.org/dc/terms/creator> "Daniel Doña"@es ,
                                                                                                              "Edna Ruckhaus" ,
                                                                                                              "Lucía Sánchez" ,
+                                                                                                             "Maria del Socorro Bernardos" ,
                                                                                                              "Oscar Corcho" ;
                                                                           <http://purl.org/dc/terms/description> "El propósito de esta ontología es el de proporcionar un vocabulario común para la representación de las entidades y datos principales del censo o registro de vehículos. Su alcance se limita a los datos que pueden ser utilizados con los propósitos de cobro de impuestos por parte de las entidades locales o de gestión de la movilidad (permisos de aparcamiento, permisos de acceso a zonas específicas, etc.), que son parte de las funciones habituales de las entidades locales. Quedan fuera del alcance de la ontología otros aspectos relacionados con los vehículos, como pueden ser los datos de sus permisos de circulación, inspecciones técnicas, etc., que podrían ser objeto de una extensión de esta ontología o de su evolución en el futuro, si se considera relevante."@es ,
                                                                                                                  "The purpose of this ontology is to provide a common vocabulary for representing the main entities and data of the vehicle census or registry. Its scope is limited to the data that may be used for purposes such as tax collection by local authorities or mobility management (parking permits, access permits to specific zones, etc.), which are part of the usual functions of local entities. Other aspects related to vehicles, such as data concerning driving permits, technical inspections, and similar information, are outside the scope of this ontology. These could be addressed through an extension of this ontology or through its future evolution, if considered relevant."@en ;
@@ -81,33 +82,22 @@ owl:versionInfo rdf:type owl:AnnotationProperty .
 xsd:date rdf:type rdfs:Datatype .
 
 
+###  http://www.w3.org/2001/XMLSchema#dateTime
+xsd:dateTime owl:equivalentClass xsd:date .
+
+
 #################################################################
 #    Object Properties
 #################################################################
-
-###  http://vocab.ciudadesabiertas.es/def/transporte/trafico#via
-<http://vocab.ciudadesabiertas.es/def/transporte/trafico#via> rdf:type owl:ObjectProperty ;
-                                                              rdfs:range <http://vocab.ciudadesabiertas.es/def/transporte/trafico#Tramo> .
-
 
 ###  http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#authorisesInSegment
 :authorisesInSegment rdf:type owl:ObjectProperty ;
                      rdfs:domain :Permit ;
                      rdfs:range <http://vocab.ciudadesabiertas.es/def/transporte/trafico#Tramo> ;
                      rdfs:comment "Identifica el segmento de vía para el cual la autorización da permiso para pasar o aparcar"@es ,
-                                  "It identifies a segment where the permit authorises the vehicle to go through or park"@en ,
-                                  "authorises in segment"@en ;
-                     rdfs:label "autoriza en tramo"@es .
-
-
-###  http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#authorisesInZone
-:authorisesInZone rdf:type owl:ObjectProperty ;
-                  rdfs:domain :Permit ;
-                  rdfs:range <http://vocab.linkeddata.es/datosabiertos/def/commons/zone#TrafficControlledZone> ;
-                  rdfs:comment "Identifica una zona de tráfico regulado para la cual la autorización da permiso para pasar o aparcar"@es ,
-                               "It identifies a traffic-controlled zone where the permit authorises the vehicle to go through or park"@en ,
-                               "authorises in zone"@en ;
-                  rdfs:label "autoriza en zona"@es .
+                                  "It identifies a segment where the permit authorises the vehicle to go through or park"@en ;
+                     rdfs:label "authorises in segment"@en ,
+                                "autoriza en tramo"@es .
 
 
 ###  http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#authorisesVehicle
@@ -142,9 +132,9 @@ xsd:date rdf:type rdfs:Datatype .
              rdfs:domain :Permit ;
              rdfs:range :Owner ;
              rdfs:comment "Identifica al titular (persona u organización) para el cual la autorización está expedida"@es ,
-                          "It identifies the person or organisation for which the permit has been issued"@en ,
-                          "permit owner"@en ;
-             rdfs:label "titular autorización"@es .
+                          "It identifies the person or organisation for which the permit has been issued"@en ;
+             rdfs:label "permit owner"@en ,
+                        "titular autorización"@es .
 
 
 ###  http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#permitPeriodicity
@@ -220,9 +210,9 @@ xsd:date rdf:type rdfs:Datatype .
                  rdfs:domain :Vehicle ;
                  rdfs:range :Owner ;
                  rdfs:comment "Identifica al titular (persona u organización) del vehículo"@es ,
-                              "It identifies the person or organisation who owns the vehicle"@en ,
-                              "registered owner"@en ;
-                 rdfs:label "titular registrado"@es .
+                              "It identifies the person or organisation who owns the vehicle"@en ;
+                 rdfs:label "registered owner"@en ,
+                            "titular registrado"@es .
 
 
 ###  http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#vehicleType
@@ -247,15 +237,66 @@ xsd:date rdf:type rdfs:Datatype .
 
 
 #################################################################
+#    Data properties
+#################################################################
+
+###  http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#activationDate
+:activationDate rdf:type owl:DatatypeProperty ;
+                rdfs:domain :Permit ;
+                rdfs:range xsd:date ;
+                rdfs:comment "La fecha de activación de la autorización."@es ,
+                             "The date on which the authorization is activated."@en ;
+                rdfs:label "Date of Activation"@en ,
+                           "Fecha de activación"@es .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#beginningDate
+:beginningDate rdf:type owl:DatatypeProperty ;
+               rdfs:domain :Permit ;
+               rdfs:range xsd:date ;
+               rdfs:comment "Fecha de inicio del periodo de la autorización."@es ,
+                            "Starting date of the authorization period."@en ;
+               rdfs:label "Fecha de inicio"@es ,
+                          "Beginning Date" .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#endingDate
+:endingDate rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Permit ;
+            rdfs:range xsd:date ;
+            rdfs:comment "Fecha de finalización de vigencia de la autorización"@es ,
+                         "Permit expiration date"@en ;
+            rdfs:label "Ending date"@en ,
+                       "Fecha de finalización"@es .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#licensePlateNumber
+:licensePlateNumber rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :Vehicle ;
+                    rdfs:range xsd:string ;
+                    rdfs:comment "Alphanumeric identifier assigned to a vehicle for registration and identification purposes."@en ,
+                                 "Identificador alfanumérico asignado a un vehículo para su registro e identificación"@es ;
+                    rdfs:label "License Plate Number"@en ,
+                               "Número de matrícula"@es .
+
+
+#################################################################
 #    Classes
 #################################################################
 
 ###  http://vocab.ciudadesabiertas.es/def/transporte/trafico#Tramo
-<http://vocab.ciudadesabiertas.es/def/transporte/trafico#Tramo> rdf:type owl:Class .
+<http://vocab.ciudadesabiertas.es/def/transporte/trafico#Tramo> rdf:type owl:Class ;
+                                                                rdfs:comment "Tramo definido por un punto de inicio y fin que puede pertenecer a una o más vías."@es ;
+                                                                rdfs:isDefinedBy <http://vocab.ciudadesabiertas.es/def/transporte/trafico> ;
+                                                                rdfs:label "Tramo"@es .
 
 
-###  http://vocab.linkeddata.es/datosabiertos/def/commons/zone#TrafficControlledZone
-<http://vocab.linkeddata.es/datosabiertos/def/commons/zone#TrafficControlledZone> rdf:type owl:Class .
+###  http://vocab.linkeddata.es/datosabiertos/def/common/zone#RegulatedZone
+<http://vocab.linkeddata.es/datosabiertos/def/common/zone#RegulatedZone> rdf:type owl:Class ;
+                                                                         rdfs:comment "Area a la que se aplica una regulacion o normativa particular."@es ,
+                                                                                      "Area to which a particular regulation or policy applies."@en ;
+                                                                         rdfs:label "Regulated Zone"@en ,
+                                                                                    "Zona regulatoria"@es .
 
 
 ###  http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#Owner
@@ -267,18 +308,18 @@ xsd:date rdf:type rdfs:Datatype .
                                        <https://schema.org/Person>
                                      )
                        ] ;
-       rdfs:comment "Owner"@en ,
-                    "Person or organisation that is registered as the owner of a vehicle or of a vehicle permit"@en ,
+       rdfs:comment "Person or organisation that is registered as the owner of a vehicle or of a vehicle permit"@en ,
                     "Persona u organización que está registrada como titular de un vehículo o como titular de una autorización para un vehículo"@es ;
-       rdfs:label "Titular"@es .
+       rdfs:label "Owner"@en ,
+                  "Titular"@es .
 
 
 ###  http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#Permit
 :Permit rdf:type owl:Class ;
         rdfs:comment "Official permit, usually issued by the city council or the traffic authority, that allows a particular vehicle to access, drive through, or park in an area where entry is restricted or regulated"@en ,
-                     "Permiso oficial, emitido normalmente por el ayuntamiento o la autoridad de tráfico, que habilita a un vehículo concreto a acceder, circular o estacionar en un área donde el acceso está restringido o regulado"@es ,
-                     "Permit"@en ;
-        rdfs:label "Autorización"@es .
+                     "Permiso oficial, emitido normalmente por el ayuntamiento o la autoridad de tráfico, que habilita a un vehículo concreto a acceder, circular o estacionar en un área donde el acceso está restringido o regulado"@es ;
+        rdfs:label "Autorización"@es ,
+                   "Permit"@en .
 
 
 ###  http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#Vehicle
@@ -299,15 +340,26 @@ xsd:date rdf:type rdfs:Datatype .
 
 
 ###  https://saref.etsi.org/saref4auto/Vehicle/Vehicle
-<https://saref.etsi.org/saref4auto/Vehicle/Vehicle> rdf:type owl:Class .
+<https://saref.etsi.org/saref4auto/Vehicle/Vehicle> rdf:type owl:Class ;
+                                                    rdfs:comment "Self-propelled transport device, along with any attachments, e.g. trailers, that is a legal user of the transportation network (Source: ISO/TS 19091:2019(en))." ;
+                                                    rdfs:isDefinedBy <https://saref.etsi.org/saref4auto/> ;
+                                                    rdfs:label "Vehicle"@en .
 
 
 ###  https://schema.org/Organization
-<https://schema.org/Organization> rdf:type owl:Class .
+<https://schema.org/Organization> rdf:type owl:Class ;
+                                  rdfs:comment "An organization such as a school, NGO, corporation, club, etc."@en ,
+                                               "Una organización como una escuela, una ONG, una corporación, un club, etc."@es ;
+                                  rdfs:isDefinedBy <https://schema.org/> ;
+                                  rdfs:label "Organization"@en .
 
 
 ###  https://schema.org/Person
-<https://schema.org/Person> rdf:type owl:Class .
+<https://schema.org/Person> rdf:type owl:Class ;
+                            rdfs:comment "A person (alive, dead, undead, or fictional)."@en ,
+                                         "Una persona (viva, muerta, no muerta o ficticia)."@es ;
+                            rdfs:isDefinedBy <https://schema.org/> ;
+                            rdfs:label "Person" .
 
 
 #################################################################

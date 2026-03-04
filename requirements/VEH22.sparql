@@ -1,0 +1,46 @@
+
+# VEH22: ¿Qué vehículos tienen una autorización (de periodicidad) anual en un tramo determinado?
+
+PREFIX edintveh: <http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#>
+PREFIX edintkos: <http://vocab.linkeddata.es/datosabiertos/kos/edint/>
+PREFIX skos:     <http://www.w3.org/2004/02/skos/core#>
+
+SELECT DISTINCT ?vehicle ?permit
+WHERE {
+    ?permit a edintveh:Permit ;
+            edintveh:authorisesVehicle ?vehicle ;
+            edintveh:authorisesInSegment <URI_DEL_TRAMO> ;
+            edintveh:permitPeriodicity ?periodicity .
+
+    # La periodicidad debe pertenecer al esquema correcto
+    ?periodicity skos:inScheme edintkos:VehiclePermitPeriodicity ;
+                 skos:prefLabel ?label .
+
+    FILTER (LCASE(STR(?label)) = LCASE("Annual") 
+         || LCASE(STR(?label)) = LCASE("Anual"))
+}
+ORDER BY ?vehicle
+
+
+# Añadiendo estado de autorización:
+
+PREFIX edintveh: <http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#>
+PREFIX edintkos: <http://vocab.linkeddata.es/datosabiertos/kos/edint/>
+PREFIX skos:     <http://www.w3.org/2004/02/skos/core#>
+
+SELECT DISTINCT ?vehicle ?permit ?typeLabel ?statusLabel
+WHERE {
+    ?permit a edintveh:Permit ;
+            edintveh:authorisesVehicle ?vehicle ;
+            edintveh:authorisesInSegment <URI_DEL_TRAMO> ;
+            edintveh:permitPeriodicity
+                <http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePermitPeriodicity/Annual> .
+
+    OPTIONAL {
+        ?permit edintveh:permitType ?type ;
+                edintveh:permitStatus ?status .
+        OPTIONAL { ?type   skos:prefLabel ?typeLabel . }
+        OPTIONAL { ?status skos:prefLabel ?statusLabel . }
+    }
+}
+ORDER BY ?vehicle

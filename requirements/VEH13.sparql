@@ -1,0 +1,62 @@
+
+# VEH13: ¿Qué tipos de autorizaciones existen?
+
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX edintkos: <http://vocab.linkeddata.es/datosabiertos/kos/edint/>
+
+SELECT ?permitType ?label
+WHERE {
+    ?permitType a skos:Concept ;
+                skos:inScheme edintkos:VehiclePermitType .
+
+    OPTIONAL { ?permitType skos:prefLabel ?label . }
+}
+ORDER BY ?label
+
+
+# Solo en español:
+
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX edintkos: <http://vocab.linkeddata.es/datosabiertos/kos/edint/>
+
+SELECT ?permitType ?labelEs
+WHERE {
+    ?permitType a skos:Concept ;
+                skos:inScheme edintkos:VehiclePermitType ;
+                skos:prefLabel ?labelEs .
+
+    FILTER(LANG(?labelEs) = "es")
+}
+ORDER BY ?labelEs
+
+# Cuántos tipos:
+
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX edintkos: <http://vocab.linkeddata.es/datosabiertos/kos/edint/>
+
+SELECT (COUNT(?permitType) AS ?numTypes)
+WHERE {
+    ?permitType a skos:Concept ;
+                skos:inScheme edintkos:VehiclePermitType .
+}
+
+# Autorizaciones por tipo:
+
+PREFIX edintveh: <http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#>
+PREFIX edintkos: <http://vocab.linkeddata.es/datosabiertos/kos/edint/>
+PREFIX skos:     <http://www.w3.org/2004/02/skos/core#>
+
+SELECT ?permit ?permitType ?permitTypeLabel
+WHERE {
+  ?permit a edintveh:Permit ;
+          edintveh:permitType ?permitType .
+
+  # El tipo pertenece al esquema correcto
+  ?permitType skos:inScheme edintkos:VehiclePermitType .
+
+  OPTIONAL { ?permitType skos:prefLabel ?permitTypeLabel . }
+}
+ORDER BY ?permitTypeLabel ?permit
+
+
+

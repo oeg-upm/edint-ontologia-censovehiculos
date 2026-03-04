@@ -1,0 +1,59 @@
+
+# VEH1:  ¿Quién es el titular de un vehículo?
+
+PREFIX edintveh: <http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#>
+PREFIX schema: <https://schema.org/>
+
+SELECT ?vehicle ?owner
+WHERE {
+    ?vehicle a edintveh:Vehicle ;
+             edintveh:registeredOwner ?owner .
+}
+
+
+# Con vehículo concreto
+
+PREFIX edintveh: <http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#>
+
+SELECT ?owner
+WHERE {
+    <URI_DEL_VEHICULO> edintveh:registeredOwner ?owner .
+}
+
+
+# Con nombre de titular 
+
+PREFIX edintveh: <http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#>
+PREFIX schema: <https://schema.org/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?owner ?ownerName
+WHERE {
+    <URI_DEL_VEHICULO> edintveh:registeredOwner ?owner .
+
+    OPTIONAL {
+        ?owner schema:name | rdfs:label ?ownerName .
+    }
+}
+
+
+# Con matrícula concreta y nombre de titular
+
+PREFIX edintveh: <http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#>
+PREFIX schema: <https://schema.org/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?owner ?ownerName
+WHERE {
+    ?vehicle edintveh:registeredOwner ?owner .
+	?vehicle edintveh:licensePlateNumber "MATRICULA"^^xsd:string .
+    OPTIONAL {
+        ?owner schema:name | rdfs:label ?ownerName .
+    }
+}
+
+
+
+
+
+

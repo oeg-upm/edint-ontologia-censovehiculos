@@ -1,0 +1,49 @@
+
+#VEH15: ¿Cuál es el estado de una autorización?
+
+PREFIX edintveh: <http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT ?status ?statusLabel
+WHERE {
+    <URI_DE_LA_AUTORIZACION> edintveh:permitStatus ?status .
+
+    OPTIONAL { ?status skos:prefLabel ?statusLabel . }
+}
+
+
+# Para estado de todas las autorizaciones:
+
+PREFIX edintveh: <http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT ?permit ?status ?statusLabel
+WHERE {
+    ?permit a edintveh:Permit ;
+            edintveh:permitStatus ?status .
+
+    OPTIONAL { ?status skos:prefLabel ?statusLabel . }
+}
+ORDER BY ?permit
+
+
+# Para buscar permisos solo por etiqueta de su estado (p. ej. “Activo”):
+
+PREFIX edintveh: <http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#>
+PREFIX edintkos: <http://vocab.linkeddata.es/datosabiertos/kos/edint/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT ?permit
+WHERE {
+    ?permit a edintveh:Permit ;
+            edintveh:permitStatus ?status .
+
+    ?status skos:inScheme edintkos:VehiclePermitStatus ;
+            skos:prefLabel ?label .
+
+    FILTER (LCASE(STR(?label)) = LCASE("Activo"))
+    # Si quieres forzar idioma español:
+    # FILTER (LANG(?label) = "es")
+}
+
+

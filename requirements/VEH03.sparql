@@ -1,0 +1,21 @@
+
+# VEH3: ¿Quién es el titular de una autorización?
+
+
+PREFIX edintveh: <http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#>
+
+SELECT ?permit ?owner
+WHERE {
+    ?permit a edintveh:Permit ;
+            edintveh:permitOwner ?owner .
+}
+
+
+# Con autorización concreta
+
+PREFIX edintveh: <http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#>
+
+SELECT ?owner
+WHERE {
+    <URI_DE_AUTORIZACION> edintveh:permitOwner ?owner .
+}

@@ -1,0 +1,50 @@
+
+# VEH14: ¿Qué vehículos están autorizados por un tipo de autorización determinada?
+
+PREFIX edintveh: <http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#>
+
+SELECT DISTINCT ?vehicle
+WHERE {
+  ?permit a edintveh:Permit ;
+          edintveh:permitType <URI_DEL_TIPO> ;
+          edintveh:authorisesVehicle ?vehicle .
+}
+ORDER BY ?vehicle
+
+# Para un tipo de autorización referido por su etiqueta (por ejemplo, “Residente”):
+
+PREFIX edintveh: <http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#>
+PREFIX edintkos: <http://vocab.linkeddata.es/datosabiertos/kos/edint/>
+PREFIX skos:     <http://www.w3.org/2004/02/skos/core#>
+
+SELECT DISTINCT ?vehicle ?permitType ?label
+WHERE {
+  ?permit a edintveh:Permit ;
+          edintveh:permitType ?permitType ;
+          edintveh:authorisesVehicle ?vehicle .
+
+  ?permitType skos:inScheme edintkos:VehiclePermitType ;
+              skos:prefLabel ?label .
+
+  FILTER (LCASE(STR(?label)) = LCASE("Residente"))
+  # Si quieres forzar idioma español:
+  # FILTER (LANG(?label) = "es")
+}
+ORDER BY ?vehicle
+
+
+# Para un tipo de autorización referido por su etiqueta (por ejemplo, “Residente”) sin depender de labels:
+
+PREFIX edintveh: <http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#>
+PREFIX edintvehiclepermittype: <http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePermitType/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT DISTINCT ?vehicle ?permitType ?label
+WHERE {
+  ?permit a edintveh:Permit ;
+          edintveh:permitType edintvehiclepermittype:Resident ;
+          edintveh:authorisesVehicle ?vehicle .
+}
+
+
+

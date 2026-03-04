@@ -116,16 +116,6 @@ edintveh:authorisesInSegment rdf:type owl:ObjectProperty ;
                                         "autoriza en tramo"@es .
 
 
-###  http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#authorisesInZone
-edintveh:authorisesInZone rdf:type owl:ObjectProperty ;
-                          rdfs:domain edintveh:Permit ;
-                          rdfs:range edintzone:TrafficControlledZone ;
-                          rdfs:comment "Identifica una zona de tráfico regulado para la cual la autorización da permiso para pasar o aparcar"@es ,
-                                       "It identifies a traffic-controlled zone where the permit authorises the vehicle to go through or park"@en ;
-                          rdfs:label "authorises in area"@en ,
-                                     "autoriza en area"@es .
-
-
 ###  http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#authorisesVehicle
 edintveh:authorisesVehicle rdf:type owl:ObjectProperty ;
                            rdfs:domain edintveh:Permit ;
@@ -269,7 +259,7 @@ skos:inScheme rdf:type owl:ObjectProperty .
 ###  http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#activationDate
 edintveh:activationDate rdf:type owl:DatatypeProperty ;
                         rdfs:domain edintveh:Permit ;
-                        rdfs:range xsd:dateTime ;
+                        rdfs:range xsd:date ;
                         rdfs:comment "La fecha de activación de la autorización."@es ,
                                      "The date on which the authorization is activated."@en ;
                         rdfs:label "Date of Activation"@en ,
@@ -284,6 +274,16 @@ edintveh:beginningDate rdf:type owl:DatatypeProperty ;
                                     "Starting date of the authorization period."@en ;
                        rdfs:label "Fecha de inicio"@es ,
                                   "Beginning Date" .
+
+
+###  http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#endingDate
+edintveh:endingDate rdf:type owl:DatatypeProperty ;
+                    rdfs:domain edintveh:Permit ;
+                    rdfs:range xsd:date ;
+                    rdfs:comment "Fecha de finalización de vigencia de la autorización"@es ,
+                                 "Permit expiration date"@en ;
+                    rdfs:label "Ending date"@en ,
+                               "Fecha de finalización"@es .
 
 
 ###  http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#licensePlateNumber
@@ -307,8 +307,12 @@ estraf:Tramo rdf:type owl:Class ;
              rdfs:label "Tramo"@es .
 
 
-###  http://vocab.linkeddata.es/datosabiertos/def/commons/zone#TrafficControlledZone
-edintzone:TrafficControlledZone rdf:type owl:Class .
+###  http://vocab.linkeddata.es/datosabiertos/def/common/zone#RegulatedZone
+<http://vocab.linkeddata.es/datosabiertos/def/common/zone#RegulatedZone> rdf:type owl:Class ;
+                                                                         rdfs:comment "Area a la que se aplica una regulacion o normativa particular."@es ,
+                                                                                      "Area to which a particular regulation or policy applies."@en ;
+                                                                         rdfs:label "Regulated Zone"@en ,
+                                                                                    "Zona regulatoria"@es .
 
 
 ###  http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#Owner
