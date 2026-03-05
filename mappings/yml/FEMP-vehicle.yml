@@ -18,4 +18,4 @@ mappings:
       - [edintveh:vehicleType, "edintvehicletype:$(tipologia_vehiculo)~iri"] # Ambulance, Bus, Truck, Van, etc.
       - [edintveh:propulsionType, "edintvehiclepropulsiontype:$(tipologia_propulsion)~iri"] # ButaneGas, Electric, Diesel, etc.
       - [edintveh:environmentalBadge, "edintvehicleenvironmentalbadge:$(distintivo)~iri"] # ECO, ZeroEmissions, B, C, etc.
-      - [edintveh:licensePlateNumber, "$(vehiculo_id)",xsd:string]
+      - [edintveh:licensePlateNumber, "$(vehiculo_id)",xsd:string] # Datos sintéticos para los ejemplos.

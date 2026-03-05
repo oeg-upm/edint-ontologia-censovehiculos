@@ -10,4 +10,4 @@ mappings:
       - t-controlled-zone-source
     s: http://vocab.linkeddata.es/datosabiertos/recurso/trafico/zona-regulada/$(zona-regulada_id)
     po:
-      - [a, edintzone:TrafficControlledZone]
+      - [a, edintzone:RegulatedZone]
