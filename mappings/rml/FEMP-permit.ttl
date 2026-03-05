@@ -25,6 +25,7 @@
 		a rml:LogicalSource;
 		rml:source "dataset_enriquecido.csv";
 		rml:referenceFormulation ql:CSV
+
 	];
 	rr:subjectMap [
 		a rr:SubjectMap;
@@ -136,6 +137,17 @@
 		rr:objectMap [
 			a rr:ObjectMap;
 			rml:reference "fecha_activacion";
+			rr:datatype xsd:date
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicateMap [
+			a rr:PredicateMap;
+			rr:constant edintveh:endingDate;
+		];
+		rr:objectMap [
+			a rr:ObjectMap;
+			rml:reference "fecha_vigencia";
 			rr:datatype xsd:date
 		];
 	].

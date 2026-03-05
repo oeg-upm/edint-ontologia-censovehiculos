@@ -22,6 +22,7 @@
 		a rml:LogicalSource;
 		rml:source "dataset_enriquecido.csv";
 		rml:referenceFormulation ql:CSV
+
 	];
 	rr:subjectMap [
 		a rr:SubjectMap;
@@ -34,7 +35,7 @@
 		];
 		rr:objectMap [
 			a rr:ObjectMap;
-			rr:constant edintzone:TrafficControlledZone;
+			rr:constant edintzone:RegulatedZone;
 		];
 	].
 
