@@ -1,0 +1,24 @@
+
+
+# VEH4: ¿En que tramo es válida una autorización?
+
+
+PREFIX edintveh: <http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#>
+PREFIX trafico: <http://vocab.ciudadesabiertas.es/def/transporte/trafico#>
+
+SELECT ?permit ?segment
+WHERE {
+    ?permit a edintveh:Permit ;
+            edintveh:authorisesInSegment ?segment .
+}
+
+# Con autorización concreta:
+
+PREFIX edintveh: <http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#>
+
+SELECT ?segment
+WHERE {
+    <URI_DE_LA_AUTORIZACION> edintveh:authorisesInSegment ?segment .
+}
+
+

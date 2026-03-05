@@ -1,0 +1,13 @@
+# VEH6: Una autorización autoriza a un vehículo en un tramo 
+
+PREFIX edintveh: <http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#>
+PREFIX trafico:  <http://vocab.ciudadesabiertas.es/def/transporte/trafico#>
+
+SELECT ?permit ?vehicle ?segment
+WHERE {
+  ?permit a edintveh:Permit ;
+          edintveh:authorisesVehicle    ?vehicle ;
+          edintveh:authorisesInSegment  ?segment .
+
+}
+

@@ -1,0 +1,32 @@
+
+# VEH12: ¿Qué distintivo ambiental tiene un vehículo autorizado?
+
+
+PREFIX edintveh: <http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT ?vehicle ?badge ?badgeLabel
+WHERE {
+    <URI_DE_LA_AUTORIZACION> edintveh:authorisesVehicle ?vehicle .
+
+    ?vehicle edintveh:environmentalBadge ?badge .
+
+    OPTIONAL { ?badge skos:prefLabel ?badgeLabel . }
+}
+
+# Para todos los autorizados:
+
+PREFIX edintveh: <http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT ?permit ?vehicle ?badge ?badgeLabel
+WHERE {
+    ?permit a edintveh:Permit ;
+            edintveh:authorisesVehicle ?vehicle .
+
+    ?vehicle edintveh:environmentalBadge ?badge .
+
+    OPTIONAL { ?badge skos:prefLabel ?badgeLabel . }
+}
+
+

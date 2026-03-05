@@ -3,11 +3,11 @@ Identifier,Responsible partner,"Version (optional)
  Natural language sentence (fact)",Answer (For Competency Questions),"Status (Proposed, Accepted, Rejected, Deprecated)",Comments (optional),Extracted from (provenance),"Priority 
 (High, Medium, Low) (optional)",Relation with other requirements (optional),Associated ontology elements,Relation to ontology elements in other domains
 VEH1,UPM,v0.1.0,Un vehículo tiene un titular/dueño / ¿Quién es el titular de un vehículo?,,Proposed,al menos 1 obligatoriamente ¿posible más de un titular?,,,,,
-VEH2,UPM,v0.1.0,Un titular puede ser una persona o una organización,,Proposed,,,,,,
+VEH2,UPM,v0.1.0,Un titular puede ser  es una persona o una organización ,,Proposed,,,,,,
 VEH3,UPM,v0.1.0,Una autorización tiene un titular / ¿Quién es el titular de una autorización?,,Proposed,,,,,,
-VEH4,UPM,v0.1.0,¿En que tramo de vía es válida una autorización?,,Proposed,,,,,,
+VEH4,UPM,v0.1.0,¿En que tramo de vía es válida una autorización?,,Proposed,el concepto via ha sido eliminado de la ontologia (04-02-2026). ,,,,,
 VEH5,UPM,v0.1.0,Una autorización autoriza en una zona regulada / ¿En que zona permite operar una autorización?,,Proposed,,,,,,
-VEH6,UPM,v0.1.0,Una autorización autoriza a un vehículo en un tramo perteneciente a una via,,Proposed,,,,,,
+VEH6,UPM,v0.1.0,Una autorización autoriza a un vehículo en un tramo perteneciente a una via,,Proposed,eliminada la clase via,,,,,
 VEH7,UPM,v0.1.0,Una zona de estacionamiento regulado es una zona regulada,,Rejected,Pasar a ontología de zonas,,,,,
 VEH8,UPM,v0.1.0,Una zona de bajas emisiones es una zona regulada,,Rejected,Pasar a ontología de zonas,,,,,
 VEH9,UPM,v0.1.0,Una zona de interés económico es una zona regulada,,Rejected,Pasar a ontología de zonas,,,,,
@@ -15,14 +15,14 @@ VEH10,,v0.1.0,Un caso histórico es una zona regulada,,Rejected,Pasar a ontolog�
 VEH11,UPM,v0.1.0,¿Qué vehículo es autorizado por una autorización determinada?,,Proposed,,,,,,
 VEH12,UPM,v0.1.0,¿Qué distintivo ambiental tiene un vehículo autorizado?,,Proposed,,,,,,
 VEH13,UPM,v0.1.0,¿Qué tipos de autorizaciones existen?,,Proposed,"¿a qué se refiere TipoAutorizaciónVehículo ?--> comercial-industrial, residente",,,,,
-VEH14,,v0.1.0,¿Qué vehículos están autorizados por un tipo de autorización determinada?,,,,,,,,
+VEH14,UPM,v0.1.0,¿Qué vehículos están autorizados por un tipo de autorización determinada?,,Proposed,,,,,,
 VEH15,UPM,v0.1.0,¿Cuál es el estado de una autorización?,,Proposed,,,,,,
 VEH16,UPM,v0.1.0,¿Cuál es la periodicidad/duración de una autorización?,,Proposed,,,,,,
-VEH17,UPM,v0.1.0,¿Qué vehículos con un determinado distintivo ambiental estan autorizados en una zona regulada?,,Proposed,,,,,,
-VEH18,UPM,v0.1.0,¿Qué tipos de vehículo con un determinado distintivo ambiental estan autorizados en una zona regulada?,,Proposed,"¿TipoVehículo = ¿camión, coche, bici, moto, ... o =comercial, particular ...? Lo primero según datos de kos ¿lo último sería TipoActividad? ¿nec?
+VEH17,UPM,v0.1.0,¿Qué vehículos con un determinado distintivo ambiental están autorizados en una zona regulada?,,Proposed,,,,,,
+VEH18,UPM,v0.1.0,¿Qué tipos de vehículo con un determinado distintivo ambiental están autorizados en una zona regulada?,,Proposed,"¿TipoVehículo = ¿camión, coche, bici, moto, ... o =comercial, particular ...? Lo primero según datos de kos ¿lo último sería TipoActividad? ¿nec?
 No entiendo bien enfoque de s4auto",,,,,
 VEH19,UPM,v0.1.0,¿Que tipo de autorización permite a un vehículo comercial en una zona regulada?,,Rejected,"
-No tiene sentido: el tipo de aut es comercial ¿cambiar jpor VEH25?",,,,,
+No tiene sentido: el tipo de aut es comercial ¿cambiar por VEH25?",,,,,
 VEH20,UPM,v0.1.0,¿Qué autorización está activa en un determinado periodo?,,Proposed,o no activa?,,,,,
 VEH21,UPM,v0.1.0,¿Qué tipo de vehículo puede acceder a una zona de bajas emisiones?,,Rejected,"¿añadir relación entre ZonaBajasEmisiones (o ZonaRegulatoria)  y tipo de vehículo (skos)? ¿Y tipo de propulsión y tipo de distintivo?
 
@@ -30,7 +30,10 @@ Se puede considerar lógica de negocio de las aplicaciones y de cada entidad loc
 VEH22,UPM,v0.1.0,¿Qué vehículos tienen una autorización (de periodicidad) anual en un tramo determinado?,,Proposed,"o periodicidad x?
 o vía x?
 o zona de clase X?",,,,,
-VEH23,UPM,v0.1.0,¿Cuál es el titular de un vehículo y los de sus autorizaciones?,,Proposed,"¿es posible que sean distintos?
+VEH23,UPM,v0.1.0,¿Quien es el titular de un vehículo y los de sus autorizaciones?,,Proposed,"¿es posible que sean distintos?
 ¿y distintas autorizaciones para mismo veh para distintos titulares?",,,,,
 VEH24,UPM,v0.1.0,¿Cuáles son los vehículos con titular distinto al de sus autorizaciones?,,Proposed,Tiene sentido dependiendo de respuestas a comentario de VEH23,,,,,
-VEH25,UPM,v0.1.0,¿Que autorizaciones de tipo comercial dan permiso en una zona regulada?,,Proposed,,,,,,
+VEH25,UPM,v0.1.0,¿Qué autorizaciones de tipo comercial dan permiso en una zona regulada?,,Proposed,,,,,,
+VEH26,UPM,v0.1.0,¿Qué vehículos tienen una autorización para zonas de aparcamiento regulado?,,Proposed,o zonas de bajas emisiones?,,,,,
+VEH27,UPM,v0.1.0,¿Qué vehículos sin distintivo tienen autorización activa?,,Proposed,¿alguno que no debería estar?,,,,,
+VEH28,UPM,v0.1.0,¿Quiénes son propietarios de vehículos eléctricos con autorización activa?,,Proposed,,,,,,

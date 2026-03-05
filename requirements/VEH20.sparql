@@ -1,0 +1,21 @@
+
+# VEH20 ¿Qué autorización está activa en un determinado periodo?  --> autorizaciones activas cuyo inicio cae dentro del periodo (aunque terminen también en ese periodo)
+
+PREFIX edintveh: <http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#>
+PREFIX edintvehiclepermitstatus: <http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePermitStatus/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT DISTINCT ?permit ?beginningDate ?activationDate
+WHERE {
+  ?permit a edintveh:Permit ;
+          edintveh:permitStatus edintvehiclepermitstatus:Active ;
+          edintveh:beginningDate ?beginningDate ;
+          edintveh:activationDate ?activationDate .
+
+  FILTER ( ?beginningDate >= "FECHA_INICIO_INTERVALO"^^xsd:date &&
+           ?beginningDate <= "FECHA_FIN_INTERVALO"^^xsd:date )		## Fechas con formato: "Año-Mes-Día"
+}
+ORDER BY ?beginningDate ?permit
+
+
+

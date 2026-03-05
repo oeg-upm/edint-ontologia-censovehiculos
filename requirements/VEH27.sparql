@@ -1,0 +1,16 @@
+
+# VEH27: ¿Qué vehículos sin distintivo tienen autorización activa?
+
+PREFIX edintveh: <http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#>
+PREFIX edintvehiclepermitstatus: <http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePermitStatus/>
+
+SELECT DISTINCT ?vehicle ?permit
+WHERE {
+  ?permit a edintveh:Permit ;
+          edintveh:authorisesVehicle ?vehicle ;
+          edintveh:permitStatus edintvehiclepermitstatus:Active .
+
+  FILTER NOT EXISTS { ?vehicle edintveh:environmentalBadge ?badge . }
+}
+ORDER BY ?vehicle ?permit
+

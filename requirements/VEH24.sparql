@@ -1,0 +1,64 @@
+
+# VEH24: ¿Cuáles son los vehículos con titular distinto al de sus autorizaciones?
+
+PREFIX edintveh: <http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#>
+
+SELECT DISTINCT ?vehicle ?vehicleOwner ?permit ?permitOwner
+WHERE {
+  ?vehicle a edintveh:Vehicle ;
+           edintveh:registeredOwner ?vehicleOwner .
+
+  ?permit  a edintveh:Permit ;
+           edintveh:authorisesVehicle ?vehicle ;
+           edintveh:permitOwner ?permitOwner .
+
+  FILTER(?vehicleOwner != ?permitOwner)
+}
+
+
+
+# Variante más elaborada
+
+PREFIX rdf:      <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX schema:   <https://schema.org/>
+PREFIX edintveh: <http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehicles#>
+
+SELECT ?vehicle
+       ?owner
+       (COALESCE(SAMPLE(?ownerRegName), STR(?owner)) AS ?ownerName)
+       (GROUP_CONCAT(DISTINCT ?permitOwnerName; separator=" | ") AS ?titularesPermisosDistintos)
+       (GROUP_CONCAT(DISTINCT STR(?permitOwner); separator=" | ") AS ?titularesPermisosDistintosIRIs)
+WHERE {
+  # Titular registrado
+  ?vehicle a edintveh:Vehicle ;
+            edintveh:registeredOwner ?owner .
+  OPTIONAL {
+    ?owner rdfs:label ?ownerRegLabel .
+    FILTER(LANG(?ownerRegLabel) = "" || LANGMATCHES(LANG(?ownerRegLabel), "es"))
+  }
+  OPTIONAL {
+    ?owner schema:name ?ownerRegNameES .
+    FILTER(LANG(?ownerRegNameES) = "" || LANGMATCHES(LANG(?ownerRegNameES), "es"))
+  }
+  BIND(COALESCE(?ownerRegNameES, ?ownerRegLabel) AS ?ownerRegName)
+
+  # Permisos cuyo titular difiere del registrado
+  ?permit a edintveh:Permit ;
+          edintveh:authorisesVehicle ?vehicle ;
+          edintveh:permitOwner ?permitOwner .
+  FILTER(?permitOwner != ?owner)
+
+  OPTIONAL {
+    ?permitOwner rdfs:label ?permitOwnerLabel .
+    FILTER(LANG(?permitOwnerLabel) = "" || LANGMATCHES(LANG(?permitOwnerLabel), "es"))
+  }
+  OPTIONAL {
+    ?permitOwner schema:name ?permitOwnerNameES .
+    FILTER(LANG(?permitOwnerNameES) = "" || LANGMATCHES(LANG(?permitOwnerNameES), "es"))
+  }
+  BIND(COALESCE(?permitOwnerNameES, ?permitOwnerLabel, STR(?permitOwner)) AS ?permitOwnerName)
+}
+GROUP BY ?vehicle ?owner
+ORDER BY ?vehicle
+

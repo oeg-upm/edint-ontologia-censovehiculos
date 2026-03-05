@@ -1,0 +1,48 @@
+
+# VEH16: ¿Cuál es la periodicidad/duración de una autorización?
+
+PREFIX edintveh: <http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT ?periodicity ?label
+WHERE {
+    <URI_DE_LA_AUTORIZACION> edintveh:permitPeriodicity ?periodicity .
+    OPTIONAL { ?periodicity skos:prefLabel ?label . }
+}
+
+
+# Para periodicidad de todas las autorizaciones:
+
+PREFIX edintveh: <http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT ?permit ?periodicity ?label
+WHERE {
+    ?permit a edintveh:Permit ;
+            edintveh:permitPeriodicity ?periodicity .
+
+    OPTIONAL { ?periodicity skos:prefLabel ?label . }
+}
+ORDER BY ?permit
+
+
+# Para periodicidad concreta (p. ej. “Mensual”)
+
+PREFIX edintveh: <http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#>
+PREFIX edintkos: <http://vocab.linkeddata.es/datosabiertos/kos/edint/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT ?permit
+WHERE {
+    ?permit a edintveh:Permit ;
+            edintveh:permitPeriodicity ?periodicity .
+
+    ?periodicity skos:inScheme edintkos:VehiclePermitPeriodicity ;
+                 skos:prefLabel ?label .
+
+    FILTER (LCASE(STR(?label)) = LCASE("Mensual"))
+    # Para forzar idioma:
+    # FILTER (LANG(?label) = "es")
+}
+
+

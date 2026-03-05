@@ -40,4 +40,5 @@ generate an issue (work in progress)
 
 Esta ontología ha sido desarrollada en el contexto del Espacio de Datos para las Infraestructuras Urbanas Inteligentes ([EDINT](https://edint.es/)). 
 
-<<Completar con información global del proyecto y logos si es necesario>>.
+![Logos](EDINT_UE_V-Color.png)
+

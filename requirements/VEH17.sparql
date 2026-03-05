@@ -1,0 +1,73 @@
+
+# VEH17: ¿Qué vehículos con un determinado distintivo ambiental estan autorizados en una zona regulada?
+
+PREFIX edintveh: <http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#>
+
+SELECT DISTINCT ?vehicle ?zone
+WHERE {
+  ?permit a edintveh:Permit ;
+          edintveh:authorisesVehicle ?vehicle ;
+          edintveh:authorisesInZone  ?zone .
+
+  ?vehicle edintveh:environmentalBadge <URI_DEL_DISTINTIVO> .
+}
+ORDER BY ?zone ?vehicle
+
+
+# Devolviendo etiqueta legible del distintivo:
+
+PREFIX edintveh: <http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#>
+PREFIX skos:     <http://www.w3.org/2004/02/skos/core#>
+
+SELECT DISTINCT ?vehicle ?zone ?badge ?badgeLabel
+WHERE {
+  ?permit a edintveh:Permit ;
+          edintveh:authorisesVehicle ?vehicle ;
+          edintveh:authorisesInZone  ?zone .
+
+  ?vehicle edintveh:environmentalBadge ?badge .
+  FILTER (?badge = <URI_DEL_DISTINTIVO>)
+
+  OPTIONAL { ?badge skos:prefLabel ?badgeLabel . }
+}
+ORDER BY LCASE(STR(COALESCE(?badgeLabel, STR(?badge)))) ?zone ?vehicle
+
+
+# Para filtrar por nombre del distintivo (p. ej., “ECO”):
+
+PREFIX edintveh: <http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#>
+PREFIX edintkos: <http://vocab.linkeddata.es/datosabiertos/kos/edint/>
+PREFIX skos:     <http://www.w3.org/2004/02/skos/core#>
+
+SELECT DISTINCT ?vehicle ?zone ?badge
+WHERE {
+  ?permit a edintveh:Permit ;
+          edintveh:authorisesVehicle ?vehicle ;
+          edintveh:authorisesInZone  ?zone .
+
+  ?vehicle edintveh:environmentalBadge ?badge .
+  ?badge   skos:inScheme edintkos:VehicleEnvironmentalBadge ;
+           skos:prefLabel ?label .
+
+  FILTER(LCASE(STR(?label)) = LCASE("ECO"))
+  # Si quieres forzar español o inglés:
+  # FILTER(LANG(?label) = "es")
+}
+ORDER BY ?zone ?vehicle
+
+
+# Para zona concreta + Distintivo concreto (por URI):
+
+PREFIX edintveh: <http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#>
+
+SELECT DISTINCT ?vehicle
+WHERE {
+  ?permit a edintveh:Permit ;
+          edintveh:authorisesVehicle ?vehicle ;
+          edintveh:authorisesInZone  <URI_DE_LA_ZONA> .
+
+  ?vehicle edintveh:environmentalBadge <URI_DEL_DISTINTIVO> .
+}
+ORDER BY ?vehicle
+
+

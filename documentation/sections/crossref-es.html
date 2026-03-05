@@ -1,688 +1,611 @@
 <h2 id="crossreference" class="list">T&eacute;rminos de censovehiculos para clases, propiedades de objeto y propiedades de datos <span class="backlink"> volver a <a href="#toc">&iacute;ndice</a></span></h2>
 Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad definida por censovehiculos.
-<div xmlns:era="http://data.europa.eu/949/"
-     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-     id="classes">
-   <h3 id="classes-headline" class="list">Clases</h3>
-   <ul class="hlist">
-      <li>
-         <a href="#Permit"
-            title="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#Permit">Autorización</a>
-      </li>
-      <li>
-         <a href="#Owner"
-            title="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#Owner">Titular</a>
-      </li>
-      <li>
-         <a href="#Vehicle"
-            title="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#Vehicle">Vehículo</a>
-      </li>
-   </ul>
-   <div class="entity" id="Permit">
-      <h3>Autorización<sup class="type-c" title="clase">c</sup>
-         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#Permit</p>
-      <div class="comment">
-         <span class="markdown">Permiso oficial, emitido normalmente por el ayuntamiento o la autoridad de tráfico, que habilita a un vehículo concreto a acceder, circular o estacionar en un área donde el acceso está restringido o regulado</span>
-      </div>
-      <dl class="description">
-         <dt>en dominio de</dt>
-         <dd>
-            <a href="#authorisesInSegment"
-               title="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#authorisesInSegment">autoriza en tramo</a>
-            <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#authorisesInZone"
-               title="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#authorisesInZone">autoriza en zona</a>
-            <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#authorisesVehicle"
-               title="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#authorisesVehicle">autoriza vehículo</a>
-            <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#permitStatus"
-               title="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#permitStatus">estado de autorización</a>
-            <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#permitPeriodicity"
-               title="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#permitPeriodicity">periodicidad de la autorización</a>
-            <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#permitType"
-               title="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#permitType">tipo de autorizacion</a>
-            <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#permitOwner"
-               title="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#permitOwner">titular autorización</a>
-            <sup class="type-op" title="Propiedad entre objetos">op</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="Owner">
-      <h3>Titular<sup class="type-c" title="clase">c</sup>
-         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#Owner</p>
-      <div class="comment">
-         <span class="markdown">Persona u organización que está registrada como titular de un vehículo o como titular de una autorización para un vehículo</span>
-      </div>
-      <dl class="description">
-         <dt>tiene superclases</dt>
-         <dd>
-            <a href="https://schema.org/Organization"
-               target="_blank"
-               title="https://schema.org/Organization">organization</a>
-            <sup class="type-c" title="clase">c</sup>, <a href="https://schema.org/Person"
-               target="_blank"
-               title="https://schema.org/Person">person</a>
-            <sup class="type-c" title="clase">c</sup>
-         </dd>
-         <dt>en rango de</dt>
-         <dd>
-            <a href="#permitOwner"
-               title="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#permitOwner">titular autorización</a>
-            <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#registeredOwner"
-               title="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#registeredOwner">titular registrado</a>
-            <sup class="type-op" title="Propiedad entre objetos">op</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="Vehicle">
-      <h3>Vehículo<sup class="type-c" title="clase">c</sup>
-         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#Vehicle</p>
-      <div class="comment">
-         <span class="markdown">Dispositivo de transporte autopropulsado, junto con cualquier accesorio, por ejemplo remolques, que es un usuario legal de la red de transporte (Fuente: ISO/TS 19091:2019(en))</span>
-      </div>
-      <dl class="description">
-         <dt>tiene superclases</dt>
-         <dd>
-            <a href="https://saref.etsi.org/saref4auto/Vehicle/Vehicle"
-               target="_blank"
-               title="https://saref.etsi.org/saref4auto/Vehicle/Vehicle">vehicle</a>
-            <sup class="type-c" title="clase">c</sup>
-         </dd>
-         <dt>en dominio de</dt>
-         <dd>
-            <a href="#environmentalBadge"
-               title="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#environmentalBadge">distintivo ambiental del vehículo</a>
-            <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#propulsionType"
-               title="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#propulsionType">tipo de propulsión</a>
-            <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#vehicleType"
-               title="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#vehicleType">tipo de vehículo</a>
-            <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#registeredOwner"
-               title="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#registeredOwner">titular registrado</a>
-            <sup class="type-op" title="Propiedad entre objetos">op</sup>
-         </dd>
-         <dt>en rango de</dt>
-         <dd>
-            <a href="#authorisesVehicle"
-               title="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#authorisesVehicle">autoriza vehículo</a>
-            <sup class="type-op" title="Propiedad entre objetos">op</sup>
-         </dd>
-      </dl>
-   </div>
-</div><div xmlns:era="http://data.europa.eu/949/"
-     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-     id="objectproperties">
-   <h2>Propiedades entre objetos</h2>
-   <ul class="hlist">
-      <li>
-         <a href="#authorisesInSegment"
-            title="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#authorisesInSegment">autoriza en tramo</a>
-      </li>
-      <li>
-         <a href="#authorisesInZone"
-            title="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#authorisesInZone">autoriza en zona</a>
-      </li>
-      <li>
-         <a href="#authorisesVehicle"
-            title="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#authorisesVehicle">autoriza vehículo</a>
-      </li>
-      <li>
-         <a href="#environmentalBadge"
-            title="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#environmentalBadge">distintivo ambiental del vehículo</a>
-      </li>
-      <li>
-         <a href="#permitStatus"
-            title="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#permitStatus">estado de autorización</a>
-      </li>
-      <li>
-         <a href="#permitPeriodicity"
-            title="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#permitPeriodicity">periodicidad de la autorización</a>
-      </li>
-      <li>
-         <a href="#permitType"
-            title="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#permitType">tipo de autorizacion</a>
-      </li>
-      <li>
-         <a href="#propulsionType"
-            title="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#propulsionType">tipo de propulsión</a>
-      </li>
-      <li>
-         <a href="#vehicleType"
-            title="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#vehicleType">tipo de vehículo</a>
-      </li>
-      <li>
-         <a href="#permitOwner"
-            title="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#permitOwner">titular autorización</a>
-      </li>
-      <li>
-         <a href="#registeredOwner"
-            title="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#registeredOwner">titular registrado</a>
-      </li>
-      <li>
-         <a href="#http://vocab.ciudadesabiertas.es/def/transporte/trafico#via"
-            title="http://vocab.ciudadesabiertas.es/def/transporte/trafico#via">
-            <span>via</span>
-         </a>
-      </li>
-   </ul>
-   <div class="entity" id="authorisesInSegment">
-      <h3>autoriza en tramo<sup class="type-op" title="Propiedad entre objetos">op</sup>
-         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#authorisesInSegment</p>
-      <div class="comment">
-         <span class="markdown">Identifica el segmento de vía para el cual la autorización da permiso para pasar o aparcar</span>
-      </div>
-      <div class="description">
-         <dl>
-            <dt>dominio</dt>
-            <dd>
-               <a href="#Permit"
-                  title="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#Permit">Autorización</a>
-               <sup class="type-c" title="clase">c</sup>
-            </dd>
-            <dt>rango</dt>
-            <dd>
-               <a href="http://vocab.ciudadesabiertas.es/def/transporte/trafico#Tramo"
-                  target="_blank"
-                  title="http://vocab.ciudadesabiertas.es/def/transporte/trafico#Tramo">tramo</a>
-               <sup class="type-c" title="clase">c</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="authorisesInZone">
-      <h3>autoriza en zona<sup class="type-op" title="Propiedad entre objetos">op</sup>
-         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#authorisesInZone</p>
-      <div class="comment">
-         <span class="markdown">Identifica una zona de tráfico regulado para la cual la autorización da permiso para pasar o aparcar</span>
-      </div>
-      <div class="description">
-         <dl>
-            <dt>dominio</dt>
-            <dd>
-               <a href="#Permit"
-                  title="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#Permit">Autorización</a>
-               <sup class="type-c" title="clase">c</sup>
-            </dd>
-            <dt>rango</dt>
-            <dd>
-               <a href="http://vocab.linkeddata.es/datosabiertos/def/commons/zone#TrafficControlledZone"
-                  target="_blank"
-                  title="http://vocab.linkeddata.es/datosabiertos/def/commons/zone#TrafficControlledZone">traffic controlled zone</a>
-               <sup class="type-c" title="clase">c</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="authorisesVehicle">
-      <h3>autoriza vehículo<sup class="type-op" title="Propiedad entre objetos">op</sup>
-         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#authorisesVehicle</p>
-      <div class="comment">
-         <span class="markdown">Identifica el vehículo al que se refiere la autorización</span>
-      </div>
-      <div class="description">
-         <dl>
-            <dt>dominio</dt>
-            <dd>
-               <a href="#Permit"
-                  title="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#Permit">Autorización</a>
-               <sup class="type-c" title="clase">c</sup>
-            </dd>
-            <dt>rango</dt>
-            <dd>
-               <a href="#Vehicle"
-                  title="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#Vehicle">Vehículo</a>
-               <sup class="type-c" title="clase">c</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="environmentalBadge">
-      <h3>distintivo ambiental del vehículo<sup class="type-op" title="Propiedad entre objetos">op</sup>
-         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#environmentalBadge</p>
-      <div class="comment">
-         <span class="markdown">Distintivo ambiental asignado a un vehículo. Los valores son conceptos SKOS que pertenecen a una lista controlada de tipos de autorización (por ejemplo, ECO, B, C, etc.)</span>
-      </div>
-      <div class="description">
-         <dl>
-            <dt>dominio</dt>
-            <dd>
-               <a href="#Vehicle"
-                  title="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#Vehicle">Vehículo</a>
-               <sup class="type-c" title="clase">c</sup>
-            </dd>
-            <dt>rango</dt>
-            <dd>
-               <a href="http://www.w3.org/2004/02/skos/core#Concept"
-                  target="_blank"
-                  title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
-               <sup class="type-c" title="clase">c</sup> 
-               <span class="logic">and</span> (<a href="http://www.w3.org/2004/02/skos/core#inScheme"
-                  target="_blank"
-                  title="http://www.w3.org/2004/02/skos/core#inScheme">in scheme</a>
-               <sup class="type-op" title="Propiedad entre objetos">op</sup> 
-               <span class="logic">value</span> 
-               <a href="#http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleEnvironmentalBadge"
-                  title="http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleEnvironmentalBadge">vehicle environmental badge</a>)</dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="permitStatus">
-      <h3>estado de autorización<sup class="type-op" title="Propiedad entre objetos">op</sup>
-         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#permitStatus</p>
-      <div class="comment">
-         <span class="markdown">Identifica el estado de la autorización para un vehículo. Los valores son conceptos SKOS que pertenecen a una lista controlada de tipos de autorización (por ejemplo, activo, inactivo, rechazado, etc.)</span>
-      </div>
-      <div class="description">
-         <dl>
-            <dt>dominio</dt>
-            <dd>
-               <a href="#Permit"
-                  title="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#Permit">Autorización</a>
-               <sup class="type-c" title="clase">c</sup>
-            </dd>
-            <dt>rango</dt>
-            <dd>
-               <a href="http://www.w3.org/2004/02/skos/core#Concept"
-                  target="_blank"
-                  title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
-               <sup class="type-c" title="clase">c</sup> 
-               <span class="logic">and</span> (<a href="http://www.w3.org/2004/02/skos/core#inScheme"
-                  target="_blank"
-                  title="http://www.w3.org/2004/02/skos/core#inScheme">in scheme</a>
-               <sup class="type-op" title="Propiedad entre objetos">op</sup> 
-               <span class="logic">value</span> 
-               <a href="#http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePermitStatus"
-                  title="http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePermitStatus">vehicle permit status</a>)</dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="permitPeriodicity">
-      <h3>periodicidad de la autorización<sup class="type-op" title="Propiedad entre objetos">op</sup>
-         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#permitPeriodicity</p>
-      <div class="comment">
-         <span class="markdown">Identifica la periodicidad de la autorización para un vehículo. Los valores son conceptos SKOS que pertenecen a una lista controlada de tipos de autorización (por ejemplo, mensual, anual, etc.)</span>
-      </div>
-      <div class="description">
-         <dl>
-            <dt>dominio</dt>
-            <dd>
-               <a href="#Permit"
-                  title="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#Permit">Autorización</a>
-               <sup class="type-c" title="clase">c</sup>
-            </dd>
-            <dt>rango</dt>
-            <dd>
-               <a href="http://www.w3.org/2004/02/skos/core#Concept"
-                  target="_blank"
-                  title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
-               <sup class="type-c" title="clase">c</sup> 
-               <span class="logic">and</span> (<a href="http://www.w3.org/2004/02/skos/core#inScheme"
-                  target="_blank"
-                  title="http://www.w3.org/2004/02/skos/core#inScheme">in scheme</a>
-               <sup class="type-op" title="Propiedad entre objetos">op</sup> 
-               <span class="logic">value</span> 
-               <a href="#http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePermitPeriodicity"
-                  title="http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePermitPeriodicity">vehicle permit periodicity</a>)</dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="permitType">
-      <h3>tipo de autorizacion<sup class="type-op" title="Propiedad entre objetos">op</sup>
-         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#permitType</p>
-      <div class="comment">
-         <span class="markdown">Identifica el tipo de autorización para un vehículo. Los valores son conceptos SKOS que pertenecen a una lista controlada de tipos de autorización.</span>
-      </div>
-      <div class="description">
-         <dl>
-            <dt>dominio</dt>
-            <dd>
-               <a href="#Permit"
-                  title="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#Permit">Autorización</a>
-               <sup class="type-c" title="clase">c</sup>
-            </dd>
-            <dt>rango</dt>
-            <dd>
-               <a href="http://www.w3.org/2004/02/skos/core#Concept"
-                  target="_blank"
-                  title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
-               <sup class="type-c" title="clase">c</sup> 
-               <span class="logic">and</span> (<a href="http://www.w3.org/2004/02/skos/core#inScheme"
-                  target="_blank"
-                  title="http://www.w3.org/2004/02/skos/core#inScheme">in scheme</a>
-               <sup class="type-op" title="Propiedad entre objetos">op</sup> 
-               <span class="logic">value</span> 
-               <a href="#http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePermitType"
-                  title="http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePermitType">vehicle permit type</a>)</dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="propulsionType">
-      <h3>tipo de propulsión<sup class="type-op" title="Propiedad entre objetos">op</sup>
-         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#propulsionType</p>
-      <div class="comment">
-         <span class="markdown">Tipo de propulsión de un vehículo. Los valores son conceptos SKOS que pertenecen a una lista controlada de tipos de autorización (por ejemplo, diésel, gasolina, eléctrico, etc.)</span>
-      </div>
-      <div class="description">
-         <dl>
-            <dt>dominio</dt>
-            <dd>
-               <a href="#Vehicle"
-                  title="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#Vehicle">Vehículo</a>
-               <sup class="type-c" title="clase">c</sup>
-            </dd>
-            <dt>rango</dt>
-            <dd>
-               <a href="http://www.w3.org/2004/02/skos/core#Concept"
-                  target="_blank"
-                  title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
-               <sup class="type-c" title="clase">c</sup> 
-               <span class="logic">and</span> (<a href="http://www.w3.org/2004/02/skos/core#inScheme"
-                  target="_blank"
-                  title="http://www.w3.org/2004/02/skos/core#inScheme">in scheme</a>
-               <sup class="type-op" title="Propiedad entre objetos">op</sup> 
-               <span class="logic">value</span> 
-               <a href="#http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePropulsionType"
-                  title="http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePropulsionType">vehicle propulsion type</a>)</dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="vehicleType">
-      <h3>tipo de vehículo<sup class="type-op" title="Propiedad entre objetos">op</sup>
-         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#vehicleType</p>
-      <div class="comment">
-         <span class="markdown">Tipo de vehículo. Los valores son conceptos SKOS que pertenecen a una lista controlada de tipos de autorización (por ejemplo, turismo, furgoneta, caravana, etc.)</span>
-      </div>
-      <div class="description">
-         <dl>
-            <dt>dominio</dt>
-            <dd>
-               <a href="#Vehicle"
-                  title="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#Vehicle">Vehículo</a>
-               <sup class="type-c" title="clase">c</sup>
-            </dd>
-            <dt>rango</dt>
-            <dd>
-               <a href="http://www.w3.org/2004/02/skos/core#Concept"
-                  target="_blank"
-                  title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
-               <sup class="type-c" title="clase">c</sup> 
-               <span class="logic">and</span> (<a href="http://www.w3.org/2004/02/skos/core#inScheme"
-                  target="_blank"
-                  title="http://www.w3.org/2004/02/skos/core#inScheme">in scheme</a>
-               <sup class="type-op" title="Propiedad entre objetos">op</sup> 
-               <span class="logic">value</span> 
-               <a href="#http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleType"
-                  title="http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleType">vehicle type</a>)</dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="permitOwner">
-      <h3>titular autorización<sup class="type-op" title="Propiedad entre objetos">op</sup>
-         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#permitOwner</p>
-      <div class="comment">
-         <span class="markdown">Identifica al titular (persona u organización) para el cual la autorización está expedida</span>
-      </div>
-      <div class="description">
-         <dl>
-            <dt>dominio</dt>
-            <dd>
-               <a href="#Permit"
-                  title="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#Permit">Autorización</a>
-               <sup class="type-c" title="clase">c</sup>
-            </dd>
-            <dt>rango</dt>
-            <dd>
-               <a href="#Owner"
-                  title="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#Owner">Titular</a>
-               <sup class="type-c" title="clase">c</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="registeredOwner">
-      <h3>titular registrado<sup class="type-op" title="Propiedad entre objetos">op</sup>
-         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#registeredOwner</p>
-      <div class="comment">
-         <span class="markdown">Identifica al titular (persona u organización) del vehículo</span>
-      </div>
-      <div class="description">
-         <dl>
-            <dt>dominio</dt>
-            <dd>
-               <a href="#Vehicle"
-                  title="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#Vehicle">Vehículo</a>
-               <sup class="type-c" title="clase">c</sup>
-            </dd>
-            <dt>rango</dt>
-            <dd>
-               <a href="#Owner"
-                  title="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#Owner">Titular</a>
-               <sup class="type-c" title="clase">c</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="http://vocab.ciudadesabiertas.es/def/transporte/trafico#via">
-      <h3>via<sup class="type-op" title="Propiedad entre objetos">op</sup>
-         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://vocab.ciudadesabiertas.es/def/transporte/trafico#via</p>
-      <div class="description">
-         <dl>
-            <dt>rango</dt>
-            <dd>
-               <a href="http://vocab.ciudadesabiertas.es/def/transporte/trafico#Tramo"
-                  target="_blank"
-                  title="http://vocab.ciudadesabiertas.es/def/transporte/trafico#Tramo">tramo</a>
-               <sup class="type-c" title="clase">c</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-</div><div xmlns:era="http://data.europa.eu/949/"
-     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-     id="namedindividuals">
-   <h3 id="namedindividuals" class="list">Individuos</h3>
-   <ul class="hlist">
-      <li>
-         <a href="#http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleEnvironmentalBadge"
-            title="http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleEnvironmentalBadge">
-            <span>vehicle environmental badge</span>
-         </a>
-      </li>
-      <li>
-         <a href="#http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePermitPeriodicity"
-            title="http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePermitPeriodicity">
-            <span>vehicle permit periodicity</span>
-         </a>
-      </li>
-      <li>
-         <a href="#http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePermitStatus"
-            title="http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePermitStatus">
-            <span>vehicle permit status</span>
-         </a>
-      </li>
-      <li>
-         <a href="#http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePermitType"
-            title="http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePermitType">
-            <span>vehicle permit type</span>
-         </a>
-      </li>
-      <li>
-         <a href="#http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePropulsionType"
-            title="http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePropulsionType">
-            <span>vehicle propulsion type</span>
-         </a>
-      </li>
-      <li>
-         <a href="#http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleType"
-            title="http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleType">
-            <span>vehicle type</span>
-         </a>
-      </li>
-   </ul>
-   <div class="entity" id="http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleEnvironmentalBadge">
-      <h3>vehicle environmental badge<sup class="type-ni" title="Individuo">ni</sup>
-         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#namedindividuals">Índice de individuos</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleEnvironmentalBadge</p>
-      <dl class="description">
-         <dt>pertenece a</dt>
-         <dd>
-            <a href="http://www.w3.org/2004/02/skos/core#ConceptScheme"
-               target="_blank"
-               title="http://www.w3.org/2004/02/skos/core#ConceptScheme">concept scheme</a>
-            <sup class="type-c" title="clase">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePermitPeriodicity">
-      <h3>vehicle permit periodicity<sup class="type-ni" title="Individuo">ni</sup>
-         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#namedindividuals">Índice de individuos</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePermitPeriodicity</p>
-      <dl class="description">
-         <dt>pertenece a</dt>
-         <dd>
-            <a href="http://www.w3.org/2004/02/skos/core#ConceptScheme"
-               target="_blank"
-               title="http://www.w3.org/2004/02/skos/core#ConceptScheme">concept scheme</a>
-            <sup class="type-c" title="clase">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePermitStatus">
-      <h3>vehicle permit status<sup class="type-ni" title="Individuo">ni</sup>
-         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#namedindividuals">Índice de individuos</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePermitStatus</p>
-      <dl class="description">
-         <dt>pertenece a</dt>
-         <dd>
-            <a href="http://www.w3.org/2004/02/skos/core#ConceptScheme"
-               target="_blank"
-               title="http://www.w3.org/2004/02/skos/core#ConceptScheme">concept scheme</a>
-            <sup class="type-c" title="clase">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePermitType">
-      <h3>vehicle permit type<sup class="type-ni" title="Individuo">ni</sup>
-         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#namedindividuals">Índice de individuos</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePermitType</p>
-      <dl class="description">
-         <dt>pertenece a</dt>
-         <dd>
-            <a href="http://www.w3.org/2004/02/skos/core#ConceptScheme"
-               target="_blank"
-               title="http://www.w3.org/2004/02/skos/core#ConceptScheme">concept scheme</a>
-            <sup class="type-c" title="clase">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePropulsionType">
-      <h3>vehicle propulsion type<sup class="type-ni" title="Individuo">ni</sup>
-         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#namedindividuals">Índice de individuos</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePropulsionType</p>
-      <dl class="description">
-         <dt>pertenece a</dt>
-         <dd>
-            <a href="http://www.w3.org/2004/02/skos/core#ConceptScheme"
-               target="_blank"
-               title="http://www.w3.org/2004/02/skos/core#ConceptScheme">concept scheme</a>
-            <sup class="type-c" title="clase">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleType">
-      <h3>vehicle type<sup class="type-ni" title="Individuo">ni</sup>
-         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#namedindividuals">Índice de individuos</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleType</p>
-      <dl class="description">
-         <dt>pertenece a</dt>
-         <dd>
-            <a href="http://www.w3.org/2004/02/skos/core#ConceptScheme"
-               target="_blank"
-               title="http://www.w3.org/2004/02/skos/core#ConceptScheme">concept scheme</a>
-            <sup class="type-c" title="clase">c</sup>
-         </dd>
-      </dl>
-   </div>
+<div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+ <h3 id="classes-headline" class="list">Clases</h3>
+ <ul class="hlist">
+  <li><a href="#Permit" title="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#Permit">Autorización</a></li>
+  <li><a href="#https://schema.org/Organization" title="https://schema.org/Organization">Organization</a></li>
+  <li><a href="#https://schema.org/Person" title="https://schema.org/Person">Person</a></li>
+  <li><a href="#Owner" title="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#Owner">Titular</a></li>
+  <li><a href="#http://vocab.ciudadesabiertas.es/def/transporte/trafico#Tramo" title="http://vocab.ciudadesabiertas.es/def/transporte/trafico#Tramo">Tramo</a></li>
+  <li><a href="#https://saref.etsi.org/saref4auto/Vehicle/Vehicle" title="https://saref.etsi.org/saref4auto/Vehicle/Vehicle">Vehicle</a></li>
+  <li><a href="#Vehicle" title="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#Vehicle">Vehículo</a></li>
+  <li><a href="#http://vocab.linkeddata.es/datosabiertos/def/common/zone#RegulatedZone" title="http://vocab.linkeddata.es/datosabiertos/def/common/zone#RegulatedZone">Zona regulatoria</a></li>
+ </ul>
+ <div class="entity" id="Permit">
+  <h3>Autorización<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#Permit</p>
+  <div class="comment">
+   <span class="markdown">Permiso oficial, emitido normalmente por el ayuntamiento o la autoridad de tráfico, que habilita a un vehículo concreto a acceder, circular o estacionar en un área donde el acceso está restringido o regulado</span>
+  </div>
+  <dl class="description">
+   <dt>
+    en dominio de
+   </dt>
+   <dd>
+    <a href="#activationDate" title="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#activationDate">Fecha de activación</a> <sup class="type-dp" title="Propiedad de datos">dp</sup>, <a href="#endingDate" title="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#endingDate">Fecha de finalización</a> <sup class="type-dp" title="Propiedad de datos">dp</sup>, <a href="#beginningDate" title="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#beginningDate">Fecha de inicio</a> <sup class="type-dp" title="Propiedad de datos">dp</sup>, <a href="#authorisesInSegment" title="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#authorisesInSegment">autoriza en tramo</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#authorisesVehicle" title="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#authorisesVehicle">autoriza vehículo</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#permitStatus" title="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#permitStatus">estado de autorización</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#permitPeriodicity" title="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#permitPeriodicity">periodicidad de la autorización</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#permitType" title="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#permitType">tipo de autorizacion</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#permitOwner" title="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#permitOwner">titular autorización</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://schema.org/Organization">
+  <h3>Organization<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> https://schema.org/Organization</p>
+  <div class="comment">
+   <span class="markdown">Una organización como una escuela, una ONG, una corporación, un club, etc.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Definida por
+   </dt>
+   <dd>
+    <a href="https://schema.org/">https://schema.org/</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    tiene subclases
+   </dt>
+   <dd>
+    <a href="#Owner" title="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#Owner">Titular</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://schema.org/Person">
+  <h3>Person<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> https://schema.org/Person</p>
+  <div class="comment">
+   <span class="markdown">Una persona (viva, muerta, no muerta o ficticia).</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Definida por
+   </dt>
+   <dd>
+    <a href="https://schema.org/">https://schema.org/</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    tiene subclases
+   </dt>
+   <dd>
+    <a href="#Owner" title="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#Owner">Titular</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Owner">
+  <h3>Titular<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#Owner</p>
+  <div class="comment">
+   <span class="markdown">Persona u organización que está registrada como titular de un vehículo o como titular de una autorización para un vehículo</span>
+  </div>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#https://schema.org/Organization" title="https://schema.org/Organization">Organization</a> <sup class="type-c" title="clase">c</sup>, <a href="#https://schema.org/Person" title="https://schema.org/Person">Person</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+   <dt>
+    en rango de
+   </dt>
+   <dd>
+    <a href="#permitOwner" title="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#permitOwner">titular autorización</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#registeredOwner" title="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#registeredOwner">titular registrado</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://vocab.ciudadesabiertas.es/def/transporte/trafico#Tramo">
+  <h3>Tramo<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://vocab.ciudadesabiertas.es/def/transporte/trafico#Tramo</p>
+  <div class="comment">
+   <span class="markdown">Tramo definido por un punto de inicio y fin que puede pertenecer a una o más vías.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Definida por
+   </dt>
+   <dd>
+    <a href="http://vocab.ciudadesabiertas.es/def/transporte/trafico">http://vocab.ciudadesabiertas.es/def/transporte/trafico</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    en rango de
+   </dt>
+   <dd>
+    <a href="#authorisesInSegment" title="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#authorisesInSegment">autoriza en tramo</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://saref.etsi.org/saref4auto/Vehicle/Vehicle">
+  <h3>Vehicle<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> https://saref.etsi.org/saref4auto/Vehicle/Vehicle</p>
+  <div class="comment">
+   <span class="markdown">Self-propelled transport device, along with any attachments, e.g. trailers, that is a legal user of the transportation network (Source: ISO/TS 19091:2019(en)).</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Definida por
+   </dt>
+   <dd>
+    <a href="https://saref.etsi.org/saref4auto/">https://saref.etsi.org/saref4auto/</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    tiene subclases
+   </dt>
+   <dd>
+    <a href="#Vehicle" title="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#Vehicle">Vehículo</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Vehicle">
+  <h3>Vehículo<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#Vehicle</p>
+  <div class="comment">
+   <span class="markdown">Dispositivo de transporte autopropulsado, junto con cualquier accesorio, por ejemplo remolques, que es un usuario legal de la red de transporte (Fuente: ISO/TS 19091:2019(en))</span>
+  </div>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#https://saref.etsi.org/saref4auto/Vehicle/Vehicle" title="https://saref.etsi.org/saref4auto/Vehicle/Vehicle">Vehicle</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+   <dt>
+    en dominio de
+   </dt>
+   <dd>
+    <a href="#licensePlateNumber" title="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#licensePlateNumber">Número de matrícula</a> <sup class="type-dp" title="Propiedad de datos">dp</sup>, <a href="#environmentalBadge" title="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#environmentalBadge">distintivo ambiental del vehículo</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#propulsionType" title="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#propulsionType">tipo de propulsión</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#vehicleType" title="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#vehicleType">tipo de vehículo</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#registeredOwner" title="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#registeredOwner">titular registrado</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>
+   </dd>
+   <dt>
+    en rango de
+   </dt>
+   <dd>
+    <a href="#authorisesVehicle" title="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#authorisesVehicle">autoriza vehículo</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://vocab.linkeddata.es/datosabiertos/def/common/zone#RegulatedZone">
+  <h3>Zona regulatoria<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/common/zone#RegulatedZone</p>
+  <div class="comment">
+   <span class="markdown">Area a la que se aplica una regulacion o normativa particular.</span>
+  </div>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
+ <h2>Propiedades entre objetos</h2>
+ <ul class="hlist">
+  <li><a href="#authorisesInSegment" title="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#authorisesInSegment">autoriza en tramo</a></li>
+  <li><a href="#authorisesVehicle" title="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#authorisesVehicle">autoriza vehículo</a></li>
+  <li><a href="#environmentalBadge" title="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#environmentalBadge">distintivo ambiental del vehículo</a></li>
+  <li><a href="#permitStatus" title="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#permitStatus">estado de autorización</a></li>
+  <li><a href="#permitPeriodicity" title="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#permitPeriodicity">periodicidad de la autorización</a></li>
+  <li><a href="#permitType" title="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#permitType">tipo de autorizacion</a></li>
+  <li><a href="#propulsionType" title="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#propulsionType">tipo de propulsión</a></li>
+  <li><a href="#vehicleType" title="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#vehicleType">tipo de vehículo</a></li>
+  <li><a href="#permitOwner" title="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#permitOwner">titular autorización</a></li>
+  <li><a href="#registeredOwner" title="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#registeredOwner">titular registrado</a></li>
+ </ul>
+ <div class="entity" id="authorisesInSegment">
+  <h3>autoriza en tramo<sup class="type-op" title="Propiedad entre objetos">op</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a> </span></h3>
+  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#authorisesInSegment</p>
+  <div class="comment">
+   <span class="markdown">Identifica el segmento de vía para el cual la autorización da permiso para pasar o aparcar</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     dominio
+    </dt>
+    <dd>
+     <a href="#Permit" title="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#Permit">Autorización</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+    <dt>
+     rango
+    </dt>
+    <dd>
+     <a href="#http://vocab.ciudadesabiertas.es/def/transporte/trafico#Tramo" title="http://vocab.ciudadesabiertas.es/def/transporte/trafico#Tramo">Tramo</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="authorisesVehicle">
+  <h3>autoriza vehículo<sup class="type-op" title="Propiedad entre objetos">op</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a> </span></h3>
+  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#authorisesVehicle</p>
+  <div class="comment">
+   <span class="markdown">Identifica el vehículo al que se refiere la autorización</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     dominio
+    </dt>
+    <dd>
+     <a href="#Permit" title="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#Permit">Autorización</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+    <dt>
+     rango
+    </dt>
+    <dd>
+     <a href="#Vehicle" title="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#Vehicle">Vehículo</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="environmentalBadge">
+  <h3>distintivo ambiental del vehículo<sup class="type-op" title="Propiedad entre objetos">op</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a> </span></h3>
+  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#environmentalBadge</p>
+  <div class="comment">
+   <span class="markdown">Distintivo ambiental asignado a un vehículo. Los valores son conceptos SKOS que pertenecen a una lista controlada de tipos de autorización (por ejemplo, ECO, B, C, etc.)</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     dominio
+    </dt>
+    <dd>
+     <a href="#Vehicle" title="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#Vehicle">Vehículo</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+    <dt>
+     rango
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="clase">c</sup> <span class="logic">and</span> (<a href="http://www.w3.org/2004/02/skos/core#inScheme" target="_blank" title="http://www.w3.org/2004/02/skos/core#inScheme">in Scheme</a> <sup class="type-op" title="Propiedad entre objetos">op</sup> <span class="logic">value</span> <a href="#http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleEnvironmentalBadge" title="http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleEnvironmentalBadge">Vehicle Environmental Badge</a> <sup class="type-ni" title="Individuo">ni</sup>)
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="permitStatus">
+  <h3>estado de autorización<sup class="type-op" title="Propiedad entre objetos">op</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a> </span></h3>
+  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#permitStatus</p>
+  <div class="comment">
+   <span class="markdown">Identifica el estado de la autorización para un vehículo. Los valores son conceptos SKOS que pertenecen a una lista controlada de tipos de autorización (por ejemplo, activo, inactivo, rechazado, etc.)</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     dominio
+    </dt>
+    <dd>
+     <a href="#Permit" title="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#Permit">Autorización</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+    <dt>
+     rango
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="clase">c</sup> <span class="logic">and</span> (<a href="http://www.w3.org/2004/02/skos/core#inScheme" target="_blank" title="http://www.w3.org/2004/02/skos/core#inScheme">in Scheme</a> <sup class="type-op" title="Propiedad entre objetos">op</sup> <span class="logic">value</span> <a href="#http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePermitStatus" title="http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePermitStatus">Vehicle Permit Status</a> <sup class="type-ni" title="Individuo">ni</sup>)
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="permitPeriodicity">
+  <h3>periodicidad de la autorización<sup class="type-op" title="Propiedad entre objetos">op</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a> </span></h3>
+  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#permitPeriodicity</p>
+  <div class="comment">
+   <span class="markdown">Identifica la periodicidad de la autorización para un vehículo. Los valores son conceptos SKOS que pertenecen a una lista controlada de tipos de autorización (por ejemplo, mensual, anual, etc.)</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     dominio
+    </dt>
+    <dd>
+     <a href="#Permit" title="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#Permit">Autorización</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+    <dt>
+     rango
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="clase">c</sup> <span class="logic">and</span> (<a href="http://www.w3.org/2004/02/skos/core#inScheme" target="_blank" title="http://www.w3.org/2004/02/skos/core#inScheme">in Scheme</a> <sup class="type-op" title="Propiedad entre objetos">op</sup> <span class="logic">value</span> <a href="#http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePermitPeriodicity" title="http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePermitPeriodicity">Vehicle Permit Periodicity</a> <sup class="type-ni" title="Individuo">ni</sup>)
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="permitType">
+  <h3>tipo de autorizacion<sup class="type-op" title="Propiedad entre objetos">op</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a> </span></h3>
+  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#permitType</p>
+  <div class="comment">
+   <span class="markdown">Identifica el tipo de autorización para un vehículo. Los valores son conceptos SKOS que pertenecen a una lista controlada de tipos de autorización.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     dominio
+    </dt>
+    <dd>
+     <a href="#Permit" title="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#Permit">Autorización</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+    <dt>
+     rango
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="clase">c</sup> <span class="logic">and</span> (<a href="http://www.w3.org/2004/02/skos/core#inScheme" target="_blank" title="http://www.w3.org/2004/02/skos/core#inScheme">in Scheme</a> <sup class="type-op" title="Propiedad entre objetos">op</sup> <span class="logic">value</span> <a href="#http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePermitType" title="http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePermitType">Vehicle Permit Type</a> <sup class="type-ni" title="Individuo">ni</sup>)
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="propulsionType">
+  <h3>tipo de propulsión<sup class="type-op" title="Propiedad entre objetos">op</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a> </span></h3>
+  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#propulsionType</p>
+  <div class="comment">
+   <span class="markdown">Tipo de propulsión de un vehículo. Los valores son conceptos SKOS que pertenecen a una lista controlada de tipos de autorización (por ejemplo, diésel, gasolina, eléctrico, etc.)</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     dominio
+    </dt>
+    <dd>
+     <a href="#Vehicle" title="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#Vehicle">Vehículo</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+    <dt>
+     rango
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="clase">c</sup> <span class="logic">and</span> (<a href="http://www.w3.org/2004/02/skos/core#inScheme" target="_blank" title="http://www.w3.org/2004/02/skos/core#inScheme">in Scheme</a> <sup class="type-op" title="Propiedad entre objetos">op</sup> <span class="logic">value</span> <a href="#http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePropulsionType" title="http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePropulsionType">Vehicle Propulsion Type</a> <sup class="type-ni" title="Individuo">ni</sup>)
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="vehicleType">
+  <h3>tipo de vehículo<sup class="type-op" title="Propiedad entre objetos">op</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a> </span></h3>
+  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#vehicleType</p>
+  <div class="comment">
+   <span class="markdown">Tipo de vehículo. Los valores son conceptos SKOS que pertenecen a una lista controlada de tipos de autorización (por ejemplo, turismo, furgoneta, caravana, etc.)</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     dominio
+    </dt>
+    <dd>
+     <a href="#Vehicle" title="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#Vehicle">Vehículo</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+    <dt>
+     rango
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="clase">c</sup> <span class="logic">and</span> (<a href="http://www.w3.org/2004/02/skos/core#inScheme" target="_blank" title="http://www.w3.org/2004/02/skos/core#inScheme">in Scheme</a> <sup class="type-op" title="Propiedad entre objetos">op</sup> <span class="logic">value</span> <a href="#http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleType" title="http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleType">Vehicle Type</a> <sup class="type-ni" title="Individuo">ni</sup>)
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="permitOwner">
+  <h3>titular autorización<sup class="type-op" title="Propiedad entre objetos">op</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a> </span></h3>
+  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#permitOwner</p>
+  <div class="comment">
+   <span class="markdown">Identifica al titular (persona u organización) para el cual la autorización está expedida</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     dominio
+    </dt>
+    <dd>
+     <a href="#Permit" title="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#Permit">Autorización</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+    <dt>
+     rango
+    </dt>
+    <dd>
+     <a href="#Owner" title="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#Owner">Titular</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="registeredOwner">
+  <h3>titular registrado<sup class="type-op" title="Propiedad entre objetos">op</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a> </span></h3>
+  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#registeredOwner</p>
+  <div class="comment">
+   <span class="markdown">Identifica al titular (persona u organización) del vehículo</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     dominio
+    </dt>
+    <dd>
+     <a href="#Vehicle" title="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#Vehicle">Vehículo</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+    <dt>
+     rango
+    </dt>
+    <dd>
+     <a href="#Owner" title="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#Owner">Titular</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
+ <h3 id="dataproperties-headline" class="list">Propiedades de datos</h3>
+ <ul class="hlist">
+  <li><a href="#activationDate" title="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#activationDate">Fecha de activación</a></li>
+  <li><a href="#endingDate" title="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#endingDate">Fecha de finalización</a></li>
+  <li><a href="#beginningDate" title="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#beginningDate">Fecha de inicio</a></li>
+  <li><a href="#licensePlateNumber" title="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#licensePlateNumber">Número de matrícula</a></li>
+ </ul>
+ <div class="entity" id="activationDate">
+  <h3>Fecha de activación<sup class="type-dp" title="Propiedad de datos">dp</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#dataproperties">Índice de propiedades de datos</a> </span></h3>
+  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#activationDate</p>
+  <div class="comment">
+   <span class="markdown">La fecha de activación de la autorización.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     dominio
+    </dt>
+    <dd>
+     <a href="#Permit" title="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#Permit">Autorización</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+    <dt>
+     rango
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#date" target="_blank" title="http://www.w3.org/2001/XMLSchema#date">date</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="endingDate">
+  <h3>Fecha de finalización<sup class="type-dp" title="Propiedad de datos">dp</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#dataproperties">Índice de propiedades de datos</a> </span></h3>
+  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#endingDate</p>
+  <div class="comment">
+   <span class="markdown">Fecha de finalización de vigencia de la autorización</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     dominio
+    </dt>
+    <dd>
+     <a href="#Permit" title="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#Permit">Autorización</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+    <dt>
+     rango
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#date" target="_blank" title="http://www.w3.org/2001/XMLSchema#date">date</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="beginningDate">
+  <h3>Fecha de inicio<sup class="type-dp" title="Propiedad de datos">dp</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#dataproperties">Índice de propiedades de datos</a> </span></h3>
+  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#beginningDate</p>
+  <div class="comment">
+   <span class="markdown">Fecha de inicio del periodo de la autorización.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     dominio
+    </dt>
+    <dd>
+     <a href="#Permit" title="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#Permit">Autorización</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+    <dt>
+     rango
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#date" target="_blank" title="http://www.w3.org/2001/XMLSchema#date">date</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="licensePlateNumber">
+  <h3>Número de matrícula<sup class="type-dp" title="Propiedad de datos">dp</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#dataproperties">Índice de propiedades de datos</a> </span></h3>
+  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#licensePlateNumber</p>
+  <div class="comment">
+   <span class="markdown">Identificador alfanumérico asignado a un vehículo para su registro e identificación</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     dominio
+    </dt>
+    <dd>
+     <a href="#Vehicle" title="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#Vehicle">Vehículo</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+    <dt>
+     rango
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="namedindividuals">
+ <h3 id="namedindividuals" class="list">Individuos</h3>
+ <ul class="hlist">
+  <li><a href="#http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleEnvironmentalBadge" title="http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleEnvironmentalBadge"> <span>Vehicle Environmental Badge</span> </a></li>
+  <li><a href="#http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePermitPeriodicity" title="http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePermitPeriodicity"> <span>Vehicle Permit Periodicity</span> </a></li>
+  <li><a href="#http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePermitStatus" title="http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePermitStatus"> <span>Vehicle Permit Status</span> </a></li>
+  <li><a href="#http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePermitType" title="http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePermitType"> <span>Vehicle Permit Type</span> </a></li>
+  <li><a href="#http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePropulsionType" title="http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePropulsionType"> <span>Vehicle Propulsion Type</span> </a></li>
+  <li><a href="#http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleType" title="http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleType"> <span>Vehicle Type</span> </a></li>
+ </ul>
+ <div class="entity" id="http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleEnvironmentalBadge">
+  <h3>Vehicle Environmental Badge<sup class="type-ni" title="Individuo">ni</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#namedindividuals">Índice de individuos</a> </span></h3>
+  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleEnvironmentalBadge</p>
+  <dl class="description">
+   <dt>
+    pertenece a
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#ConceptScheme" target="_blank" title="http://www.w3.org/2004/02/skos/core#ConceptScheme">Concept Scheme</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePermitPeriodicity">
+  <h3>Vehicle Permit Periodicity<sup class="type-ni" title="Individuo">ni</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#namedindividuals">Índice de individuos</a> </span></h3>
+  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePermitPeriodicity</p>
+  <dl class="description">
+   <dt>
+    pertenece a
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#ConceptScheme" target="_blank" title="http://www.w3.org/2004/02/skos/core#ConceptScheme">Concept Scheme</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePermitStatus">
+  <h3>Vehicle Permit Status<sup class="type-ni" title="Individuo">ni</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#namedindividuals">Índice de individuos</a> </span></h3>
+  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePermitStatus</p>
+  <dl class="description">
+   <dt>
+    pertenece a
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#ConceptScheme" target="_blank" title="http://www.w3.org/2004/02/skos/core#ConceptScheme">Concept Scheme</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePermitType">
+  <h3>Vehicle Permit Type<sup class="type-ni" title="Individuo">ni</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#namedindividuals">Índice de individuos</a> </span></h3>
+  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePermitType</p>
+  <dl class="description">
+   <dt>
+    pertenece a
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#ConceptScheme" target="_blank" title="http://www.w3.org/2004/02/skos/core#ConceptScheme">Concept Scheme</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePropulsionType">
+  <h3>Vehicle Propulsion Type<sup class="type-ni" title="Individuo">ni</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#namedindividuals">Índice de individuos</a> </span></h3>
+  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/kos/edint/VehiclePropulsionType</p>
+  <dl class="description">
+   <dt>
+    pertenece a
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#ConceptScheme" target="_blank" title="http://www.w3.org/2004/02/skos/core#ConceptScheme">Concept Scheme</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleType">
+  <h3>Vehicle Type<sup class="type-ni" title="Individuo">ni</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#namedindividuals">Índice de individuos</a> </span></h3>
+  <p><strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/kos/edint/VehicleType</p>
+  <dl class="description">
+   <dt>
+    pertenece a
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#ConceptScheme" target="_blank" title="http://www.w3.org/2004/02/skos/core#ConceptScheme">Concept Scheme</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
 </div><div id="legend">
 <h2>Leyenda <span class="backlink"> volver a <a href="#toc">ToC</a></span></h2>
 <div   class="entity">
 <sup class="type-c" title="Clases">c</sup>: Clases <br/>
 <sup class="type-op" title="Propiedades de objeto">op</sup>: Propiedades de objeto <br/>
-<sup class="type-ni" title="Individuos">ni</sup>: Individuos
+<sup class="type-dp" title="Propiedades de datos">dp</sup>: Propiedades de datos <br/>
+<sup class="type-ni" title="Individuos">ni</sup>: Individuos <br/>
 </div>
 </div>
