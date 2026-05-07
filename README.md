@@ -10,7 +10,7 @@ El propósito de esta ontología es el de proporcionar un vocabulario común par
 
 # Prefijo y espacio de nombres (prefix and namespace)
 
-El prefijo de esta ontologías es edint-veh. Se publica en el espacio de nombres: http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos# 
+El prefijo de esta ontologías es edintveh. Se publica en el espacio de nombres: http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos# 
 
 # Modelo conceptual (Ontology Conceptualization)
 
