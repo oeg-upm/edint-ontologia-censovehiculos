@@ -4,11 +4,11 @@ Esta ontología permite representar el dominio del censo o registro de vehículo
 
 Está siendo desarrollada en el contexto del Espacio de Datos para las Infraestructuras Urbanas Inteligentes ([EDINT](https://edint.es/)). Asimismo, fue identificada como una ontología relevante para la representación de datos gestionados por entidades locales en la guía [Datos abiertos FEMP 2019: 40 conjuntos de datos a publicar por las Entidades Locales](http://femp.femp.es/files/3580-1937-fichero/DATOS%20ABIERTOS%20FEMP%202019.pdf), tal y como se describe también en la correspondiente nota de [datos.gob.es](https://datos.gob.es/es/conocimiento/datos-abiertos-femp-2019-40-conjuntos-de-datos-publicar-por-las-entidades-locales), y por tanto recogido en el [repositorio Github de apoyo a la iniciativa](https://github.com/opencitydata/vocab-transporte-censo-vehiculos), que queda deprecado una vez se lanza este repositorio.
 
-# Propósito y alcance de la ontología (ontology purpose and scope)
+# Propósito y alcance de la ontología (Purpose and scope of the ontology)
 
 El propósito de esta ontología es el de proporcionar un vocabulario común para la representación de las entidades y datos principales del censo o registro de vehículos. Su alcance se limita a los datos que pueden ser utilizados con los propósitos de cobro de impuestos por parte de las entidades locales o de gestión de la movilidad (permisos de aparcamiento, permisos de acceso a zonas específicas, etc.), que son parte de las funciones habituales de las entidades locales. Quedan fuera del alcance de la ontología otros aspectos relacionados con los vehículos, como pueden ser los datos de sus permisos de circulación, inspecciones técnicas, etc., que podrían ser objeto de una extensión de esta ontología o de su evolución en el futuro, si se considera relevante. 
 
-# Prefijo y espacio de nombres (prefix and namespace)
+# Prefijo y espacio de nombres (Prefix and namespace)
 
 El prefijo de esta ontologías es edint-veh. Se publica en el espacio de nombres: http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos# 
 
@@ -16,7 +16,7 @@ El prefijo de esta ontologías es edint-veh. Se publica en el espacio de nombres
 
 ![Diagrama del modelo conceptual](diagrams/diagram.png)
 
-# Estructura del repositorio (Reposity structure)
+# Estructura del repositorio (Repository structure)
 
 El repositorio contiene las siguientes carpetas:
 
@@ -30,11 +30,9 @@ El repositorio contiene las siguientes carpetas:
 | **requirements/** | Contains all documents used to define the ontology’s requirements: data example, competency questions, functional requirements, use cases, etc. |
 | **shapes/** | Contains the SHACL shapes used to define and validate ontology constraints. |
 
-# Mantenimiento y evolución (maintenance and evolution)
+# Mantenimiento y evolución (Maintenance and evolution)
 
-To manage those incidents or suggested improvements with respect to the vocabulary, we recommend you to follow
-the guides provided in [Issues Management](https://github.com/nombre-repositorio/wiki/issues-management) to
-generate an issue (work in progress)
+Para manejar las incidencias o mejoras sugeridas con respecto a la ontología, recomendamos seguir las guías proporcionadas en ([Issues Management](./ISSUES.md)) para generar una incidencia.
 
 # Financiación (Funding)
 
