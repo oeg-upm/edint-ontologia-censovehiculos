@@ -1,7 +1,6 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#"
      xml:base="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos"
-     xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:gsp="http://www.opengis.net/spec/geosparql/1.0/"
      xmlns:mod="https://w3id.org/mod#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
@@ -34,6 +33,9 @@
         <dcterms:description xml:lang="en">The purpose of this ontology is to provide a common vocabulary for representing the main entities and data of the vehicle census or registry. Its scope is limited to the data that may be used for purposes such as tax collection by local authorities or mobility management (parking permits, access permits to specific zones, etc.), which are part of the usual functions of local entities. Other aspects related to vehicles, such as data concerning driving permits, technical inspections, and similar information, are outside the scope of this ontology. These could be addressed through an extension of this ontology or through its future evolution, if considered relevant.</dcterms:description>
         <dcterms:hasFormat>http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos.owl</dcterms:hasFormat>
         <dcterms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+        <dcterms:title xml:lang="es">Ontología del Censo de Vehículos</dcterms:title>
+        <dcterms:title xml:lang="en">Vehicle Census Ontology</dcterms:title>
+        <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-01-29</dcterms:issued>
         <vann:preferredNamespacePrefix>edintveh</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/transporte/censovehiculos#"/>
         <owl:versionInfo>0.1.0</owl:versionInfo>
